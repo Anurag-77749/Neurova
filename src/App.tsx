@@ -324,7 +324,7 @@ export const App: React.FC = () => {
   // ========================================================
   if (activeSession && activeSession.role === 'student') {
     return (
-      <div className={`bg-[#F8FAFB] dark:bg-[#0B0B0F] text-[#0F172A] dark:text-[#F3F4F6] flex flex-col md:flex-row antialiased ${studentScreen === "ai-reteach" ? "h-screen overflow-hidden" : "min-h-screen"}`}>
+      <div className={`bg-[#F8FAFB] dark:bg-[#0B0B0F] text-[#0F172A] dark:text-[#F3F4F6] flex flex-col md:flex-row antialiased ${studentScreen === "ai-reteach" ? "h-[100dvh] overflow-hidden" : "min-h-screen"}`}>
         <div className="md:hidden flex items-center justify-between p-4 bg-white dark:bg-[#15161C] border-b border-slate-200 dark:border-[#222430]">
           <NeurovaLogo size="sm" showText={true} />
           <div className="flex items-center gap-2">
@@ -351,7 +351,7 @@ export const App: React.FC = () => {
           />
         </div>
 
-        <div className={`flex-1 flex flex-col min-w-0 ${studentScreen === 'ai-reteach' ? 'h-full min-h-0 overflow-hidden' : 'min-h-screen'}`}>
+        <div className={`flex-1 flex flex-col min-w-0 ${studentScreen === 'ai-reteach' ? 'h-[calc(100dvh-64px)] md:h-full min-h-0 overflow-hidden' : 'min-h-screen'}`}>
           <div className="hidden md:flex items-center justify-between px-6 py-3 border-b border-slate-200/80 dark:border-[#1C1E2A] bg-white/70 dark:bg-[#0E0F15]/70 backdrop-blur-md sticky top-0 z-10 shrink-0">
             <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
               <span className="font-medium text-slate-400 dark:text-slate-500">Neurova</span>

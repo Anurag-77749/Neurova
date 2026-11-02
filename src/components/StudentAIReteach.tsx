@@ -181,6 +181,9 @@ const ACADEMIC_PRESETS: SubjectPreset[] = [
 
 export const StudentAIReteach: React.FC<StudentAIReteachProps> = ({ session, onGoToTodayTasks }) => {
   // Extract student's pre-selected grade from session.classLevel (e.g. 'Class 10-D' -> 10)
+  // Mobile Tab State ('chat' | 'hub') for responsive mobile layout
+  const [mobileTab, setMobileTab] = useState<'chat' | 'hub'>('chat');
+
   const studentGrade = parseInt(String(session.classLevel || '10').replace(/[^0-9]/g, '')) || 10;
   
   // Chat Messages State
@@ -505,6 +508,7 @@ I am ready to answer any question or explain any topic across **Physics, Chemist
   // CORE CHAT SUBMISSION
   // ========================================================
   const handleSendMessage = async (textToSend?: string, autoSpeak: boolean = false, customSpeechTitle?: string) => {
+    setMobileTab('chat');
     const query = (textToSend || inputQuery).trim();
     if (!query || isGenerating) return;
 
@@ -648,12 +652,46 @@ Please provide a comprehensive conceptual breakdown of this topic along with com
   });
 
   return (
-    <div className="flex-1 flex flex-col lg:flex-row gap-3 sm:gap-4 p-2 sm:p-4 h-full min-h-0 overflow-hidden bg-[#F8FAFB] dark:bg-[#0B0B0F]">
+    <div className="flex-1 flex flex-col gap-2 sm:gap-4 p-2 sm:p-4 h-full min-h-0 overflow-hidden bg-[#F8FAFB] dark:bg-[#0B0B0F]">
+      {/* Mobile Tab Switcher (< lg) */}
+      <div className="lg:hidden flex items-center p-1 bg-slate-200/80 dark:bg-[#15161E] rounded-xl shrink-0 gap-1 border border-slate-300/40 dark:border-[#202330]">
+        <button
+          type="button"
+          onClick={() => setMobileTab('chat')}
+          className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
+            mobileTab === 'chat'
+              ? 'bg-white dark:bg-[#202330] text-emerald-600 dark:text-emerald-400 shadow-xs'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          <Bot className="w-3.5 h-3.5 text-emerald-500" />
+          <span>AI Chat Tutor</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => setMobileTab('hub')}
+          className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold flex items-center justify-center gap-1.5 transition-all ${
+            mobileTab === 'hub'
+              ? 'bg-white dark:bg-[#202330] text-emerald-600 dark:text-emerald-400 shadow-xs'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+          <span>Study Hub & Presets</span>
+          {todayTasks.length > 0 && (
+            <span className="px-1.5 py-0.2 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 text-[10px] font-black">
+              {todayTasks.length}
+            </span>
+          )}
+        </button>
+      </div>
+
+      <div className="flex-1 flex flex-col lg:flex-row gap-3 sm:gap-4 min-h-0 overflow-hidden">
       
       {/* ======================================================== */}
       {/* LEFT COLUMN: WIDE AI CHATBOT (EXPANDED BREADTH)          */}
       {/* ======================================================== */}
-      <div className="flex-1 min-w-0 flex flex-col h-full bg-white dark:bg-[#11131A] rounded-xl border border-slate-200/80 dark:border-[#1E212E] shadow-2xs overflow-hidden">
+      <div className={`flex-1 min-w-0 flex flex-col h-full bg-white dark:bg-[#11131A] rounded-xl border border-slate-200/80 dark:border-[#1E212E] shadow-2xs overflow-hidden ${mobileTab === "chat" ? "flex" : "hidden lg:flex"}`}>
         
         {/* Header Bar */}
         <div className="p-3 sm:p-3.5 border-b border-slate-200 dark:border-[#1E212E] flex items-center justify-between gap-2 shrink-0">
@@ -932,7 +970,7 @@ Please provide a comprehensive conceptual breakdown of this topic along with com
       {/* ======================================================== */}
       {/* RIGHT COLUMN: QUICK STUDY HUB (COMPACT WIDTH W-80)       */}
       {/* ======================================================== */}
-      <div className="w-full lg:w-[320px] xl:w-[340px] shrink-0 flex flex-col h-full bg-white dark:bg-[#11131A] rounded-xl border border-slate-200/80 dark:border-[#1E212E] shadow-2xs overflow-hidden p-3.5 space-y-3">
+      <div className={`w-full lg:w-[320px] xl:w-[340px] shrink-0 flex flex-col h-full bg-white dark:bg-[#11131A] rounded-xl border border-slate-200/80 dark:border-[#1E212E] shadow-2xs overflow-hidden p-3.5 space-y-3 ${mobileTab === "hub" ? "flex" : "hidden lg:flex"}`}>
         
         {/* Hub Header */}
         <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-[#1E212E] shrink-0">
@@ -1128,6 +1166,8 @@ Please provide a comprehensive conceptual breakdown of this topic along with com
           </div>
 
         </div>
+
+      </div>
 
       </div>
 
