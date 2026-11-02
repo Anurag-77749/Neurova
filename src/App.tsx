@@ -218,15 +218,19 @@ export const App: React.FC = () => {
     const cleanName = teacherName.trim();
     const cleanPass = teacherPassword.trim();
 
-    if (!cleanInput || !cleanPass) {
-      setErrorMsg('Please enter Staff ID or Email and password.');
+    if (!cleanInput && !cleanName) {
+      setErrorMsg('Please enter your Staff ID, Teacher Name, or Email.');
+      return;
+    }
+    if (!cleanPass) {
+      setErrorMsg('Please enter your password.');
       return;
     }
 
-    const account = await findTeacherByLoginAsync(cleanInput, cleanName);
+    const account = await findTeacherByLoginAsync(cleanInput || cleanName, cleanName || cleanInput);
 
     if (!account) {
-      setErrorMsg(`No teacher account found for "${cleanInput}". Please check your details.`);
+      setErrorMsg(`No teacher account found for "${cleanInput || cleanName}". Please check your Staff ID or Name.`);
       return;
     }
 
@@ -772,6 +776,26 @@ export const App: React.FC = () => {
                 </button>
               </div>
 
+              {/* Quick Helper Badge */}
+              <div className="mb-5 p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-emerald-500 shrink-0" />
+                  <span>Demo: <strong>STAFF-1001</strong> / Pass: <strong>1234</strong></span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTeacherEmail('STAFF-1001');
+                    setTeacherName('Demo Teacher');
+                    setTeacherPassword('1234');
+                    setErrorMsg(null);
+                  }}
+                  className="px-2 py-0.5 rounded-lg bg-emerald-600 text-white font-semibold text-[11px] hover:bg-emerald-500 active:scale-95 transition-all"
+                >
+                  Fill Demo
+                </button>
+              </div>
+
               {errorMsg && (
                 <div className="mb-5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs flex items-center gap-2">
                   <ShieldAlert className="w-4 h-4 shrink-0 text-rose-500" />
@@ -782,7 +806,7 @@ export const App: React.FC = () => {
               <form onSubmit={handleTeacherLogin} autoComplete="off" className="space-y-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Enter Staff ID or Email
+                    Staff ID or Email
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -796,7 +820,6 @@ export const App: React.FC = () => {
                       onChange={(e) => setTeacherEmail(e.target.value)}
                       placeholder="e.g. STAFF-1001 or teacher@gmail.com"
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all font-mono"
-                      required
                     />
                   </div>
                 </div>
