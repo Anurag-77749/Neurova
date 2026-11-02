@@ -37,8 +37,14 @@ import {
   adminUnlockAccount, 
   adminDeleteAccount,
   adminUpdateTeacherClasses,
-  getAdminAccount
+  getAdminAccount,
+  syncDirectoryFromCloud
 } from '../services/adminStore';
+import { 
+  getSupabaseConfig, 
+  saveSupabaseConfig, 
+  isSupabaseConfigured 
+} from '../services/supabase';
 import { StudentAccount, TeacherAccount, AuditLogEntry, ClassLevel, Section, AssignedClass, UserSession } from '../types';
 import { NeurovaLogo } from './NeurovaLogo';
 
@@ -87,6 +93,25 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const [selectedAssignedClasses, setSelectedAssignedClasses] = useState<AssignedClass[]>([
     { classLevel: 8, section: 'B' },
   ]);
+
+  // Supabase Cloud Sync State
+  const [supabaseUrlInput, setSupabaseUrlInput] = useState(() => getSupabaseConfig().url);
+  const [supabaseKeyInput, setSupabaseKeyInput] = useState(() => getSupabaseConfig().anonKey);
+  const [isSyncingCloud, setIsSyncingCloud] = useState(false);
+
+  const handleSaveSupabase = async (e: React.FormEvent) => {
+    e.preventDefault();
+    saveSupabaseConfig({
+      url: supabaseUrlInput.trim(),
+      anonKey: supabaseKeyInput.trim(),
+    });
+    setIsSyncingCloud(true);
+    await syncDirectoryFromCloud();
+    setIsSyncingCloud(false);
+    loadAllData();
+    setNotification('Supabase configuration saved & cloud directory synchronized!');
+    setTimeout(() => setNotification(null), 4000);
+  };
 
   const loadAllData = () => {
     setStudents(getAllStudents());
@@ -824,6 +849,74 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                 <p className="text-xs text-slate-600 dark:text-[#9CA3AF] leading-relaxed">
                   The Admin console intentionally provides <strong>ZERO access</strong> to student homework answers, teacher grade evaluations, voice recordings, or private classroom communications. The administrator manages identities and access rights, while academic coursework remains strictly private between students and their assigned teachers.
                 </p>
+              </div>
+
+              {/* Cloud Database (Supabase) Panel */}
+              <div className="p-6 rounded-3xl bg-white dark:bg-[#15161C] border border-slate-200 dark:border-[#222430] space-y-5">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100 dark:border-[#222430]">
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900 dark:text-[#F3F4F6] flex items-center gap-2">
+                      <Layers className="w-5 h-5 text-emerald-500" />
+                      Supabase Cloud Database Synchronization
+                    </h3>
+                    <p className="text-xs text-slate-500 dark:text-[#9CA3AF] mt-0.5">
+                      Sync student and teacher accounts across all devices, mobile phones, and evaluator laptops.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className={`px-2.5 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 ${
+                      isSupabaseConfigured() 
+                        ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20'
+                        : 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20'
+                    }`}>
+                      <span className={`w-2 h-2 rounded-full ${isSupabaseConfigured() ? 'bg-emerald-500' : 'bg-amber-500'}`} />
+                      {isSupabaseConfigured() ? 'Cloud Sync Connected' : 'Local Directory Mode'}
+                    </span>
+                  </div>
+                </div>
+
+                <form onSubmit={handleSaveSupabase} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
+                        Supabase Project URL
+                      </label>
+                      <input
+                        type="text"
+                        value={supabaseUrlInput}
+                        onChange={(e) => setSupabaseUrlInput(e.target.value)}
+                        placeholder="https://xyzcompany.supabase.co"
+                        className="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-mono bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#222430] text-slate-900 dark:text-[#F3F4F6] focus:outline-none focus:border-emerald-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
+                        Supabase Anon / Public Key
+                      </label>
+                      <input
+                        type="password"
+                        value={supabaseKeyInput}
+                        onChange={(e) => setSupabaseKeyInput(e.target.value)}
+                        placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                        className="w-full px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-mono bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#222430] text-slate-900 dark:text-[#F3F4F6] focus:outline-none focus:border-emerald-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                      💡 Get your free project credentials at <a href="https://supabase.com" target="_blank" rel="noreferrer" className="text-emerald-500 underline font-medium">supabase.com</a> &rarr; Project Settings &rarr; API.
+                    </p>
+                    <button
+                      type="submit"
+                      disabled={isSyncingCloud}
+                      className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-xs transition-all flex items-center gap-1.5 disabled:opacity-50"
+                    >
+                      <Check className="w-3.5 h-3.5" />
+                      <span>{isSyncingCloud ? 'Syncing...' : 'Save & Sync Cloud Database'}</span>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           )}

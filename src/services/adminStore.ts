@@ -8,6 +8,12 @@ import {
   AssignedClass 
 } from '../types';
 import { hashPassword, verifyPassword } from './cryptoUtils';
+import { 
+  syncStudentToCloud, 
+  syncTeacherToCloud, 
+  fetchCloudStudents, 
+  fetchCloudTeachers 
+} from './supabase';
 
 const STORAGE_KEYS = {
   ADMIN: 'neurova_admin_profile',
@@ -354,6 +360,7 @@ export const createStudentAccount = async (
 
   students[id] = account;
   localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+  syncStudentToCloud(account).catch(() => {});
   addAuditLog(
     'CREATE_STUDENT',
     'student',
@@ -483,6 +490,7 @@ export const createTeacherAccount = async (
 
   teachers[cleanEmail] = account;
   localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
+  syncTeacherToCloud(account).catch(() => {});
   addAuditLog(
     'CREATE_TEACHER',
     'teacher',
@@ -492,6 +500,47 @@ export const createTeacherAccount = async (
   );
   window.dispatchEvent(new Event('neurova_teacher_directory_changed'));
   return account;
+};
+
+/**
+ * Sync all registered accounts from Supabase cloud database
+ */
+export const syncDirectoryFromCloud = async () => {
+  try {
+    const cloudStudents = await fetchCloudStudents();
+    if (cloudStudents.length > 0) {
+      const students = getAllStudents();
+      let changed = false;
+      for (const s of cloudStudents) {
+        if (!students[s.id] || students[s.id].plainPassword !== s.plainPassword) {
+          students[s.id] = s;
+          changed = true;
+        }
+      }
+      if (changed) {
+        localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+        window.dispatchEvent(new Event('neurova_student_directory_changed'));
+      }
+    }
+
+    const cloudTeachers = await fetchCloudTeachers();
+    if (cloudTeachers.length > 0) {
+      const teachers = getAllTeachers();
+      let changed = false;
+      for (const t of cloudTeachers) {
+        if (!teachers[t.id] || teachers[t.id].plainPassword !== t.plainPassword) {
+          teachers[t.id] = t;
+          changed = true;
+        }
+      }
+      if (changed) {
+        localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
+        window.dispatchEvent(new Event('neurova_teacher_directory_changed'));
+      }
+    }
+  } catch (err) {
+    console.warn('Sync from cloud notice:', err);
+  }
 };
 
 // SECURITY, LOCKOUT & PASSWORD FORCED CHANGE

@@ -48,7 +48,8 @@ import {
   getAdminAccount, 
   verifyAdminCredentials, 
   recordFailedAttempt, 
-  resetFailedAttempts 
+  resetFailedAttempts,
+  syncDirectoryFromCloud
 } from './services/adminStore';
 import { verifyPassword } from './services/cryptoUtils';
 
@@ -105,6 +106,11 @@ export const App: React.FC = () => {
   const [totalTasksCount, setTotalTasksCount] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAIModal, setShowAIModal] = useState(false);
+
+  // Sync directory from Supabase cloud database on startup
+  useEffect(() => {
+    syncDirectoryFromCloud().catch(() => {});
+  }, []);
 
   // Quick Demo Access Handlers
   const handleQuickDemoStudent = () => {

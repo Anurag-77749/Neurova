@@ -9,6 +9,7 @@
     "preview": "vite preview --port 5174"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
     "@types/katex": "^0.16.8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
