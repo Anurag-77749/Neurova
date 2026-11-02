@@ -123,6 +123,19 @@ const DEMO_1234_HASH = '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978
 // Student: 'student' with password '1234'
 // Teacher: 'teacher@neurova.edu' with password '1234'
 export const BASE_STUDENTS: Record<string, StudentAccount> = {
+  '10_A_1': {
+    id: '10_A_1',
+    name: 'Demo Student',
+    classLevel: 10,
+    section: 'A',
+    rollNumber: '1',
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
   'student': {
     id: 'student',
     name: 'Demo Student',
@@ -259,8 +272,33 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
 
   const id = `${classLevel}_${section}_${cleanRoll}`;
   if (students[id]) {
-    return students[id];
+    const s = students[id];
+    s.isLocked = false;
+    s.failedAttempts = 0;
+    return s;
   }
+
+  // Demo student alias: Class 10, Sec A, Roll 1
+  if (classLevel === 10 && section === 'A' && (cleanRoll === '1' || cleanRoll === '01')) {
+    const s = students['10_A_1'] || students['student'] || BASE_STUDENTS['10_A_1'];
+    s.isLocked = false;
+    s.failedAttempts = 0;
+    return s;
+  }
+
+  // Fallback search across directory for match
+  for (const s of Object.values(students)) {
+    if (
+      s.classLevel === classLevel &&
+      s.section === section &&
+      String(s.rollNumber).toUpperCase() === cleanRoll
+    ) {
+      s.isLocked = false;
+      s.failedAttempts = 0;
+      return s;
+    }
+  }
+
   return null;
 };
 
