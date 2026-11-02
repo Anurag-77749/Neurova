@@ -76,8 +76,8 @@ export const App: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<Role | null>(null);
 
   // Student Login State
-  const [selectedClass, setSelectedClass] = useState<ClassLevel>(10);
-  const [selectedSection, setSelectedSection] = useState<Section>('A');
+  const [selectedClass, setSelectedClass] = useState<ClassLevel | null>(null);
+  const [selectedSection, setSelectedSection] = useState<Section | null>(null);
   const [rollNumber, setRollNumber] = useState('');
   const [studentPassword, setStudentPassword] = useState('');
   const [showStudentPassword, setShowStudentPassword] = useState(false);
@@ -150,6 +150,11 @@ export const App: React.FC = () => {
 
     const cleanRoll = rollNumber.replace(/[^0-9a-zA-Z]/g, '').trim();
     const cleanPass = studentPassword.trim();
+
+    if (!selectedClass || !selectedSection) {
+      setErrorMsg('Please select your class level and section.');
+      return;
+    }
 
     if (!cleanRoll || !cleanPass) {
       setErrorMsg('Please enter your roll number and password.');
@@ -295,6 +300,12 @@ export const App: React.FC = () => {
   const handleSignOut = () => {
     setActiveSession(null);
     setSelectedRole(null);
+    setSelectedClass(null);
+    setSelectedSection(null);
+    setRollNumber('');
+    setStudentPassword('');
+    setTeacherEmail('');
+    setTeacherPassword('');
     setAdminStep('password');
     setAdminEmail('');
     setAdminPassword('');
@@ -508,6 +519,12 @@ export const App: React.FC = () => {
               <LandingPage
                 onSelectRole={(role) => {
                   setSelectedRole(role);
+                  setSelectedClass(null);
+                  setSelectedSection(null);
+                  setRollNumber('');
+                  setStudentPassword('');
+                  setTeacherEmail('');
+                  setTeacherPassword('');
                   setErrorMsg(null);
                 }}
                 onQuickLoginStudent={handleQuickDemoStudent}
@@ -573,7 +590,7 @@ export const App: React.FC = () => {
                 </div>
               )}
 
-              <form onSubmit={handleStudentLogin} className="space-y-4">
+              <form onSubmit={handleStudentLogin} autoComplete="off" className="space-y-4">
                 {/* Class Level Selector */}
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
@@ -631,6 +648,8 @@ export const App: React.FC = () => {
                     </div>
                     <input
                       type="text"
+                      name="student_roll_number"
+                      autoComplete="off"
                       value={rollNumber}
                       onChange={(e) => setRollNumber(e.target.value)}
                       placeholder="Enter roll number"
@@ -651,6 +670,8 @@ export const App: React.FC = () => {
                     </div>
                     <input
                       type={showStudentPassword ? 'text' : 'password'}
+                      name="student_password"
+                      autoComplete="new-password"
                       value={studentPassword}
                       onChange={(e) => setStudentPassword(e.target.value)}
                       placeholder="Enter password"
@@ -735,7 +756,7 @@ export const App: React.FC = () => {
                 </div>
               )}
 
-              <form onSubmit={handleTeacherLogin} className="space-y-4">
+              <form onSubmit={handleTeacherLogin} autoComplete="off" className="space-y-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                     Enter teacher email
@@ -746,6 +767,8 @@ export const App: React.FC = () => {
                     </div>
                     <input
                       type="text"
+                      name="neurova_teacher_email"
+                      autoComplete="off"
                       value={teacherEmail}
                       onChange={(e) => setTeacherEmail(e.target.value)}
                       placeholder="Enter teacher email"
@@ -765,6 +788,8 @@ export const App: React.FC = () => {
                     </div>
                     <input
                       type={showTeacherPassword ? 'text' : 'password'}
+                      name="neurova_teacher_password"
+                      autoComplete="new-password"
                       value={teacherPassword}
                       onChange={(e) => setTeacherPassword(e.target.value)}
                       placeholder="Enter password"
