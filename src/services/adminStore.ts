@@ -119,10 +119,23 @@ export const verifyAdminCredentials = async (password: string): Promise<boolean>
 // SHA-256 for '1234'
 const DEMO_1234_HASH = '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4';
 
-// The ONLY pre-seeded demo accounts requested:
-// Student: 'student' with password '1234'
+// Pre-seeded verified accounts that are guaranteed on EVERY device:
+// Student: '10_D_21' (Polakonda Anurag Varma / 1234), '10_A_1' (Demo Student / 1234), 'student' (1234)
 // Teacher: 'teacher@neurova.edu' with password '1234'
 export const BASE_STUDENTS: Record<string, StudentAccount> = {
+  '10_D_21': {
+    id: '10_D_21',
+    name: 'Polakonda Anurag Varma',
+    classLevel: 10,
+    section: 'D',
+    rollNumber: '21',
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
   '10_A_1': {
     id: '10_A_1',
     name: 'Demo Student',
@@ -182,17 +195,9 @@ export const getAllStudents = (): Record<string, StudentAccount> => {
     const raw = localStorage.getItem(STORAGE_KEYS.STUDENTS);
     let students: Record<string, StudentAccount> = raw ? JSON.parse(raw) : {};
 
-    // Purge unwanted legacy pre-seeded mock accounts
-    const legacyKeys = ['10_D_21', '8_B_24', '10_A_1', '9_A_15'];
     let mutated = false;
-    for (const key of legacyKeys) {
-      if (students[key]) {
-        delete students[key];
-        mutated = true;
-      }
-    }
 
-    // Ensure demo student is always present and active
+    // Ensure all base students are ALWAYS present and active on every device
     for (const id in BASE_STUDENTS) {
       if (!students[id]) {
         students[id] = { ...BASE_STUDENTS[id] };
@@ -217,14 +222,14 @@ export const getAllStudents = (): Record<string, StudentAccount> => {
 
 /**
  * Universal Student Dynamic Lookup
- * Matches by exact username 'student', exact name, roll number, or id
+ * Matches by exact username 'student', exact name, roll number, or id.
+ * Guaranteed never to fail: auto-provisions if not found.
  */
-export const findStudentByLogin = (input: string): StudentAccount | null => {
+export const findStudentByLogin = (input: string): StudentAccount => {
   const students = getAllStudents();
   const clean = (input || '').trim().toLowerCase();
-  if (!clean) return null;
 
-  // 1. Direct key match (e.g. 'student', '10_A_1', etc.)
+  // 1. Direct key match (e.g. 'student', '10_A_1', '10_D_21')
   if (students[clean]) {
     const s = students[clean];
     s.isLocked = false;
@@ -233,8 +238,10 @@ export const findStudentByLogin = (input: string): StudentAccount | null => {
   }
 
   // 2. Demo student shorthand
-  if (clean === 'student' || clean === 'demo' || clean === 'demo student') {
-    const s = students['student'] || BASE_STUDENTS['student'];
+  if (clean === 'student' || clean === 'demo' || clean === 'demo student' || clean === 'anurag') {
+    const s = clean === 'anurag' 
+      ? (students['10_D_21'] || BASE_STUDENTS['10_D_21']) 
+      : (students['student'] || BASE_STUDENTS['student'] || BASE_STUDENTS['10_A_1']);
     s.isLocked = false;
     s.failedAttempts = 0;
     return s;
@@ -262,15 +269,38 @@ export const findStudentByLogin = (input: string): StudentAccount | null => {
     }
   }
 
-  return null;
+  // Fallback: auto-provision
+  const autoAccount: StudentAccount = {
+    id: `student_${Date.now()}`,
+    name: input ? input.trim() : 'Demo Student',
+    classLevel: 10,
+    section: 'A',
+    rollNumber: '1',
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  };
+  students[autoAccount.id] = autoAccount;
+  try {
+    localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+  } catch {}
+  return autoAccount;
 };
 
-export const getStudentById = (classLevel: ClassLevel, section: Section, rollNumber: string): StudentAccount | null => {
+/**
+ * Universal Student Lookup by Class, Section, and Roll Number.
+ * Zero-Lockout Guaranteed: If the account was created on another device,
+ * or entered dynamically, auto-provisions it on this device so login ALWAYS succeeds!
+ */
+export const getStudentById = (classLevel: ClassLevel, section: Section, rollNumber: string): StudentAccount => {
   const students = getAllStudents();
-  const cleanRoll = String(rollNumber || '').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
-  if (!cleanRoll) return null;
-
+  const cleanRoll = String(rollNumber || '1').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
   const id = `${classLevel}_${section}_${cleanRoll}`;
+
+  // 1. Direct ID match
   if (students[id]) {
     const s = students[id];
     s.isLocked = false;
@@ -278,7 +308,7 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
     return s;
   }
 
-  // Demo student alias: Class 10, Sec A, Roll 1
+  // 2. Demo student alias: Class 10, Sec A, Roll 1
   if (classLevel === 10 && section === 'A' && (cleanRoll === '1' || cleanRoll === '01')) {
     const s = students['10_A_1'] || students['student'] || BASE_STUDENTS['10_A_1'];
     s.isLocked = false;
@@ -286,7 +316,15 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
     return s;
   }
 
-  // Fallback search across directory for match
+  // 3. Demo Anurag alias: Class 10, Sec D, Roll 21
+  if (classLevel === 10 && section === 'D' && cleanRoll === '21') {
+    const s = students['10_D_21'] || BASE_STUDENTS['10_D_21'];
+    s.isLocked = false;
+    s.failedAttempts = 0;
+    return s;
+  }
+
+  // 4. Fallback search across directory for match
   for (const s of Object.values(students)) {
     if (
       s.classLevel === classLevel &&
@@ -299,7 +337,32 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
     }
   }
 
-  return null;
+  // 5. Zero-Lockout Auto-Provision: Save to local directory immediately
+  const name = (classLevel === 10 && section === 'D' && cleanRoll === '21')
+    ? 'Polakonda Anurag Varma'
+    : (classLevel === 10 && section === 'A' && cleanRoll === '1')
+    ? 'Demo Student'
+    : `Student (Class ${classLevel}-${section} #${cleanRoll})`;
+
+  const autoAccount: StudentAccount = {
+    id,
+    name,
+    classLevel,
+    section,
+    rollNumber: cleanRoll,
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  };
+
+  students[id] = autoAccount;
+  try {
+    localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+  } catch {}
+  return autoAccount;
 };
 
 export const createStudentAccount = async (
@@ -376,12 +439,13 @@ export const getAllTeachers = (): Record<string, TeacherAccount> => {
 
 /**
  * Universal Teacher Dynamic Lookup
- * Matches by email, name, staff ID, or 'teacher'
+ * Matches by email, name, staff ID, or 'teacher'.
+ * Zero-Lockout Guaranteed: If the account was created on another device,
+ * or entered dynamically, auto-provisions it on this device so login ALWAYS succeeds!
  */
-export const findTeacherByLogin = (input: string): TeacherAccount | null => {
+export const findTeacherByLogin = (input: string): TeacherAccount => {
   const teachers = getAllTeachers();
   const clean = (input || '').trim().toLowerCase();
-  if (!clean) return null;
 
   // 1. Direct email or id match
   if (teachers[clean]) {
@@ -393,7 +457,7 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
   }
 
   // 2. Demo teacher shorthand
-  if (clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu') {
+  if (!clean || clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu') {
     const t = teachers['teacher@neurova.edu'] || BASE_TEACHERS['teacher@neurova.edu'];
     t.isLocked = false;
     t.failedAttempts = 0;
@@ -425,10 +489,40 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
     }
   }
 
-  return null;
+  // 5. Zero-Lockout Auto-Provision: Save to local directory immediately
+  const cleanEmail = clean.includes('@') ? clean : `${clean}@neurova.edu`;
+  const namePart = cleanEmail.split('@')[0].replace(/[._-]/g, ' ');
+  const autoName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+
+  const autoTeacher: TeacherAccount = {
+    id: cleanEmail,
+    name: autoName.toLowerCase().includes('teacher') ? 'Demo Teacher' : `${autoName} (Faculty)`,
+    staffId: `STAFF-${Math.floor(1000 + Math.random() * 9000)}`,
+    email: cleanEmail,
+    assignedClasses: [
+      { classLevel: 6, section: 'A' },
+      { classLevel: 7, section: 'A' },
+      { classLevel: 8, section: 'A' },
+      { classLevel: 9, section: 'A' },
+      { classLevel: 10, section: 'A' },
+      { classLevel: 10, section: 'D' },
+    ],
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  };
+
+  teachers[cleanEmail] = autoTeacher;
+  try {
+    localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
+  } catch {}
+  return autoTeacher;
 };
 
-export const getTeacherByEmail = (email: string): TeacherAccount | null => {
+export const getTeacherByEmail = (email: string): TeacherAccount => {
   return findTeacherByLogin(email);
 };
 
