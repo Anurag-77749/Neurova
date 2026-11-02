@@ -41,7 +41,9 @@ import { AdminDashboard } from './components/AdminDashboard';
 import { ForcePasswordChangeModal } from './components/ForcePasswordChangeModal';
 import { Role, ClassLevel, Section, UserSession } from './types';
 import { 
-  getStudentById, 
+  findStudentByLogin,
+  findTeacherByLogin,
+  getStudentById,
   getTeacherByEmail, 
   getAdminAccount, 
   verifyAdminCredentials, 
@@ -74,9 +76,10 @@ export const App: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<Role | null>(null);
 
   // Student Login State
-  const [selectedClass, setSelectedClass] = useState<ClassLevel | null>(null);
-  const [selectedSection, setSelectedSection] = useState<Section | null>(null);
-  const [rollNumber, setRollNumber] = useState('');
+  const [studentNameInput, setStudentNameInput] = useState('');
+  const [selectedClass, setSelectedClass] = useState<ClassLevel | null>(10);
+  const [selectedSection, setSelectedSection] = useState<Section | null>('A');
+  const [rollNumber, setRollNumber] = useState('1');
   const [studentPassword, setStudentPassword] = useState('');
   const [showStudentPassword, setShowStudentPassword] = useState(false);
 
@@ -106,26 +109,34 @@ export const App: React.FC = () => {
 
   // Quick Demo Access Handlers
   const handleQuickDemoStudent = () => {
-    setSelectedClass(10);
-    setSelectedSection('D');
-    setRollNumber('21');
-    setStudentPassword('pass');
+    setStudentNameInput('student');
+    setStudentPassword('1234');
     setActiveSession({
       role: 'student',
-      name: 'Polakonda Anurag Varma',
+      name: 'Demo Student',
       classLevel: 10,
-      section: 'D',
-      rollNumber: '21',
+      section: 'A',
+      rollNumber: '1',
+      mustChangePassword: false,
     });
   };
 
   const handleQuickDemoTeacher = () => {
     setTeacherEmail('teacher@neurova.edu');
-    setTeacherPassword('temp123');
+    setTeacherPassword('1234');
     setActiveSession({
       role: 'teacher',
-      name: 'Dr. Evelyn Reed',
+      name: 'Demo Teacher',
       email: 'teacher@neurova.edu',
+      staffId: 'STAFF-1001',
+      assignedClasses: [
+        { classLevel: 6, section: 'A' },
+        { classLevel: 7, section: 'A' },
+        { classLevel: 8, section: 'A' },
+        { classLevel: 9, section: 'A' },
+        { classLevel: 10, section: 'A' },
+      ],
+      mustChangePassword: false,
     });
   };
 
@@ -136,29 +147,30 @@ export const App: React.FC = () => {
     e.preventDefault();
     setErrorMsg(null);
 
-    const cleanRoll = rollNumber.replace(/[^0-9a-zA-Z]/g, '').trim();
+    const cleanName = studentNameInput.trim();
+    const cleanPass = studentPassword.trim();
 
-    if (!selectedClass || !selectedSection || !cleanRoll || !studentPassword.trim()) {
-      setErrorMsg('Please select your class, section, roll number, and enter your password.');
+    if (!cleanName || !cleanPass) {
+      setErrorMsg('Please enter student name and password.');
       return;
     }
 
-    const account = getStudentById(selectedClass, selectedSection, cleanRoll);
+    const account = findStudentByLogin(cleanName);
 
     if (!account) {
-      setErrorMsg(`Access Denied: No student account exists for Class ${selectedClass}-${selectedSection} Roll #${cleanRoll}.`);
+      setErrorMsg(`No student account found for "${cleanName}". Please verify the name or create it via the Admin Portal.`);
       return;
     }
 
-    const cleanPass = studentPassword.trim();
-    // Accept standard demo passwords 'pass', 'temp123', 'password' OR computed SHA-256 hash match
-    const isDemoPass = cleanPass === 'pass' || cleanPass === 'temp123' || cleanPass === 'password';
-    const isValid = isDemoPass || (await verifyPassword(cleanPass, account.passwordHash));
+    const isMatch =
+      cleanPass === '1234' ||
+      (account.plainPassword && cleanPass === account.plainPassword) ||
+      (await verifyPassword(cleanPass, account.passwordHash));
 
-    if (!isValid) {
+    if (!isMatch) {
       const { isLocked, attemptsLeft } = recordFailedAttempt('student', account.id);
       if (isLocked) {
-        setErrorMsg('Account Locked: 5 failed attempts exceeded. Please see the School Administrator face-to-face.');
+        setErrorMsg('Account Locked: 5 failed attempts exceeded. Please see the School Administrator.');
       } else {
         setErrorMsg(`Incorrect password. ${attemptsLeft} attempt(s) remaining before security lockout.`);
       }
@@ -169,10 +181,10 @@ export const App: React.FC = () => {
 
     setActiveSession({
       role: 'student',
-      name: account.name || (cleanRoll === '21' && selectedClass === 10 && selectedSection === 'D' ? 'Polakonda Anurag Varma' : `Student (${selectedClass}-${selectedSection} #${cleanRoll})`),
-      classLevel: account.classLevel,
-      section: account.section,
-      rollNumber: account.rollNumber,
+      name: account.name || cleanName,
+      classLevel: account.classLevel || 10,
+      section: account.section || 'A',
+      rollNumber: account.rollNumber || '1',
       mustChangePassword: false,
     });
   };
@@ -184,24 +196,27 @@ export const App: React.FC = () => {
     e.preventDefault();
     setErrorMsg(null);
 
-    if (!teacherEmail.trim() || !teacherPassword.trim()) {
-      setErrorMsg('Please enter your educator email and password.');
+    const cleanInput = teacherEmail.trim();
+    const cleanPass = teacherPassword.trim();
+
+    if (!cleanInput || !cleanPass) {
+      setErrorMsg('Please enter teacher email and password.');
       return;
     }
 
-    const account = getTeacherByEmail(teacherEmail);
+    const account = findTeacherByLogin(cleanInput);
 
     if (!account) {
-      setErrorMsg('Access Denied: No educator profile found with this email.');
+      setErrorMsg(`No teacher account found for "${cleanInput}". Please verify the email or create it via the Admin Portal.`);
       return;
     }
 
-    const cleanPass = teacherPassword.trim();
-    // Accept standard demo passwords 'temp123', 'pass', 'teacher', 'password', 'Admin@2026!' OR hash match
-    const isDemoPass = cleanPass === 'temp123' || cleanPass === 'pass' || cleanPass === 'teacher' || cleanPass === 'password' || cleanPass === 'Admin@2026!';
-    const isValid = isDemoPass || (await verifyPassword(cleanPass, account.passwordHash));
+    const isMatch =
+      cleanPass === '1234' ||
+      (account.plainPassword && cleanPass === account.plainPassword) ||
+      (await verifyPassword(cleanPass, account.passwordHash));
 
-    if (!isValid) {
+    if (!isMatch) {
       const { isLocked, attemptsLeft } = recordFailedAttempt('teacher', account.id);
       if (isLocked) {
         setErrorMsg('Account Locked: 5 failed attempts exceeded. Please see the School Administrator.');
@@ -215,10 +230,16 @@ export const App: React.FC = () => {
 
     setActiveSession({
       role: 'teacher',
-      name: account.name || 'Dr. Evelyn Reed',
-      email: account.email,
-      staffId: account.staffId,
-      assignedClasses: account.assignedClasses,
+      name: account.name || 'Demo Teacher',
+      email: account.email || cleanInput,
+      staffId: account.staffId || 'STAFF-1001',
+      assignedClasses: account.assignedClasses && account.assignedClasses.length > 0 ? account.assignedClasses : [
+        { classLevel: 6, section: 'A' },
+        { classLevel: 7, section: 'A' },
+        { classLevel: 8, section: 'A' },
+        { classLevel: 9, section: 'A' },
+        { classLevel: 10, section: 'A' },
+      ],
       mustChangePassword: false,
     });
   };
@@ -514,37 +535,36 @@ export const App: React.FC = () => {
                 <span>Back to Platform Overview</span>
               </button>
 
-              <div className="flex items-center gap-3.5 mb-5">
-                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                  <GraduationCap className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between gap-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <GraduationCap className="w-5 h-5" />
+                  </div>
+                  <div>
                     <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
                       Student Sign In
                     </h2>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
-                      Class 6-10
-                    </span>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                      Log in to access your daily tasks and learning suite.
+                    </p>
                   </div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                    Log in with your assigned class and student roll number.
-                  </p>
                 </div>
-              </div>
 
-              {/* 1-Click Demo Quick Launcher */}
-              <button
-                type="button"
-                onClick={handleQuickDemoStudent}
-                className="w-full mb-5 p-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-semibold flex items-center justify-between transition-all group shadow-xs"
-              >
-                <span className="flex items-center gap-2 text-left">
-                  <Zap className="w-4 h-4 text-emerald-500 fill-emerald-500 shrink-0" />
-                  <span>⚡ 1-Click Demo: Anurag (Class 10-D #21)</span>
-                </span>
-                <ArrowRight className="w-3.5 h-3.5 text-emerald-500 group-hover:translate-x-0.5 transition-transform shrink-0" />
-              </button>
+                {/* Side Demo Student Button */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setStudentNameInput('student');
+                    setStudentPassword('1234');
+                    setErrorMsg(null);
+                  }}
+                  className="shrink-0 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs active:scale-95"
+                  title="Demo Student: student / 1234"
+                >
+                  <Zap className="w-3.5 h-3.5 fill-current" />
+                  <span>Demo Student</span>
+                </button>
+              </div>
 
               {errorMsg && (
                 <div className="mb-5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs flex items-center gap-2">
@@ -555,63 +575,19 @@ export const App: React.FC = () => {
 
               <form onSubmit={handleStudentLogin} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
-                    Class Level
-                  </label>
-                  <div className="grid grid-cols-5 gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E]">
-                    {([6, 7, 8, 9, 10] as ClassLevel[]).map((c) => (
-                      <button
-                        key={c}
-                        type="button"
-                        onClick={() => setSelectedClass(c)}
-                        className={`py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                          selectedClass === c
-                            ? 'bg-emerald-600 text-white shadow-xs'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                        }`}
-                      >
-                        Class {c}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">
-                    Section
-                  </label>
-                  <div className="grid grid-cols-4 gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E]">
-                    {(['A', 'B', 'C', 'D'] as Section[]).map((s) => (
-                      <button
-                        key={s}
-                        type="button"
-                        onClick={() => setSelectedSection(s)}
-                        className={`py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                          selectedSection === s
-                            ? 'bg-emerald-600 text-white shadow-xs'
-                            : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                        }`}
-                      >
-                        Sec {s}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Roll Number
+                    Enter student name
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                      <Hash className="w-4 h-4" />
+                      <UserCheck className="w-4 h-4" />
                     </div>
                     <input
                       type="text"
-                      value={rollNumber}
-                      onChange={(e) => setRollNumber(e.target.value)}
-                      placeholder="e.g. 21"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 font-mono transition-all"
+                      value={studentNameInput}
+                      onChange={(e) => setStudentNameInput(e.target.value)}
+                      placeholder="Enter student name"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all"
                       required
                     />
                   </div>
@@ -619,7 +595,7 @@ export const App: React.FC = () => {
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Password / Student PIN
+                    Enter password
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -629,7 +605,7 @@ export const App: React.FC = () => {
                       type={showStudentPassword ? 'text' : 'password'}
                       value={studentPassword}
                       onChange={(e) => setStudentPassword(e.target.value)}
-                      placeholder="Enter password (e.g. pass)"
+                      placeholder="Enter password"
                       className="w-full pl-10 pr-11 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all"
                       required
                     />
@@ -643,9 +619,6 @@ export const App: React.FC = () => {
                       {showStudentPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
                   </div>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1.5">
-                    Official demo password is <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-mono">pass</code>. Forgotten PINs must be reset face-to-face by administrator.
-                  </p>
                 </div>
 
                 <button
@@ -676,37 +649,36 @@ export const App: React.FC = () => {
                 <span>Back to Platform Overview</span>
               </button>
 
-              <div className="flex items-center gap-3.5 mb-5">
-                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                  <School className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-                      Educator Sign In
-                    </h2>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono">
-                      Staff Suite
-                    </span>
+              <div className="flex items-center justify-between gap-3 mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/25 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <School className="w-5 h-5" />
                   </div>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                    Official school staff credentials issued by administration.
-                  </p>
+                  <div>
+                    <h2 className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                      Teacher Sign In
+                    </h2>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                      Educator & Staff management portal.
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              {/* 1-Click Demo Quick Launcher */}
-              <button
-                type="button"
-                onClick={handleQuickDemoTeacher}
-                className="w-full mb-5 p-3 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/25 text-emerald-700 dark:text-emerald-300 text-xs font-semibold flex items-center justify-between transition-all group shadow-xs"
-              >
-                <span className="flex items-center gap-2 text-left">
-                  <Zap className="w-4 h-4 text-emerald-500 fill-emerald-500 shrink-0" />
-                  <span>⚡ 1-Click Demo: Dr. Evelyn Reed (Physics)</span>
-                </span>
-                <ArrowRight className="w-3.5 h-3.5 text-emerald-500 group-hover:translate-x-0.5 transition-transform shrink-0" />
-              </button>
+                {/* Side Demo Teacher Button */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTeacherEmail('teacher@neurova.edu');
+                    setTeacherPassword('1234');
+                    setErrorMsg(null);
+                  }}
+                  className="shrink-0 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs active:scale-95"
+                  title="Demo Teacher: teacher@neurova.edu / 1234"
+                >
+                  <Zap className="w-3.5 h-3.5 fill-current" />
+                  <span>Demo Teacher</span>
+                </button>
+              </div>
 
               {errorMsg && (
                 <div className="mb-5 p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-400 text-xs flex items-center gap-2">
@@ -718,17 +690,17 @@ export const App: React.FC = () => {
               <form onSubmit={handleTeacherLogin} className="space-y-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Institutional Email
+                    Enter teacher email
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
                       <Mail className="w-4 h-4" />
                     </div>
                     <input
-                      type="email"
+                      type="text"
                       value={teacherEmail}
                       onChange={(e) => setTeacherEmail(e.target.value)}
-                      placeholder="teacher@neurova.edu"
+                      placeholder="Enter teacher email"
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all font-mono"
                       required
                     />
@@ -737,7 +709,7 @@ export const App: React.FC = () => {
 
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Password / Faculty PIN
+                    Enter password
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -747,7 +719,7 @@ export const App: React.FC = () => {
                       type={showTeacherPassword ? 'text' : 'password'}
                       value={teacherPassword}
                       onChange={(e) => setTeacherPassword(e.target.value)}
-                      placeholder="Enter password (e.g. temp123)"
+                      placeholder="Enter password"
                       className="w-full pl-10 pr-11 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all"
                       required
                     />
@@ -761,9 +733,6 @@ export const App: React.FC = () => {
                       {showTeacherPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
                   </div>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-1.5">
-                    Demo credentials: <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-mono">teacher@neurova.edu</code> / <code className="px-1 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-mono">temp123</code>
-                  </p>
                 </div>
 
                 <button

@@ -26,6 +26,7 @@ export interface StudentAccount {
   section: Section;
   rollNumber: string;
   passwordHash: string;
+  plainPassword?: string;
   mustChangePassword: boolean;
   isLocked: boolean;
   failedAttempts: number;
@@ -40,6 +41,7 @@ export interface TeacherAccount {
   email: string;
   assignedClasses: AssignedClass[];
   passwordHash: string;
+  plainPassword?: string;
   mustChangePassword: boolean;
   isLocked: boolean;
   failedAttempts: number;
@@ -51,6 +53,7 @@ export interface AdminAccount {
   email: string;
   name: string;
   passwordHash: string;
+  plainPassword?: string;
   phone: string;
   recoveryCode: string;
   failedAttempts: number;

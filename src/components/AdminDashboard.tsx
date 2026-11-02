@@ -122,7 +122,9 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       session.email
     );
 
-    setNotification(`Created verified account for ${newStudentName} (Class ${newStudentClass}-${newStudentSection} Roll #${newStudentRoll}). Temporary password set.`);
+    setNotification(`Created verified account for ${newStudentName} (Class ${newStudentClass}-${newStudentSection} Roll #${newStudentRoll}).`);
+    setSelectedClass(newStudentClass);
+    setSelectedSection(newStudentSection);
     setIsNewStudentModalOpen(false);
     setNewStudentName('');
     setNewStudentRoll('');
@@ -201,12 +203,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   // Filtered Student List
   const filteredStudents = Object.values(students)
-    .filter(s => s.classLevel === selectedClass && s.section === selectedSection)
-    .filter(s => {
-      if (!searchStudent.trim()) return true;
-      const q = searchStudent.toLowerCase();
-      return s.name.toLowerCase().includes(q) || s.rollNumber.toLowerCase().includes(q);
-    })
+    .filter(s => { if (searchStudent.trim()) { const q = searchStudent.toLowerCase(); return s.name.toLowerCase().includes(q) || s.rollNumber.toLowerCase().includes(q) || s.id.toLowerCase().includes(q); } return s.classLevel === selectedClass && s.section === selectedSection; })
     .sort((a, b) => parseInt(a.rollNumber) - parseInt(b.rollNumber));
 
   // Filtered Teacher List

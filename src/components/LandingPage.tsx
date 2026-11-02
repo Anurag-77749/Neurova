@@ -121,7 +121,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             onClick={onQuickLoginStudent}
             className="px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/15 border border-emerald-500/25 text-emerald-600 dark:text-emerald-400 text-[11px] font-semibold transition-all flex items-center gap-1.5"
           >
-            <span>Student (Class 10-D #21)</span>
+            <span>Demo Student (student / 1234)</span>
             <ArrowRight className="w-3 h-3" />
           </button>
           <button
@@ -129,7 +129,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
             onClick={onQuickLoginTeacher}
             className="px-3 py-1.5 rounded-lg bg-slate-200/60 dark:bg-white/[0.06] hover:bg-slate-200 dark:hover:bg-white/[0.1] border border-slate-300/60 dark:border-[#222430] text-slate-700 dark:text-slate-300 text-[11px] font-semibold transition-all flex items-center gap-1.5"
           >
-            <span>Teacher (Dr. Evelyn Reed)</span>
+            <span>Demo Teacher (teacher@neurova.edu / 1234)</span>
             <ArrowRight className="w-3 h-3" />
           </button>
         </div>
