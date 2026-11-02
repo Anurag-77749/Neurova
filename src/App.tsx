@@ -13,6 +13,7 @@ import {
   CheckCircle2,
   Lock,
   Sparkles,
+  User,
   UserCheck,
   ShieldAlert,
   LogOut,
@@ -87,6 +88,7 @@ export const App: React.FC = () => {
 
   // Teacher Login State
   const [teacherEmail, setTeacherEmail] = useState('');
+  const [teacherName, setTeacherName] = useState('');
   const [teacherPassword, setTeacherPassword] = useState('');
   const [showTeacherPassword, setShowTeacherPassword] = useState(false);
 
@@ -131,7 +133,8 @@ export const App: React.FC = () => {
   };
 
   const handleQuickDemoTeacher = () => {
-    setTeacherEmail('teacher@neurova.edu');
+    setTeacherEmail('STAFF-1001');
+    setTeacherName('Demo Teacher');
     setTeacherPassword('1234');
     setActiveSession({
       role: 'teacher',
@@ -212,17 +215,18 @@ export const App: React.FC = () => {
     setErrorMsg(null);
 
     const cleanInput = teacherEmail.trim();
+    const cleanName = teacherName.trim();
     const cleanPass = teacherPassword.trim();
 
     if (!cleanInput || !cleanPass) {
-      setErrorMsg('Please enter teacher email or Staff ID and password.');
+      setErrorMsg('Please enter Staff ID or Email and password.');
       return;
     }
 
-    const account = await findTeacherByLoginAsync(cleanInput);
+    const account = await findTeacherByLoginAsync(cleanInput, cleanName);
 
     if (!account) {
-      setErrorMsg(`No teacher account found for "${cleanInput}". Please verify your email or Staff ID.`);
+      setErrorMsg(`No teacher account found for "${cleanInput}". Please check your details.`);
       return;
     }
 
@@ -321,6 +325,7 @@ export const App: React.FC = () => {
     setRollNumber('');
     setStudentPassword('');
     setTeacherEmail('');
+    setTeacherName('');
     setTeacherPassword('');
     setAdminStep('password');
     setAdminEmail('');
@@ -540,6 +545,7 @@ export const App: React.FC = () => {
                   setRollNumber('');
                   setStudentPassword('');
                   setTeacherEmail('');
+                  setTeacherName('');
                   setTeacherPassword('');
                   setErrorMsg(null);
                 }}
@@ -753,12 +759,13 @@ export const App: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => {
-                    setTeacherEmail('teacher@neurova.edu');
+                    setTeacherEmail('STAFF-1001');
+                    setTeacherName('Demo Teacher');
                     setTeacherPassword('1234');
                     setErrorMsg(null);
                   }}
                   className="shrink-0 px-3 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-semibold flex items-center gap-1.5 transition-all shadow-xs active:scale-95"
-                  title="Demo Teacher: teacher@neurova.edu / 1234"
+                  title="Demo Teacher: STAFF-1001 / 1234"
                 >
                   <Zap className="w-3.5 h-3.5 fill-current" />
                   <span>Demo Teacher</span>
@@ -775,7 +782,7 @@ export const App: React.FC = () => {
               <form onSubmit={handleTeacherLogin} autoComplete="off" className="space-y-4">
                 <div>
                   <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Enter teacher email or Staff ID
+                    Enter Staff ID or Email
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -783,13 +790,33 @@ export const App: React.FC = () => {
                     </div>
                     <input
                       type="text"
-                      name="neurova_teacher_email"
+                      name="neurova_teacher_id"
                       autoComplete="off"
                       value={teacherEmail}
                       onChange={(e) => setTeacherEmail(e.target.value)}
-                      placeholder="e.g. teacher@neurova.edu or STAFF-1001"
+                      placeholder="e.g. STAFF-1001 or teacher@gmail.com"
                       className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all font-mono"
                       required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+                    Teacher Name <span className="text-slate-400 font-normal lowercase">(optional)</span>
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                      <User className="w-4 h-4" />
+                    </div>
+                    <input
+                      type="text"
+                      name="neurova_teacher_name"
+                      autoComplete="off"
+                      value={teacherName}
+                      onChange={(e) => setTeacherName(e.target.value)}
+                      placeholder="e.g. Demo Teacher"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl text-xs sm:text-sm bg-slate-50 dark:bg-[#0B0C11] border border-slate-200 dark:border-[#1E212E] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 transition-all"
                     />
                   </div>
                 </div>

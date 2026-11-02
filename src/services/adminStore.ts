@@ -192,6 +192,26 @@ export const BASE_TEACHERS: Record<string, TeacherAccount> = {
     failedAttempts: 0,
     createdAt: new Date().toISOString(),
   },
+  'teacher@gmail.com': {
+    id: 'teacher@gmail.com',
+    name: 'Demo Teacher',
+    staffId: 'STAFF-1001',
+    email: 'teacher@gmail.com',
+    assignedClasses: [
+      { classLevel: 6, section: 'A' },
+      { classLevel: 7, section: 'A' },
+      { classLevel: 8, section: 'A' },
+      { classLevel: 9, section: 'A' },
+      { classLevel: 10, section: 'A' },
+      { classLevel: 10, section: 'D' },
+    ],
+    passwordHash: DEMO_1234_HASH,
+    plainPassword: '1234',
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
 };
 
 // ========================================================
@@ -501,68 +521,106 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
 /**
  * Real-time Supabase Teacher Lookup:
  * Checks local cache, and if not present, pulls live from Supabase PostgreSQL cloud table.
- * Supports email, Staff ID, full name, and demo shortcuts.
+ * Supports Staff ID, Email, Name, and demo aliases.
  */
-export const findTeacherByLoginAsync = async (input: string): Promise<TeacherAccount | null> => {
+export const findTeacherByLoginAsync = async (input: string, nameInput?: string): Promise<TeacherAccount | null> => {
   const clean = (input || '').trim();
-  if (!clean) return null;
+  const cleanName = (nameInput || '').trim();
+  if (!clean && !cleanName) return null;
 
-  // 1. Check local cache
-  const local = findTeacherByLogin(clean);
-  if (local) return local;
+  const cleanLower = clean.toLowerCase();
+  const cleanNameLower = cleanName.toLowerCase();
 
-  // 2. Query Supabase PostgreSQL cloud table
+  // 1. Shorthand & Demo check (matches teacher@gmail.com, teacher@neurova.edu, STAFF-1001, demo teacher, teacher, etc.)
+  if (
+    cleanLower.includes('teacher') ||
+    cleanLower.includes('demo') ||
+    cleanLower.includes('staff-1001') ||
+    cleanLower === '1001' ||
+    cleanNameLower.includes('teacher') ||
+    cleanNameLower.includes('demo')
+  ) {
+    const demo = BASE_TEACHERS['teacher@neurova.edu'] || {
+      id: 'teacher@neurova.edu',
+      name: 'Demo Teacher',
+      staffId: 'STAFF-1001',
+      email: 'teacher@neurova.edu',
+      plainPassword: '1234',
+      passwordHash: DEMO_1234_HASH,
+      assignedClasses: [
+        { classLevel: 6, section: 'A' },
+        { classLevel: 7, section: 'A' },
+        { classLevel: 8, section: 'A' },
+        { classLevel: 9, section: 'A' },
+        { classLevel: 10, section: 'A' },
+        { classLevel: 10, section: 'D' },
+      ],
+      isLocked: false,
+      failedAttempts: 0,
+      mustChangePassword: false,
+      createdAt: new Date().toISOString(),
+    };
+    return demo;
+  }
+
+  // 2. Check local cache
+  if (clean) {
+    const local = findTeacherByLogin(clean);
+    if (local) return local;
+  }
+  if (cleanName) {
+    const localByName = findTeacherByLogin(cleanName);
+    if (localByName) return localByName;
+  }
+
+  // 3. Query Supabase PostgreSQL cloud table
   const client = getSupabase();
   if (client) {
     try {
-      const cleanLower = clean.toLowerCase();
       const cleanUpper = clean.toUpperCase();
 
-      // Try exact email / id / staff_id match
-      let { data, error } = await client
-        .from('teachers')
-        .select('*')
-        .or(`id.ilike.${cleanLower},email.ilike.${cleanLower},staff_id.ilike.${cleanLower},staff_id.ilike.${cleanUpper}`)
-        .limit(1);
-
-      // If no match yet and search term is descriptive, try fuzzy name / email matching
-      if ((!data || data.length === 0) && clean.length >= 3) {
-        const res = await client
-          .from('teachers')
-          .select('*')
-          .or(`name.ilike.%${cleanLower}%,email.ilike.%${cleanLower}%,staff_id.ilike.%${cleanUpper}%`)
-          .limit(1);
-        data = res.data;
+      const orConditions: string[] = [];
+      if (clean) {
+        orConditions.push(`id.ilike.%${cleanLower}%`);
+        orConditions.push(`email.ilike.%${cleanLower}%`);
+        orConditions.push(`staff_id.ilike.%${cleanUpper}%`);
+        orConditions.push(`staff_id.ilike.%${cleanLower}%`);
+      }
+      if (cleanName) {
+        orConditions.push(`name.ilike.%${cleanNameLower}%`);
       }
 
-      if (data && data.length > 0) {
-        const row = data[0];
-        const teacher: TeacherAccount = {
-          id: row.id || row.email,
-          name: row.name || 'Teacher',
-          staffId: row.staff_id || 'STAFF-1001',
-          email: row.email || row.id,
-          plainPassword: row.plain_password || '1234',
-          passwordHash: row.password_hash || '',
-          assignedClasses: row.assigned_classes || [],
-          isLocked: row.is_locked || false,
-          failedAttempts: row.failed_attempts || 0,
-          mustChangePassword: false,
-          createdAt: row.created_at || new Date().toISOString(),
-        };
-        const allTeachers = getAllTeachers();
-        allTeachers[teacher.id] = teacher;
-        localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(allTeachers));
-        return teacher;
+      if (orConditions.length > 0) {
+        let { data } = await client
+          .from('teachers')
+          .select('*')
+          .or(orConditions.join(','))
+          .limit(1);
+
+        if (data && data.length > 0) {
+          const row = data[0];
+          const teacher: TeacherAccount = {
+            id: row.id || row.email,
+            name: row.name || 'Teacher',
+            staffId: row.staff_id || 'STAFF-1001',
+            email: row.email || row.id,
+            plainPassword: row.plain_password || '1234',
+            passwordHash: row.password_hash || '',
+            assignedClasses: row.assigned_classes || [],
+            isLocked: row.is_locked || false,
+            failedAttempts: row.failed_attempts || 0,
+            mustChangePassword: false,
+            createdAt: row.created_at || new Date().toISOString(),
+          };
+          const allTeachers = getAllTeachers();
+          allTeachers[teacher.id] = teacher;
+          localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(allTeachers));
+          return teacher;
+        }
       }
     } catch (err) {
       console.warn('findTeacherByLoginAsync Supabase error:', err);
     }
-  }
-
-  // 3. Fallback for demo teacher shorthand
-  if (clean.toLowerCase() === 'teacher' || clean.toLowerCase() === 'demo' || clean.toLowerCase() === 'demo teacher') {
-    return { ...BASE_TEACHERS['teacher@neurova.edu'] };
   }
 
   return null;
