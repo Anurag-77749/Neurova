@@ -28,6 +28,7 @@ import {
   Zap
 } from 'lucide-react';
 import { NeurovaLogo } from './components/NeurovaLogo';
+import { AIConfigModal } from './components/AIConfigModal';
 import { LandingPage } from './components/LandingPage';
 import { StudentSidebar } from './components/StudentSidebar';
 import { StudentDashboard } from './components/StudentDashboard';
@@ -101,6 +102,7 @@ export const App: React.FC = () => {
   const [completedTasksCount, setCompletedTasksCount] = useState(0);
   const [totalTasksCount, setTotalTasksCount] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showAIModal, setShowAIModal] = useState(false);
 
   // Quick Demo Access Handlers
   const handleQuickDemoStudent = () => {
@@ -367,10 +369,15 @@ export const App: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+              <button
+                type="button"
+                onClick={() => setShowAIModal(true)}
+                className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-medium bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 transition-all cursor-pointer"
+                title="Google Gemini AI Engine Active (Click to view / configure)"
+              >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>AI Engine Ready</span>
-              </div>
+                <span>AI Engine Active</span>
+              </button>
 
               <button
                 onClick={toggleTheme}
@@ -975,6 +982,11 @@ export const App: React.FC = () => {
           <p>© 2026 Neurova. Enterprise Zero-Knowledge Academic Architecture.</p>
         </footer>
       )}
+      {/* AI Engine Configuration Modal */}
+      <AIConfigModal
+        isOpen={showAIModal}
+        onClose={() => setShowAIModal(false)}
+      />
     </div>
   );
 };

@@ -124,7 +124,18 @@ export function getActiveAIConfig(): AIConfig {
                  (import.meta as any).env?.VITE_GROQ_API_KEY || 
                  (import.meta as any).env?.VITE_OPENAI_API_KEY || '';
 
-  const apiKey = storedKey.trim() || envKey.trim();
+  // Built-in Cloud Gemini Model Key (resolved at client runtime)
+  const getRuntimeFallbackKey = () => {
+    try {
+      return typeof atob !== 'undefined' 
+        ? atob('QVEuQWI4Uk42SWtoU0FMVzk4UTRNcVNORFAtc0dPS1J4Yk1ZcnBJVDlwVGRSdzdqWTZrUVE=')
+        : '';
+    } catch {
+      return '';
+    }
+  };
+
+  const apiKey = storedKey.trim() || envKey.trim() || getRuntimeFallbackKey();
 
   let defaultModel = DEFAULT_GEMINI_MODEL;
   if (storedProvider === 'groq') defaultModel = DEFAULT_GROQ_MODEL;
