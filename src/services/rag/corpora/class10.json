@@ -1,0 +1,600 @@
+[
+  {
+    "id": "ncert-c10-sci-ch1",
+    "classLevel": 10,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 1,
+    "chapterTitle": "Chemical Reactions and Equations",
+    "sectionNumber": "1.1 - 1.3",
+    "sectionTitle": "Balancing Equations, Combination, Decomposition, Displacement, Double Displacement & Redox",
+    "pageNumber": 1,
+    "content": "Chemical Reactions & Balancing:\nA process in which reactants transform into products with new physical and chemical properties. According to the Law of Conservation of Mass, the number of atoms of each element must remain equal on both sides of a balanced chemical equation.\nTypes of Chemical Reactions:\n1. Combination Reaction: Two or more substances combine to form a single product:\n   CaO(s) + H\u2082O(l) --> Ca(OH)\u2082(aq) + Heat  (Quicklime to Slaked lime, highly exothermic).\n2. Decomposition Reaction: A single reactant breaks down into simpler products:\n   - Thermal: 2FeSO\u2084(s) --Heat--> Fe\u2082O\u2083(s) + SO\u2082(g) + SO\u2083(g); CaCO\u2083 --Heat--> CaO + CO\u2082\n   - Electrolytic: 2H\u2082O(l) --Electricity--> 2H\u2082(g) + O\u2082(g)\n   - Photolytic: 2AgCl(s) --Sunlight--> 2Ag(s) + Cl\u2082(g) (used in black-and-white photography).\n3. Displacement Reaction: A more reactive metal displaces a less reactive metal from its salt solution:\n   Fe(s) + CuSO\u2084(aq) [Blue] --> FeSO\u2084(aq) [Green] + Cu(s) [Brown deposit].\n4. Double Displacement Reaction: Mutual exchange of ions between two compounds forming an insoluble precipitate:\n   Na\u2082SO\u2084(aq) + BaCl\u2082(aq) --> BaSO\u2084(s) [White ppt] + 2NaCl(aq).\n5. Oxidation and Reduction (Redox):\n   - Oxidation: Gain of oxygen or loss of hydrogen/electrons.\n   - Reduction: Loss of oxygen or gain of hydrogen/electrons.\n   CuO + H\u2082 --Heat--> Cu + H\u2082O (CuO is reduced to Cu; H\u2082 is oxidised to H\u2082O).\nEffects in Everyday Life:\n- Corrosion: Slow oxidation of metals by air, moisture, and acids (Rusting of iron: hydrated ferric oxide Fe\u2082O\u2083\u00b7xH\u2082O; green coating on copper: basic copper carbonate; black silver sulphide on silver).\n- Rancidity: Oxidation of fats and oils in food causing foul smell and rancid taste, prevented by adding antioxidants and flushing packets with unreactive Nitrogen gas.",
+    "formulas": [
+      "CaO + H\u2082O --> Ca(OH)\u2082 + Heat  (Quicklime to Slaked Lime)",
+      "2AgCl --Sunlight--> 2Ag + Cl\u2082  (Photolytic Decomposition)",
+      "Fe + CuSO\u2084 --> FeSO\u2084 + Cu  (Displacement)",
+      "Na\u2082SO\u2084 + BaCl\u2082 --> BaSO\u2084(s) + 2NaCl  (Double Displacement Precipitation)"
+    ],
+    "keyTerms": [
+      "Balanced Chemical Equation",
+      "Combination Reaction",
+      "Thermal Decomposition",
+      "Photolytic",
+      "Displacement",
+      "Precipitate",
+      "Redox",
+      "Oxidising Agent",
+      "Reducing Agent",
+      "Corrosion",
+      "Rancidity"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why is respiration considered an exothermic reaction?",
+        "answer": "During digestion, food carbohydrates are broken down into glucose. In cellular respiration, glucose combines with oxygen in cells releasing energy in the form of ATP: C6H12O6 + 6O2 -> 6CO2 + 6H2O + Energy (ATP)."
+      }
+    ],
+    "summary": "Chemical equations are balanced to conserve mass. Reactions include Combination, Decomposition, Displacement, Double Displacement (precipitation), and Redox. Corrosion and rancidity result from oxidation."
+  },
+  {
+    "id": "ncert-c10-sci-ch2",
+    "classLevel": 10,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 2,
+    "chapterTitle": "Acids, Bases and Salts",
+    "sectionNumber": "2.1 - 2.4",
+    "sectionTitle": "pH Scale, Importance in Everyday Life, Bleaching Powder, Baking Soda, Washing Soda & Plaster of Paris",
+    "pageNumber": 17,
+    "content": "Acids and Bases in Aqueous Solution:\n- Acids produce H\u2083O\u207a (hydronium) ions in water: HCl + H\u2082O --> H\u2083O\u207a + Cl\u207b.\n- Bases produce OH\u207b (hydroxide) ions in water: NaOH --> Na\u207a + OH\u207b. Water-soluble bases are called Alkalis.\nThe pH Scale:\nMeasures hydrogen ion concentration: pH = -log\u2081\u2080[H\u207a].\n- Neutral: pH = 7. Acidic: pH < 7. Basic / Alkaline: pH > 7.\nEveryday pH Significance:\n- Human body operates within narrow pH range of 7.0 to 7.8.\n- Acid Rain: Rainwater with pH < 5.6, harming aquatic life.\n- Tooth Decay: Enamel (calcium hydroxyapatite) corrodes when mouth pH falls below 5.5 due to acid-producing bacteria.\nCommon Commercial Salts:\n1. Bleaching Powder (CaOCl\u2082): Produced by reaction of chlorine gas on dry slaked lime:\n   Ca(OH)\u2082 + Cl\u2082 --> CaOCl\u2082 + H\u2082O (disinfectant and bleaching agent in textile/paper industry).\n2. Baking Soda (Sodium hydrogen carbonate, NaHCO\u2083):\n   NaCl + H\u2082O + CO\u2082 + NH\u2083 --> NH\u2084Cl + NaHCO\u2083.\n   On heating: 2NaHCO\u2083 --Heat--> Na\u2082CO\u2083 + H\u2082O + CO\u2082 (CO\u2082 bubbles make cakes soft and spongy).\n3. Washing Soda (Na\u2082CO\u2083\u00b710H\u2082O): Sodium carbonate decahydrate, used in glass/soap industry and removing permanent water hardness.\n4. Plaster of Paris (CaSO\u2084\u00b7\u00bdH\u2082O): Calcium sulphate hemihydrate, made by heating gypsum at 373 K:\n   CaSO\u2084\u00b72H\u2082O --373K--> CaSO\u2084\u00b7\u00bdH\u2082O + 1\u00bd H\u2082O. Rehydrates back into hard solid gypsum.",
+    "formulas": [
+      "pH = -log\u2081\u2080[H\u207a]  (Scale: 0 - 14, Neutral = 7)",
+      "Ca(OH)\u2082 + Cl\u2082 --> CaOCl\u2082 + H\u2082O  (Bleaching Powder)",
+      "2NaHCO\u2083 --Heat--> Na\u2082CO\u2083 + H\u2082O + CO\u2082  (Baking Soda)",
+      "CaSO\u2084\u00b72H\u2082O --373 K--> CaSO\u2084\u00b7\u00bdH\u2082O + 1\u00bd H\u2082O  (Plaster of Paris)"
+    ],
+    "keyTerms": [
+      "Hydronium Ion",
+      "Alkalis",
+      "pH Scale",
+      "Acid Rain",
+      "Tooth Enamel",
+      "Bleaching Powder",
+      "Baking Soda",
+      "Washing Soda",
+      "Plaster of Paris",
+      "Gypsum",
+      "Water of Crystallisation"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the commercial name and formula of Plaster of Paris? Why should it be stored in moisture-proof containers?",
+        "answer": "Plaster of Paris is Calcium sulphate hemihydrate (CaSO4\u00b71/2H2O). It must be kept in moisture-proof containers because it absorbs atmospheric water to form hard rock gypsum (CaSO4\u00b72H2O), losing its setting property."
+      }
+    ],
+    "summary": "pH scale (0-14) indicates acidity (<7 acid, 7 neutral, >7 base). Essential salts: Bleaching powder CaOCl\u2082, Baking soda NaHCO\u2083, Washing soda Na\u2082CO\u2083\u00b710H\u2082O, and Plaster of Paris CaSO\u2084\u00b7\u00bdH\u2082O."
+  },
+  {
+    "id": "ncert-c10-sci-ch3",
+    "classLevel": 10,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 3,
+    "chapterTitle": "Metals and Non-metals",
+    "sectionNumber": "3.1 - 3.5",
+    "sectionTitle": "Reactivity Series, Ionic Bonds, Metallurgy (Roasting, Calcination), Thermite Reaction & Alloys",
+    "pageNumber": 37,
+    "content": "Reactivity Series of Metals (Decreasing order):\nK > Na > Ca > Mg > Al > Zn > Fe > Pb > [H] > Cu > Hg > Ag > Au.\nIonic Bonding:\nMetals lose valence electrons forming cations; non-metals gain electrons forming anions. Electrostatic attraction binds them into Ionic Compounds (e.g., Na\u207a + Cl\u207b --> NaCl; Mg\u00b2\u207a + 2Cl\u207b --> MgCl\u2082).\nProperties of Ionic Compounds: High melting/boiling points due to strong inter-ionic electrostatic bonds, solid and brittle, soluble in water, conduct electricity in molten state or aqueous solution.\nMetallurgy (Extraction of Metals from Ores):\n- Ores vs Minerals: Minerals from which metals can be extracted profitably are Ores.\n- Concentration of Ore / Gangue removal.\n- Moderate Reactivity Metals (Zinc, Iron):\n  1. Roasting: Heating sulphide ores strongly in presence of excess air: 2ZnS + 3O\u2082 --Heat--> 2ZnO + 2SO\u2082.\n  2. Calcination: Heating carbonate ores strongly in limited air: ZnCO\u2083 --Heat--> ZnO + CO\u2082.\n  3. Reduction with Carbon: ZnO + C --> Zn + CO.\n- High Reactivity Metals (Aluminium, Sodium): Extracted by Electrolytic Reduction of molten chloride/oxide (Aluminium extracted from molten Al\u2082O\u2083 using cryolite).\n- Thermite Reaction: Reduction of iron oxide by aluminium powder:\n  Fe\u2082O\u2083(s) + 2Al(s) --> 2Fe(l) + Al\u2082O\u2083(s) + Heat (molten iron joins railway tracks).\n- Alloys: Homogeneous mixture of two or more metals, or a metal and a non-metal:\n  Brass (Cu + Zn), Bronze (Cu + Sn), Solder (Pb + Sn, low melting point), Stainless Steel (Fe + Ni + Cr + C). Amalgam is an alloy containing Mercury.",
+    "formulas": [
+      "Roasting: 2ZnS + 3O\u2082 --Heat--> 2ZnO + 2SO\u2082",
+      "Calcination: ZnCO\u2083 --Heat--> ZnO + CO\u2082",
+      "Thermite: Fe\u2082O\u2083 + 2Al --> 2Fe(l) + Al\u2082O\u2083 + Heat",
+      "Alloys: Brass (Cu+Zn), Bronze (Cu+Sn), Solder (Pb+Sn), Stainless Steel (Fe+Ni+Cr+C)"
+    ],
+    "keyTerms": [
+      "Reactivity Series",
+      "Ionic Bond",
+      "Lattice Energy",
+      "Ores",
+      "Gangue",
+      "Roasting",
+      "Calcination",
+      "Thermite Process",
+      "Anodising",
+      "Alloy",
+      "Amalgam"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the thermite reaction? Mention its industrial application.",
+        "answer": "The thermite reaction is the highly exothermic reduction of iron(III) oxide by aluminium powder: Fe2O3(s) + 2Al(s) -> 2Fe(l) + Al2O3(s) + Heat. The immense heat melts iron, which is used on-site to weld cracked railway tracks and heavy machine parts."
+      }
+    ],
+    "summary": "Reactivity series dictates extraction: electrolytic reduction for reactive metals (Na, Al), roasting/calcination with carbon for moderate metals (Zn, Fe). Thermite reaction yields molten iron for rails. Alloys improve metal properties."
+  },
+  {
+    "id": "ncert-c10-sci-ch4",
+    "classLevel": 10,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 4,
+    "chapterTitle": "Carbon and its Compounds",
+    "sectionNumber": "4.1 - 4.5",
+    "sectionTitle": "Covalent Bonding, Catenation, Tetravalency, Homologous Series, Esterification & Micelle Cleansing",
+    "pageNumber": 58,
+    "content": "Covalent Bonding in Carbon:\nCarbon (atomic number 6, electronic configuration 2,4) cannot form C\u2074\u207a (requires enormous energy to remove 4 electrons) or C\u2074\u207b (6 protons cannot hold 10 electrons). Hence, carbon shares its 4 valence electrons forming 4 Covalent Bonds.\nVersatile Nature of Carbon:\n1. Catenation: Unique property of carbon atoms to link with one another forming long chains, branched chains, or closed rings.\n2. Tetravalency: Capability of bonding with 4 other monovalent atoms.\nHydrocarbons:\n- Saturated (Alkanes, single bonds C-C): General formula C_n H_(2n+2) (e.g., CH\u2084, C\u2082H\u2086).\n- Unsaturated:\n  * Alkenes (double bond C=C): General formula C_n H_(2n) (e.g., C\u2082H\u2084 Ethene).\n  * Alkynes (triple bond C\u2261C): General formula C_n H_(2n-2) (e.g., C\u2082H\u2082 Ethyne).\nHomologous Series:\nFamily of organic compounds with same functional group where adjacent members differ by a -CH\u2082- unit and 14 u molecular mass.\nKey Organic Chemical Reactions:\n- Combustion: CH\u2084 + 2O\u2082 --> CO\u2082 + 2H\u2082O + Heat and Light.\n- Addition Reaction (Hydrogenation): Unsaturated vegetable oils + H\u2082 --Ni catalyst--> Saturated vegetable ghee.\n- Esterification: Ethanoic acid + Ethanol --conc. H\u2082SO\u2084--> Ethyl ethanoate (fruity sweet smell ester) + Water.\n- Saponification: Alkaline hydrolysis of esters producing soap:\n  CH\u2083COOC\u2082H\u2085 + NaOH --> CH\u2083COONa (Soap) + C\u2082H\u2085OH.\nSoaps and Detergents (Micelle Mechanism):\n- Soap molecule has a hydrophilic ionic head (-COO\u207bNa\u207a) and a hydrophobic hydrocarbon tail.\n- In water, tails orient inward toward oily dirt, while heads face outwards, forming a spherical cluster called a Micelle which emulsifies grease and washes it away.",
+    "formulas": [
+      "Alkanes: C_n H_(2n+2)",
+      "Alkenes: C_n H_(2n)",
+      "Alkynes: C_n H_(2n-2)",
+      "Esterification: CH\u2083COOH + C\u2082H\u2085OH --H\u207a--> CH\u2083COOC\u2082H\u2085 + H\u2082O",
+      "Hydrogenation: R\u2082C=CR\u2082 + H\u2082 --Ni--> R\u2082CH-CHR\u2082"
+    ],
+    "keyTerms": [
+      "Covalent Bond",
+      "Catenation",
+      "Tetravalency",
+      "Alkanes",
+      "Alkenes",
+      "Alkynes",
+      "Homologous Series",
+      "Functional Group",
+      "Esterification",
+      "Saponification",
+      "Micelle",
+      "Detergents"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain the formation of micelles and the cleansing action of soap.",
+        "answer": "Soap molecules have a hydrophobic hydrocarbon tail and a hydrophilic ionic head. In water, hydrophobic tails attach to oily dirt while hydrophilic heads face outward towards water, creating a spherical micelle that suspends dirt in water for easy rinsing."
+      }
+    ],
+    "summary": "Carbon forms covalent bonds via catenation and tetravalency. Alkanes CnH2n+2, Alkenes CnH2n, Alkynes CnH2n-2. Esters give fruity fragrance; soaps cleanse by forming spherical micelles."
+  },
+  {
+    "id": "ncert-c10-sci-ch5",
+    "classLevel": 10,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 5,
+    "chapterTitle": "Periodic Classification of Elements",
+    "sectionNumber": "5.1 - 5.3",
+    "sectionTitle": "Dobereiner's Triads, Newlands' Octaves, Mendeleev's Periodic Law & Modern Periodic Table (Moseley)",
+    "pageNumber": 79,
+    "content": "Historical Milestones in Element Classification:\n1. D\u00f6bereiner's Triads (1817): Grouped elements in triads where atomic mass of middle element was roughly the arithmetic mean of the other two (e.g., Li 6.9, Na 23, K 39; Ca 40, Sr 87.6, Ba 137).\n2. Newlands' Law of Octaves (1866): Arranged elements by increasing atomic masses; every eighth element had properties similar to the first (like musical notes Sa, Re, Ga...). Failed after Calcium; did not accommodate noble gases.\n3. Mendeleev's Periodic Table (1869):\n   - Periodic Law: 'The properties of elements are the periodic function of their atomic masses.'\n   - Predicted undiscovered elements and left gaps (Eka-boron -> Scandium, Eka-aluminium -> Gallium, Eka-silicon -> Germanium).\n   - Limitations: Position of Hydrogen anomalous; isotopes could not be assigned separate positions; anomalous atomic mass order (Co before Ni).\nModern Periodic Table (Henry Moseley, 1913):\n- Modern Periodic Law: 'Properties of elements are a periodic function of their Atomic Number (Z).'\n- Structure: 18 vertical columns called Groups and 7 horizontal rows called Periods.\nPeriodic Trends in Properties:\n- Valency: Across period, increases from 1 to 4 then decreases to 0; remains constant down a group.\n- Atomic Size (Radius): Decreases across a period (due to increasing nuclear charge pulling electrons inward); increases down a group (due to addition of new electron shells).\n- Metallic Character: Decreases across a period (electropositive to electronegative); increases down a group.\n- Non-metallic Character: Increases across a period; decreases down a group.",
+    "formulas": [
+      "Mendeleev Law: Properties = f(Atomic Mass)",
+      "Modern Periodic Law: Properties = f(Atomic Number Z)",
+      "Trends: Atomic Size decreases across Period, increases down Group"
+    ],
+    "keyTerms": [
+      "Dobereiner's Triads",
+      "Newlands' Octaves",
+      "Mendeleev's Periodic Law",
+      "Eka-Aluminium",
+      "Modern Periodic Table",
+      "Henry Moseley",
+      "Groups (18)",
+      "Periods (7)",
+      "Atomic Radius",
+      "Electronegativity"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "How does the electronic configuration of an atom relate to its position in the Modern Periodic Table?",
+        "answer": "The number of valence electrons determines the group number (e.g., 2 valence electrons = Group 2), and the total number of electron shells determines the period number (e.g., 3 shells K, L, M = Period 3)."
+      }
+    ],
+    "summary": "Mendeleev arranged elements by atomic mass; Moseley's Modern Periodic Table arranges 18 groups and 7 periods by atomic number Z. Atomic radius decreases across periods and increases down groups."
+  },
+  {
+    "id": "ncert-c10-sci-ch6",
+    "classLevel": 10,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 6,
+    "chapterTitle": "Life Processes",
+    "sectionNumber": "6.1 - 6.5",
+    "sectionTitle": "Nutrition, Aerobic/Anaerobic Respiration, Double Circulation & Excretion (Nephron)",
+    "pageNumber": 93,
+    "content": "Life processes are the essential physiological maintenance functions:\n1. Nutrition:\n   - Autotrophic: Photosynthesis 6CO\u2082 + 6H\u2082O --> C\u2086H\u2081\u2082O\u2086 + 6O\u2082.\n   - Heterotrophic (Humans): Mouth (salivary amylase digests starch) -> Stomach (HCl activates pepsin for protein breakdown) -> Small Intestine (Bile emulsifies fats; Pancreatic trypsin/lipase complete digestion; Villi absorb nutrients into blood).\n2. Respiration:\n   Glucose (6C) breaks down into Pyruvate (3C) in cytoplasm (Glycolysis):\n   - In presence of O\u2082 (Mitochondria): Pyruvate --> 6CO\u2082 + 6H\u2082O + 38 ATP (Aerobic).\n   - In absence of O\u2082 (Yeast fermentation): Pyruvate --> 2 Ethanol + 2 CO\u2082 + 2 ATP.\n   - In lack of O\u2082 (Human muscle cells during sprinting): Pyruvate --> 2 Lactic Acid + 2 ATP (causes muscle fatigue and cramps).\n3. Transportation:\n   - Double Circulation in Humans: Heart has 4 chambers. Deoxygenated blood from body enters Right Atrium -> Right Ventricle -> Lungs via Pulmonary Artery. Oxygenated blood from lungs enters Left Atrium via Pulmonary Veins -> Left Ventricle -> Aorta to whole body. Ensures complete separation of oxygenated and deoxygenated blood for high metabolic efficiency.\n   - Plants: Xylem transports water/minerals unidirectionally via transpiration suction; Phloem translocates sucrose and amino acids bidirectionally using ATP energy.\n4. Excretion:\n   - Kidneys contain ~1 million filtration units called Nephrons.\n   - Filtration Process: Glomerulus inside Bowman's Capsule performs ultrafiltration -> Renal Tubule selectively reabsorbs glucose, amino acids, salts, and major water -> Collecting duct collects concentrated Urine containing urea and uric acid.",
+    "formulas": [
+      "Aerobic: C\u2086H\u2081\u2082O\u2086 + 6O\u2082 --> 6CO\u2082 + 6H\u2082O + 38 ATP",
+      "Anaerobic Yeast: C\u2086H\u2081\u2082O\u2086 --> 2 C\u2082H\u2085OH + 2 CO\u2082 + 2 ATP",
+      "Muscle Cramp: C\u2086H\u2081\u2082O\u2086 --> 2 Lactic Acid + 2 ATP",
+      "Blood Pressure: Normal Systolic/Diastolic = 120/80 mm Hg"
+    ],
+    "keyTerms": [
+      "Salivary Amylase",
+      "Pepsin",
+      "Bile",
+      "Villi",
+      "Aerobic",
+      "Anaerobic",
+      "Lactic Acid",
+      "Double Circulation",
+      "Aorta",
+      "Pulmonary Artery",
+      "Xylem",
+      "Phloem",
+      "Nephron",
+      "Bowman's Capsule",
+      "Glomerulus",
+      "Dialysis"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the structural and functional unit of the human kidney? Explain its working.",
+        "answer": "The Nephron is the structural and functional unit. Blood undergoes ultrafiltration under high pressure in the glomerulus inside Bowman's capsule. As the filtrate flows through the renal tubule, essential glucose, amino acids, and water are reabsorbed, leaving waste urea as urine."
+      }
+    ],
+    "summary": "Life processes: Nutrition (villi absorption), Respiration (aerobic 38 ATP vs anaerobic lactic acid), Transportation (4-chambered double circulation heart, xylem/phloem), and Excretion via kidney nephrons."
+  },
+  {
+    "id": "ncert-c10-sci-ch7",
+    "classLevel": 10,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 7,
+    "chapterTitle": "Control and Coordination",
+    "sectionNumber": "7.1 - 7.3",
+    "sectionTitle": "Nervous System, Reflex Arc, Brain (Forebrain, Midbrain, Hindbrain), Plant Tropisms & Endocrine Glands",
+    "pageNumber": 115,
+    "content": "Nervous System & Reflex Action:\n- Neuron: Structural unit of nervous system. Electrical impulse travel: Dendrite -> Cell body (Cyton) -> Axon -> Synapse (chemical neurotransmitter gap).\n- Reflex Arc: Involuntary, automatic, instantaneous response to a stimulus without conscious brain involvement:\n  Receptor (skin) -> Sensory Neuron -> Spinal Cord (Relay Neuron) -> Motor Neuron -> Effector (Muscle contract).\nHuman Brain Anatomy:\n1. Forebrain (Cerebrum): Largest part, seat of intelligence, memory, reasoning, voluntary movements, senses (hearing, sight, smell).\n2. Midbrain: Controls involuntary visual and auditory reflex actions.\n3. Hindbrain:\n   - Cerebellum: Controls precision, posture, and body balance (walking in straight line, riding bicycle).\n   - Medulla: Controls involuntary vital functions (blood pressure, salivation, vomiting).\n   - Pons: Regulates respiration rhythm.\nCoordination in Plants (Phytohormones):\n- Plant Movements:\n  1. Tropic Movements (Directional growth): Phototropism (towards light, mediated by Auxin), Geotropism (roots grow towards gravity), Hydrotropism (towards water), Chemotropism (pollen tube growth towards ovule).\n  2. Nastic Movements (Non-directional turgor changes): Sensitive plant (Mimosa pudica 'Touch-me-not' leaves drop).\n- Plant Hormones: Auxin (cell elongation), Gibberellins (stem growth), Cytokinins (cell division, fruit opening), Abscisic Acid (stress hormone, inhibits growth, wilting of leaves).\nAnimal Endocrine Hormones:\nPituitary (Growth hormone), Thyroid (Thyroxine, needs Iodine), Pancreas (Insulin), Adrenal (Adrenaline fight-or-flight), Testes (Testosterone), Ovaries (Estrogen).",
+    "formulas": [
+      "Reflex Arc Pathway: Stimulus -> Receptor -> Sensory Neuron -> Spinal Cord -> Motor Neuron -> Effector"
+    ],
+    "keyTerms": [
+      "Neuron",
+      "Synapse",
+      "Reflex Arc",
+      "Cerebrum",
+      "Cerebellum",
+      "Medulla",
+      "Phototropism",
+      "Auxin",
+      "Cytokinin",
+      "Abscisic Acid",
+      "Insulin",
+      "Thyroxine",
+      "Adrenaline"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is a reflex arc? Trace the sequence of events when you touch a hot object.",
+        "answer": "A reflex arc is the nerve pathway of an automatic involuntary action. When touching a hot plate, heat receptors in skin fire sensory neurons to the spinal cord relay neuron, which instantly signals motor neurons to contract arm muscles and withdraw the hand."
+      }
+    ],
+    "summary": "Nervous coordination operates via neurons and reflex arcs. Brain has cerebrum (memory), cerebellum (balance), and medulla (involuntary). Plant tropisms are driven by auxins; endocrine glands secrete hormones."
+  },
+  {
+    "id": "ncert-c10-sci-ch8",
+    "classLevel": 10,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 8,
+    "chapterTitle": "How do Organisms Reproduce?",
+    "sectionNumber": "8.1 - 8.4",
+    "sectionTitle": "Asexual Reproduction (Fission, Regeneration, Spores), Flowering Plant Pollination & Human Reproductive Health",
+    "pageNumber": 128,
+    "content": "Reproduction ensures the continuity of species.\nI. Asexual Reproduction:\n- Binary Fission: Amoeba, Leishmania. Multiple Fission: Plasmodium (malaria parasite).\n- Budding: Hydra and Yeast.\n- Fragmentation: Spirogyra.\n- Regeneration: Planaria and Hydra can regenerate entire new organisms from cut fragments via specialized regenerative cells.\n- Spore Formation: Rhizopus (bread mould) produces sporangia containing airborne spores.\n- Vegetative Propagation: Layering, grafting, cutting; Bryophyllum leaf buds.\nII. Sexual Reproduction in Flowering Plants (Angiosperms):\n- Flower: Stamen (Male: Anther produces pollen grains) and Carpel/Pistil (Female: Stigma, Style, Ovary with ovules).\n- Pollination: Transfer of pollen from anther to stigma (Self vs Cross).\n- Double Fertilisation: Pollen tube grows down style into ovule. One male gamete fuses with egg cell forming Zygote (Syngamy); second male gamete fuses with two polar nuclei forming Triploid Endosperm (Triple Fusion).\n- Ovary becomes Fruit; Ovules become Seeds.\nIII. Human Reproduction:\n- Male System: Testes produce sperms and testosterone (located in scrotum outside abdominal cavity to maintain 2-2.5\u00b0C lower temperature for spermatogenesis), vas deferens, prostate and seminal vesicles (provide fluid nutrition).\n- Female System: Ovaries produce eggs and estrogen/progesterone, Fallopian tubes (site of fertilisation), Uterus (site of embryo implantation and placenta nourishment), Vagina.\n- Menstruation: If egg is not fertilised, uterine lining sheds along with blood and mucus over 3 to 5 days every 28 days.\n- Contraception: Barrier methods (condoms prevent STDs like HIV/Gonorrhoea), Chemical methods (oral pills), Surgical methods (Vasectomy in males, Tubectomy in females), Intrauterine devices (Copper-T).",
+    "formulas": [
+      "Double Fertilisation: Syngamy (Egg + Sperm -> Zygote) + Triple Fusion (2 Polar Nuclei + Sperm -> Endosperm)",
+      "Scrotal Temperature = 2 to 2.5\u00b0C below core body temperature"
+    ],
+    "keyTerms": [
+      "Binary Fission",
+      "Regeneration",
+      "Planaria",
+      "Spore Formation",
+      "Stamen",
+      "Carpel",
+      "Double Fertilisation",
+      "Endosperm",
+      "Placenta",
+      "Menstruation",
+      "Vasectomy",
+      "Tubectomy",
+      "Contraception"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the function of the placenta in human reproduction?",
+        "answer": "The placenta is a disc-like vascular tissue embedded in the uterine wall containing villi. It provides a large surface area for glucose and oxygen to pass from mother's blood to the developing embryo, and removes waste products."
+      }
+    ],
+    "summary": "Organisms reproduce asexually (fission, budding, regeneration) or sexually. Flowering plants undergo double fertilisation. Human fertilisation occurs in fallopian tubes, developing in uterus via placenta."
+  },
+  {
+    "id": "ncert-c10-sci-ch9",
+    "classLevel": 10,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 9,
+    "chapterTitle": "Heredity and Evolution",
+    "sectionNumber": "9.1 - 9.3",
+    "sectionTitle": "Mendel's Laws (Monohybrid & Dihybrid), Phenotype vs Genotype & Sex Determination in Humans",
+    "pageNumber": 142,
+    "content": "Heredity is the biological transmission of traits from parents to offspring.\nGregor Johann Mendel's Experiments with Garden Pea (Pisum sativum):\n1. Monohybrid Cross (One pair of contrasting traits, e.g., Tall TT \u00d7 Dwarf tt):\n   - F1 Generation: All plants are Tall (Tt, heterozygous).\n   - F2 Generation (Selfing Tt \u00d7 Tt):\n     * Phenotypic Ratio = 3 Tall : 1 Dwarf (3:1).\n     * Genotypic Ratio = 1 TT : 2 Tt : 1 tt (1:2:1).\n   - Law of Dominance: The allele that expresses in F1 is Dominant (T); the unexpressed allele is Recessive (t).\n   - Law of Segregation: During gamete formation, the two alleles separate so each gamete carries only one allele.\n2. Dihybrid Cross (Two pairs of traits, e.g., Round Yellow RRYY \u00d7 Wrinkled Green rryy):\n   - F1 Generation: All Round Yellow (RrYy).\n   - F2 Generation:\n     * Phenotypic Ratio = 9 Round Yellow : 3 Round Green : 3 Wrinkled Yellow : 1 Wrinkled Green (9:3:3:1).\n   - Law of Independent Assortment: Alleles of different genes assort independently during gamete formation.\nSex Determination in Human Beings:\n- Humans possess 23 pairs of chromosomes: 22 pairs are Autosomes and 1 pair are Sex Chromosomes.\n- Human females have a perfect pair of sex chromosomes (XX).\n- Human males have a mismatched pair (XY).\n- All ova (eggs) produced by females carry an X chromosome. Sperms produced by males are 50% X-bearing and 50% Y-bearing.\n  Egg (X) + Sperm (X) --> XX (Female child).\n  Egg (X) + Sperm (Y) --> XY (Male child).\n- Scientifically, the father's sperm strictly determines the biological sex of the child with 50% probability.",
+    "formulas": [
+      "Mendel Monohybrid F2 Phenotypic Ratio: 3 : 1",
+      "Mendel Monohybrid F2 Genotypic Ratio: 1 (TT) : 2 (Tt) : 1 (tt)",
+      "Mendel Dihybrid F2 Phenotypic Ratio: 9 : 3 : 3 : 1",
+      "Sex Determination: Father's Sperm (X or Y) decides gender"
+    ],
+    "keyTerms": [
+      "Heredity",
+      "Mendel",
+      "Alleles",
+      "Dominant",
+      "Recessive",
+      "Phenotype",
+      "Genotype",
+      "Monohybrid Cross",
+      "Dihybrid Cross",
+      "Sex Chromosomes",
+      "Autosomes",
+      "Punnett Square"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "How is the sex of a child determined in human beings?",
+        "answer": "Human females produce eggs carrying only X chromosomes. Human males produce 50% X-bearing sperms and 50% Y-bearing sperms. If an X-sperm fertilises the egg, an XX female child is formed; if a Y-sperm fertilises the egg, an XY male child is formed. Hence, the father determines sex."
+      }
+    ],
+    "summary": "Mendel established inheritance: monohybrid cross yields 3:1 phenotypic (1:2:1 genotypic) ratio; dihybrid cross yields 9:3:3:1. Paternal sex chromosomes (XY) determine human sex."
+  },
+  {
+    "id": "ncert-c10-sci-ch14",
+    "classLevel": 10,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 14,
+    "chapterTitle": "Sources of Energy",
+    "sectionNumber": "14.1 - 14.5",
+    "sectionTitle": "Conventional vs Non-conventional Energy, Thermal, Hydro, Biogas, Solar, Nuclear & Environmental Consequences",
+    "pageNumber": 242,
+    "content": "Classification of Energy Sources:\n- Renewable Sources: Replaced naturally over short periods (Solar, Wind, Hydro, Biomass, Geothermal, Ocean).\n- Non-renewable Sources: Exhaustible fossil fuels formed over millions of years (Coal, Petroleum, Natural Gas).\nConventional Sources of Energy:\n1. Fossil Fuels: Cause greenhouse gas emissions, acid rain, air pollution.\n2. Thermal Power Plants: Burning fossil fuels to produce steam driving turbine generators.\n3. Hydro Power Plants: Converting gravitational potential energy of trapped river water in high dams into electrical energy (clean, renewable, but submerges forests and displaces communities).\n4. Biomass & Biogas Plant:\n   - Cow-dung, crop residue, and sewage decomposed by anaerobic microbes in a domed Biogas digester producing Biogas (75% Methane CH\u2084, burns with high calorific value without smoke) and organic manure rich in nitrogen and phosphorus.\nNon-Conventional Sources of Energy:\n1. Solar Energy: Solar cookers (black surface + glass sheet greenhouse trap + concave reflector), Solar cells made of Silicon converting sunlight directly into electricity (0.5-1 V per cell).\n2. Wind Energy: Requires wind speeds > 15 km/h to spin windmill turbines.\n3. Nuclear Energy:\n   - Nuclear Fission: Heavy nucleus (Uranium-235) struck by neutron splits into lighter nuclei releasing massive energy: E = \u0394m \u00b7 c\u00b2 (Einstein). High risk of radioactive contamination and nuclear waste disposal.\n   - Nuclear Fusion: Combining light nuclei (Hydrogen into Helium) at extreme temperature (powers Sun and stars).",
+    "formulas": [
+      "Einstein Mass-Energy Equivalence: E = \u0394m \u00b7 c\u00b2",
+      "Biogas Composition: ~75% Methane (CH\u2084) + CO\u2082 + H\u2082"
+    ],
+    "keyTerms": [
+      "Fossil Fuels",
+      "Thermal Power",
+      "Hydroelectric",
+      "Biomass",
+      "Biogas",
+      "Methane",
+      "Solar Cells",
+      "Silicon",
+      "Windmill",
+      "Nuclear Fission",
+      "Nuclear Fusion",
+      "Radioactive Waste"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are the advantages of using biogas over burning dried cow-dung cakes?",
+        "answer": "Biogas has high calorific value, burns cleanly without smoke or ash, does not cause respiratory pollution, and the spent slurry left behind serves as an excellent organic manure rich in nitrogen and phosphorus."
+      }
+    ],
+    "summary": "Energy sources are renewable (solar, wind, biogas, hydro) or non-renewable (fossil fuels). Biogas produces 75% clean methane. Nuclear fission releases enormous energy via E = mc\u00b2."
+  },
+  {
+    "id": "ncert-c10-sci-ch15",
+    "classLevel": 10,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 10",
+    "chapterNumber": 15,
+    "chapterTitle": "Our Environment",
+    "sectionNumber": "15.1 - 15.3",
+    "sectionTitle": "Ecosystem, Food Chains, Trophic Levels, 10% Law of Energy, Biological Magnification & Ozone Depletion",
+    "pageNumber": 256,
+    "content": "An Ecosystem consists of Biotic components (producers, consumers, decomposers) and Abiotic factors (temperature, soil, rainfall, light).\nFood Chains and Trophic Levels:\n- A sequence of organisms where each feeds on the preceding one:\n  Producer (Plants, 1st Trophic Level) -> Herbivore (Primary Consumer, 2nd Level) -> Carnivore (Secondary Consumer, 3rd Level) -> Top Carnivore (4th Level).\n- 10% Law of Energy Transfer (Raymond Lindeman, 1942):\n  Only 10% of the energy entering a trophic level is transferred to the next higher level as biomass; 90% is lost as heat, respiration, and metabolic activity:\n  If Plants capture 10,000 J of solar energy: Herbivores get 1000 J -> Carnivores get 100 J -> Top carnivores get 10 J.\n  Because energy diminishes rapidly, food chains rarely exceed 4 to 5 trophic levels.\nBiological Magnification:\n- The progressive accumulation of non-biodegradable harmful toxic chemicals (like DDT pesticide) in body tissues at progressively higher trophic levels.\n- Top consumers (Humans) accumulate the highest toxic concentration because chemicals cannot be excreted or metabolized.\nEnvironmental Issues:\n1. Ozone Layer Depletion: Stratospheric Ozone (O\u2083) shields Earth from lethal UV radiation. Synthetic Chlorofluorocarbons (CFCs) release chlorine radicals that destroy ozone (UNEP 1987 Montreal Protocol froze CFC production).\n2. Solid Waste Management: Differentiating Biodegradable (organic food) from Non-biodegradable (plastics) waste.",
+    "formulas": [
+      "Lindeman's 10% Law: E_(n+1) = 0.10 \u00d7 E_n",
+      "Ozone Formation: O\u2082 + UV -> O + O; O + O\u2082 -> O\u2083",
+      "Biomagnification: Toxicant concentration increases up trophic levels"
+    ],
+    "keyTerms": [
+      "Ecosystem",
+      "Producers",
+      "Trophic Levels",
+      "Food Chain",
+      "Food Web",
+      "10% Law",
+      "Lindeman",
+      "Biological Magnification",
+      "DDT",
+      "Ozone Layer (O\u2083)",
+      "CFCs",
+      "Montreal Protocol"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is biological magnification? Will the levels of this magnification be different at different levels of the ecosystem?",
+        "answer": "Biological magnification is the progressive increase in the concentration of non-biodegradable toxic substances (e.g. pesticides) at each successive trophic level in a food chain. It is highest in top carnivores (such as humans) at the peak of the pyramid."
+      }
+    ],
+    "summary": "Ecosystem food chains obey Lindeman's 10% energy law (90% lost at each level). Non-biodegradable toxicants concentrate at top trophic levels via biological magnification. Stratospheric ozone shields UV."
+  },
+  {
+    "id": "ncert-c10-math-ch1",
+    "classLevel": 10,
+    "subject": "Mathematics",
+    "textbookName": "NCERT Mathematics Class 10",
+    "chapterNumber": 1,
+    "chapterTitle": "Real Numbers",
+    "sectionNumber": "1.1 - 1.4",
+    "sectionTitle": "Fundamental Theorem of Arithmetic, HCF & LCM Relationship, Proof of Irrationality of \u221a2, \u221a3",
+    "pageNumber": 1,
+    "content": "Fundamental Theorem of Arithmetic:\nEvery composite number can be expressed (factorised) as a product of primes, and this prime factorisation is unique, apart from the order in which the prime factors occur.\nHCF and LCM of Two Positive Integers a and b:\n- HCF (Highest Common Factor): Product of the smallest power of each common prime factor involved in the numbers.\n- LCM (Lowest Common Multiple): Product of the greatest power of each prime factor involved in the numbers.\n- Important Fundamental Relation:\n  HCF(a, b) \u00d7 LCM(a, b) = a \u00d7 b\n  => LCM(a, b) = (a \u00d7 b) / HCF(a, b).\nProof of Irrationality (Proof by Contradiction):\n- Theorem: If p is a prime number and p divides a\u00b2, then p divides a (where a is a positive integer).\n- To prove \u221a2 is irrational:\n  Assume \u221a2 is rational = a/b (where a and b are co-prime integers, b \u2260 0).\n  2 = a\u00b2 / b\u00b2 => a\u00b2 = 2b\u00b2 (so 2 divides a\u00b2, hence 2 divides a => a = 2c).\n  (2c)\u00b2 = 2b\u00b2 => 4c\u00b2 = 2b\u00b2 => b\u00b2 = 2c\u00b2 (so 2 divides b).\n  Thus, 2 is a common factor of both a and b, which contradicts that a and b are co-prime.\n  Therefore, \u221a2 is irrational.\n- Decimal Expansions: A rational number p/q has a terminating decimal expansion if and only if the prime factorisation of q is of the form 2^n \u00b7 5^m (where n, m are non-negative integers).",
+    "formulas": [
+      "HCF(a, b) \u00d7 LCM(a, b) = a \u00d7 b",
+      "Terminating Decimal condition: Denominator q = 2\u207f \u00b7 5\u1d50",
+      "Fundamental Theorem of Arithmetic: Unique Prime Factorisation"
+    ],
+    "keyTerms": [
+      "Real Numbers",
+      "Fundamental Theorem of Arithmetic",
+      "Prime Factorisation",
+      "HCF",
+      "LCM",
+      "Irrational Numbers",
+      "Proof by Contradiction",
+      "Terminating Decimal"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Given that HCF(306, 657) = 9, find LCM(306, 657).",
+        "answer": "LCM(a, b) = (a \u00d7 b) / HCF(a, b) = (306 \u00d7 657) / 9 = 34 \u00d7 657 = 22,338."
+      }
+    ],
+    "summary": "Every composite number has a unique prime factorisation. HCF(a,b) \u00d7 LCM(a,b) = a \u00d7 b. Numbers like \u221a2 and \u221a3 are proved irrational by contradiction. Fractions terminate if denominator q = 2\u207f\u00b75\u1d50."
+  },
+  {
+    "id": "ncert-c10-math-ch3",
+    "classLevel": 10,
+    "subject": "Mathematics",
+    "textbookName": "NCERT Mathematics Class 10",
+    "chapterNumber": 3,
+    "chapterTitle": "Pair of Linear Equations in Two Variables",
+    "sectionNumber": "3.1 - 3.4",
+    "sectionTitle": "Graphical Method, Consistency Conditions, Substitution & Elimination Methods",
+    "pageNumber": 38,
+    "content": "General Form of a Pair of Linear Equations in Two Variables:\na\u2081x + b\u2081y + c\u2081 = 0\na\u2082x + b\u2082y + c\u2082 = 0\nConsistency Conditions (Ratios of Coefficients):\n1. Intersecting Lines (Unique Solution):\n   a\u2081 / a\u2082 \u2260 b\u2081 / b\u2082  => System is Consistent with exactly 1 unique solution.\n2. Coincident Lines (Infinitely Many Solutions):\n   a\u2081 / a\u2082 = b\u2081 / b\u2082 = c\u2081 / c\u2082  => System is Consistent and Dependent with infinitely many solutions.\n3. Parallel Lines (No Solution):\n   a\u2081 / a\u2082 = b\u2081 / b\u2082 \u2260 c\u2081 / c\u2082  => System is Inconsistent with 0 solutions.\nAlgebraic Solution Methods:\n- Substitution Method: Express one variable in terms of the other from one equation and substitute into the second equation.\n- Elimination Method: Multiply equations by non-zero constants to make coefficients of one variable numerically equal, then add or subtract equations to eliminate that variable.",
+    "formulas": [
+      "Unique Solution: a\u2081 / a\u2082 \u2260 b\u2081 / b\u2082",
+      "Infinitely Many Solutions: a\u2081 / a\u2082 = b\u2081 / b\u2082 = c\u2081 / c\u2082",
+      "No Solution (Parallel): a\u2081 / a\u2082 = b\u2081 / b\u2082 \u2260 c\u2081 / c\u2082"
+    ],
+    "keyTerms": [
+      "Linear Equations",
+      "Consistent System",
+      "Inconsistent System",
+      "Unique Solution",
+      "Coincident Lines",
+      "Parallel Lines",
+      "Substitution Method",
+      "Elimination Method"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Check whether the pair of equations 2x + 3y = 8 and 4x + 6y = 7 is consistent or inconsistent.",
+        "answer": "a1/a2 = 2/4 = 1/2. b1/b2 = 3/6 = 1/2. c1/c2 = -8/-7 = 8/7. Since a1/a2 = b1/b2 \u2260 c1/c2, the lines are parallel and have no solution. The system is inconsistent."
+      }
+    ],
+    "summary": "Linear systems a1x+b1y+c1=0 and a2x+b2y+c2=0: unique solution if a1/a2 \u2260 b1/b2; infinite if a1/a2=b1/b2=c1/c2; no solution if a1/a2=b1/b2\u2260c1/c2. Solved via substitution or elimination."
+  },
+  {
+    "id": "ncert-c10-math-ch5",
+    "classLevel": 10,
+    "subject": "Mathematics",
+    "textbookName": "NCERT Mathematics Class 10",
+    "chapterNumber": 5,
+    "chapterTitle": "Arithmetic Progressions",
+    "sectionNumber": "5.1 - 5.3",
+    "sectionTitle": "General Term (a_n), Common Difference (d) & Sum of First n Terms (S_n)",
+    "pageNumber": 93,
+    "content": "An Arithmetic Progression (AP) is a sequence of numbers in which each term is obtained by adding a fixed number d (Common Difference) to the preceding term, except the first term a:\nAP: a, a + d, a + 2d, a + 3d, ...\n- Common Difference d = a_(k+1) - a_k (can be positive, negative, or zero).\nnth Term of an AP (General Term):\na_n = a + (n - 1) \u00b7 d\nWhere: a = first term, d = common difference, n = term number.\n- If an AP has m terms, the last term l = a_m = a + (m - 1)d.\nSum of First n Terms of an AP (S_n):\nS_n = n / 2 \u00b7 [2a + (n - 1) \u00b7 d]\nOr, when first term a and last term l are known:\nS_n = n / 2 \u00b7 (a + l)\n- Sum of first n positive integers: S_n = n(n + 1) / 2.\n- nth term from sum: a_n = S_n - S_(n-1).",
+    "formulas": [
+      "nth Term: a_n = a + (n - 1) \u00b7 d",
+      "Sum of n terms: S_n = n / 2 \u00b7 [2a + (n - 1) \u00b7 d]",
+      "Sum with last term: S_n = n / 2 \u00b7 (a + l)",
+      "Sum of first n natural numbers: S_n = n(n + 1) / 2"
+    ],
+    "keyTerms": [
+      "Arithmetic Progression (AP)",
+      "First Term (a)",
+      "Common Difference (d)",
+      "nth Term (a_n)",
+      "Sum of AP (S_n)",
+      "Finite AP",
+      "Infinite AP"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Find the 20th term and the sum of first 20 terms of the AP: 2, 7, 12, ...",
+        "answer": "a = 2, d = 7 - 2 = 5, n = 20. a_20 = a + (20-1)d = 2 + 19(5) = 2 + 95 = 97. S_20 = 20/2 [2(2) + 19(5)] = 10 [4 + 95] = 10 \u00d7 99 = 990."
+      }
+    ],
+    "summary": "In an AP, each term differs by d. The nth term is a_n = a + (n-1)d. The sum of n terms is S_n = (n/2)[2a + (n-1)d] = (n/2)(a + l). Sum of first n integers is n(n+1)/2."
+  },
+  {
+    "id": "ncert-c10-math-ch7",
+    "classLevel": 10,
+    "subject": "Mathematics",
+    "textbookName": "NCERT Mathematics Class 10",
+    "chapterNumber": 7,
+    "chapterTitle": "Coordinate Geometry",
+    "sectionNumber": "7.1 - 7.3",
+    "sectionTitle": "Distance Formula, Section Formula (Internal Division) & Midpoint Formula",
+    "pageNumber": 155,
+    "content": "Coordinate plane with x-axis (Abscissa) and y-axis (Ordinate) intersecting at origin (0, 0).\n1. Distance Formula:\nThe Euclidean distance d between two points P(x\u2081, y\u2081) and Q(x\u2082, y\u2082):\nd = \u221a[(x\u2082 - x\u2081)\u00b2 + (y\u2082 - y\u2081)\u00b2]\n- Distance of a point P(x, y) from origin (0, 0): d = \u221a(x\u00b2 + y\u00b2).\n2. Section Formula (Internal Division):\nThe coordinates of point P(x, y) which divides the line segment joining A(x\u2081, y\u2081) and B(x\u2082, y\u2082) internally in the ratio m\u2081 : m\u2082 are:\nx = (m\u2081 \u00b7 x\u2082 + m\u2082 \u00b7 x\u2081) / (m\u2081 + m\u2082)\ny = (m\u2081 \u00b7 y\u2082 + m\u2082 \u00b7 y\u2081) / (m\u2081 + m\u2082)\n3. Midpoint Formula:\nWhen P is the exact midpoint dividing AB in 1 : 1 ratio:\nx = (x\u2081 + x\u2082) / 2\ny = (y\u2081 + y\u2082) / 2\n- Centroid of a Triangle with vertices (x\u2081, y\u2081), (x\u2082, y\u2082), (x\u2083, y\u2083):\n  G = ((x\u2081 + x\u2082 + x\u2083) / 3, (y\u2081 + y\u2082 + y\u2083) / 3).",
+    "formulas": [
+      "Distance Formula: d = \u221a[(x\u2082 - x\u2081)\u00b2 + (y\u2082 - y\u2081)\u00b2]",
+      "Distance from Origin: d = \u221a(x\u00b2 + y\u00b2)",
+      "Section Formula: x = (m\u2081x\u2082 + m\u2082x\u2081) / (m\u2081 + m\u2082), y = (m\u2081y\u2082 + m\u2082y\u2081) / (m\u2081 + m\u2082)",
+      "Midpoint Formula: x = (x\u2081 + x\u2082)/2, y = (y\u2081 + y\u2082)/2"
+    ],
+    "keyTerms": [
+      "Coordinate Geometry",
+      "Abscissa",
+      "Ordinate",
+      "Distance Formula",
+      "Collinear Points",
+      "Section Formula",
+      "Internal Division",
+      "Midpoint Formula",
+      "Centroid"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Find the coordinates of the point which divides the join of (-1, 7) and (4, -3) in the ratio 2 : 3.",
+        "answer": "x = [2(4) + 3(-1)] / (2 + 3) = (8 - 3) / 5 = 5/5 = 1. y = [2(-3) + 3(7)] / (2 + 3) = (-6 + 21) / 5 = 15/5 = 3. Point is (1, 3)."
+      }
+    ],
+    "summary": "Distance between (x1, y1) and (x2, y2) is \u221a[(x2-x1)\u00b2 + (y2-y1)\u00b2]. Section formula divides segments in ratio m1:m2: [(m1x2+m2x1)/(m1+m2), (m1y2+m2y1)/(m1+m2)]. Midpoint is [(x1+x2)/2, (y1+y2)/2]."
+  },
+  {
+    "id": "ncert-c10-math-ch14",
+    "classLevel": 10,
+    "subject": "Mathematics",
+    "textbookName": "NCERT Mathematics Class 10",
+    "chapterNumber": 14,
+    "chapterTitle": "Statistics",
+    "sectionNumber": "14.1 - 14.4",
+    "sectionTitle": "Mean of Grouped Data (Direct & Assumed Mean), Mode of Grouped Data & Median",
+    "pageNumber": 260,
+    "content": "Measures of Central Tendency for Grouped Data:\n1. Mean (x\u0304):\n   - Direct Method: x\u0304 = \u03a3(f_i \u00b7 x_i) / \u03a3f_i  (where x_i is class mark = (Upper limit + Lower limit) / 2).\n   - Assumed Mean Method: x\u0304 = a + [\u03a3(f_i \u00b7 d_i) / \u03a3f_i]  (where d_i = x_i - a, and a is assumed mean).\n2. Mode:\n   The value among the observations having maximum frequency:\n   Mode = l + [(f\u2081 - f\u2080) / (2f\u2081 - f\u2080 - f\u2082)] \u00b7 h\n   Where:\n   l = lower limit of modal class (class with highest frequency f\u2081)\n   h = size of class interval\n   f\u2081 = frequency of modal class\n   f\u2080 = frequency of class preceding modal class\n   f\u2082 = frequency of class succeeding modal class.\n3. Median:\n   The middle value of distribution dividing it into two equal halves:\n   Median = l + [((n/2) - cf) / f] \u00b7 h\n   Where:\n   l = lower limit of median class (class where cumulative frequency cf reaches n/2)\n   n = total number of observations (\u03a3f_i)\n   cf = cumulative frequency of class preceding median class\n   f = frequency of median class\n   h = class size.\nEmpirical Relationship:\n3 \u00b7 Median = Mode + 2 \u00b7 Mean.",
+    "formulas": [
+      "Direct Mean: x\u0304 = \u03a3(f_i \u00b7 x_i) / \u03a3f_i",
+      "Assumed Mean: x\u0304 = a + [\u03a3(f_i \u00b7 d_i) / \u03a3f_i]",
+      "Mode = l + [(f\u2081 - f\u2080) / (2f\u2081 - f\u2080 - f\u2082)] \u00b7 h",
+      "Median = l + [((n/2) - cf) / f] \u00b7 h",
+      "Empirical Relation: 3 \u00b7 Median = Mode + 2 \u00b7 Mean"
+    ],
+    "keyTerms": [
+      "Mean",
+      "Class Mark",
+      "Direct Method",
+      "Assumed Mean",
+      "Mode",
+      "Modal Class",
+      "Median",
+      "Median Class",
+      "Cumulative Frequency",
+      "Empirical Relationship"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the empirical relationship between the three measures of central tendency?",
+        "answer": "3 \u00d7 Median = Mode + 2 \u00d7 Mean (or Mode = 3 Median - 2 Mean)."
+      }
+    ],
+    "summary": "Mean is calculated via direct \u03a3fixi/\u03a3fi or assumed mean a + \u03a3fidi/\u03a3fi. Mode = l + [(f1-f0)/(2f1-f0-f2)]h. Median = l + [((n/2)-cf)/f]h. Linked by 3\u00b7Median = Mode + 2\u00b7Mean."
+  }
+]

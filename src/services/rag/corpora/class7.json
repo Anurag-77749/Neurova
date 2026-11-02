@@ -1,0 +1,636 @@
+[
+  {
+    "id": "ncert-c7-sci-ch1",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 1,
+    "chapterTitle": "Nutrition in Plants",
+    "sectionNumber": "1.1 - 1.4",
+    "sectionTitle": "Photosynthesis, Chlorophyll, Parasitic & Symbiotic Nutrition",
+    "pageNumber": 1,
+    "content": "Autotrophic Nutrition in Green Plants:\nGreen plants synthesize their food through Photosynthesis using Carbon dioxide from air (absorbed through Stomata with guard cells), Water/minerals from soil (absorbed by roots via xylem), and Sunlight absorbed by green pigment Chlorophyll.\nChemical Equation:\n6CO\u2082 + 6H\u2082O --(Sunlight / Chlorophyll)--> C\u2086H\u2081\u2082O\u2086 (Glucose) + 6O\u2082 (Oxygen)\nHeterotrophic Modes in Plants:\n- Parasite: Non-green plant drawing nutrition from host plant (e.g., Cuscuta / Amarbel).\n- Insectivorous Plants: Pitcher plant traps insects in modified jug-shaped leaf to obtain nitrogen in nutrient-poor soil.\n- Saprotrophs: Fungi (mushrooms, bread mould) secreting digestive juices on dead organic matter and absorbing nutrients.\n- Symbiosis: Mutualistic association where two organisms live together sharing food and shelter (Lichens = photosynthetic Alga providing food + Fungus providing shelter and moisture; Rhizobium bacteria in leguminous root nodules fixing atmospheric nitrogen).",
+    "formulas": [
+      "6CO\u2082 + 6H\u2082O --(Sunlight/Chlorophyll)--> C\u2086H\u2081\u2082O\u2086 + 6O\u2082"
+    ],
+    "keyTerms": [
+      "Autotrophs",
+      "Photosynthesis",
+      "Chlorophyll",
+      "Stomata",
+      "Cuscuta",
+      "Insectivorous",
+      "Saprotrophs",
+      "Symbiosis",
+      "Lichens",
+      "Rhizobium"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Distinguish between a parasite and a saprotroph.",
+        "answer": "A parasite lives on or inside a living host organism and absorbs nutrients without killing it (e.g., Cuscuta). A saprotroph feeds on dead, decaying organic matter by secreting digestive juices externally (e.g., Fungi)."
+      }
+    ],
+    "summary": "Plants use photosynthesis (6CO2 + 6H2O -> C6H12O6 + 6O2) via chlorophyll. Other modes: Cuscuta (parasite), pitcher plant (insectivorous), fungi (saprotrophic), lichens (symbiotic)."
+  },
+  {
+    "id": "ncert-c7-sci-ch2",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 2,
+    "chapterTitle": "Nutrition in Animals",
+    "sectionNumber": "2.1 - 2.4",
+    "sectionTitle": "Human Digestive System (Mouth to Anus), Liver, Pancreas & Ruminants",
+    "pageNumber": 11,
+    "content": "Holozoic Nutrition in Animals consists of 5 steps: Ingestion, Digestion, Absorption, Assimilation, and Egestion.\nHuman Digestive Tract (Alimentary Canal, ~9 metres long):\n1. Buccal Cavity (Mouth): Teeth (incisors, canines, premolars, molars) chew food. Salivary glands secrete saliva containing Salivary Amylase, which breaks down complex starch into maltose sugars.\n2. Oesophagus: Food pushed down by rhythmic peristaltic muscular contractions.\n3. Stomach: Thick-walled J-shaped sac secreting:\n   - Mucus (protects inner lining).\n   - Hydrochloric Acid HCl (kills bacteria and makes medium acidic).\n   - Pepsin (digestive enzyme breaking proteins into peptides).\n4. Small Intestine (~7.5 m long): Site of complete digestion:\n   - Liver: Largest gland, secretes Bile juice (stored in Gallbladder) which emulsifies large fat droplets.\n   - Pancreas: Secretes Pancreatic juice (trypsin for proteins, amylase for carbs, lipase for fats).\n   - Villi: Millions of finger-like projections in intestinal wall richly supplied with blood capillaries to absorb digested food.\n5. Large Intestine (~1.5 m): Absorbs water and minerals from undigested residue.\n6. Rectum and Anus: Undigested waste stored as faeces and expelled (egestion).\nDigestion in Ruminants (Grass-eating Animals):\n- Cows and buffaloes quickly swallow grass into the Rumen where it is partially digested (Cud). Later, cud returns to mouth in small lumps for thorough chewing (Rumination). Cellulose is digested by symbiotic bacteria in the Caecum.\n- Amoeba feeds by extending false feet (Pseudopodia) to engulf food into a Food Vacuole.",
+    "formulas": [
+      "Digestion Pipeline: Ingestion -> Digestion -> Absorption (Villi) -> Assimilation -> Egestion"
+    ],
+    "keyTerms": [
+      "Alimentary Canal",
+      "Salivary Amylase",
+      "Peristalsis",
+      "Pepsin",
+      "Bile",
+      "Gallbladder",
+      "Pancreas",
+      "Villi",
+      "Ruminants",
+      "Rumen",
+      "Cellulose",
+      "Pseudopodia"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the function of the stomach acid and the intestinal villi?",
+        "answer": "Hydrochloric acid in the stomach creates an acidic medium for pepsin activation and kills ingested microbes. Villi in the small intestine enormously increase the surface area for rapid absorption of nutrients into bloodstream."
+      }
+    ],
+    "summary": "Human digestion: mouth (amylase), stomach (HCl, pepsin), small intestine (bile, lipase, trypsin; absorbed via villi), and large intestine (water absorption). Ruminants chew cud to digest cellulose."
+  },
+  {
+    "id": "ncert-c7-sci-ch3",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 3,
+    "chapterTitle": "Fibre to Fabric",
+    "sectionNumber": "3.1 - 3.2",
+    "sectionTitle": "Animal Fibres: Wool Processing (Shearing to Carding) & Silk Sericulture",
+    "pageNumber": 24,
+    "content": "Animal fibres are natural protein fibres obtained from animals: Wool and Silk.\nWool Processing from Sheep Fleece:\n1. Shearing: Removing the sheep's fleece along with a thin top layer of dead skin (does not hurt sheep).\n2. Scouring: Washing sheared hair in tanks with detergent to remove grease, dust, and dirt.\n3. Sorting: Separating hairs of different textures and lengths in factories.\n4. Burrs Removal: Picking out small fluffy fibres called burrs.\n5. Dyeing: Hair dyed in various colours.\n6. Rolling: Fibres straightened, combed, and spun into yarn for weaving/knitting.\nSilk Production (Sericulture):\n- Rearing of silkworms (Bombyx mori) for obtaining silk is called Sericulture.\n- Life Cycle of Silk Moth:\n  Female moth lays eggs -> Caterpillars / Silkworms feed voraciously on Mulberry leaves -> Silkworm spins a protective shell around itself made of protein filaments called a Cocoon.\n- Processing: Cocoons are kept under hot water or steam to kill pupae and unwind long silk threads (Reeling the silk).",
+    "formulas": [
+      "Wool Cycle: Shearing -> Scouring -> Sorting -> Dyeing -> Rolling into Yarn"
+    ],
+    "keyTerms": [
+      "Wool",
+      "Fleece",
+      "Shearing",
+      "Scouring",
+      "Sorting",
+      "Sericulture",
+      "Mulberry Leaves",
+      "Silkworm",
+      "Cocoon",
+      "Reeling"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is meant by the terms: (a) Sericulture, (b) Shearing?",
+        "answer": "(a) Sericulture is the commercial rearing of silkworms for the production of raw silk. (b) Shearing is the process of shaving off the fleece of a sheep along with a thin layer of dead skin."
+      }
+    ],
+    "summary": "Wool is processed by shearing, scouring, sorting, dyeing, and spinning. Silk is obtained via sericulture from cocoons of silkworms feeding on mulberry leaves."
+  },
+  {
+    "id": "ncert-c7-sci-ch4",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 4,
+    "chapterTitle": "Heat",
+    "sectionNumber": "4.1 - 4.5",
+    "sectionTitle": "Measurement of Temperature, Conduction, Convection, Sea Breeze & Radiation",
+    "pageNumber": 35,
+    "content": "Temperature is the measure of degree of hotness of a body.\nThermometers:\n- Clinical Thermometer: Range 35\u00b0C to 42\u00b0C. Normal body temperature is 37\u00b0C (98.6\u00b0F). Has a constriction (kink) above bulb to prevent backflow of mercury when removed from mouth.\n- Laboratory Thermometer: Range -10\u00b0C to 110\u00b0C.\nThree Modes of Heat Transfer:\n1. Conduction: Transfer of heat from hotter to colder part through direct particle contact without bodily movement of the medium (dominant in solids). Metals are good conductors; wood, plastic, air are poor conductors (insulators).\n2. Convection: Heat transfer in fluids (liquids and gases) via actual mass movement of heated particles (hot less dense fluid rises, cold dense fluid sinks):\n   - Sea Breeze: During daytime, land heats faster than sea. Hot air over land rises, and cool air from the sea blows towards land.\n   - Land Breeze: At night, land cools faster than sea. Warmer air over sea rises, and cooler air from land moves towards the sea.\n3. Radiation: Transfer of heat through electromagnetic waves without any material medium (heat from the Sun reaches Earth through empty space). Dark-coloured objects absorb and radiate heat better than light-coloured objects.",
+    "formulas": [
+      "Normal Body Temperature = 37\u00b0C = 98.6\u00b0F",
+      "\u00b0F = (\u00b0C \u00d7 9/5) + 32",
+      "\u00b0C = (\u00b0F - 32) \u00d7 5/9"
+    ],
+    "keyTerms": [
+      "Temperature",
+      "Clinical Thermometer",
+      "Kink",
+      "Conduction",
+      "Convection",
+      "Radiation",
+      "Sea Breeze",
+      "Land Breeze",
+      "Insulators",
+      "Conductors"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain why wearing more layers of clothing during winter keeps us warmer than wearing just one thick piece of clothing.",
+        "answer": "Air gets trapped between multiple layers of clothing. Since trapped air is a poor conductor of heat (an insulator), it prevents body heat from escaping into the cold surroundings, keeping us warmer."
+      }
+    ],
+    "summary": "Heat flows via Conduction in solids, Convection in fluids (causing sea/land breezes), and Radiation through vacuum. Normal human body temperature is 37\u00b0C."
+  },
+  {
+    "id": "ncert-c7-sci-ch5",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 5,
+    "chapterTitle": "Acids, Bases and Salts",
+    "sectionNumber": "5.1 - 5.4",
+    "sectionTitle": "Natural Indicators, Neutralisation Reaction & Real-world Applications",
+    "pageNumber": 49,
+    "content": "Acids and Bases:\n- Acids: Sour taste, turn blue litmus red. Examples: Hydrochloric acid (HCl), Acetic acid (vinegar), Citric acid (citrus fruits), Lactic acid (curd), Tartaric acid (tamarind), Formic acid (ant sting).\n- Bases: Bitter taste, soapy feel, turn red litmus blue. Examples: Sodium hydroxide (NaOH), Calcium hydroxide (limewater), Magnesium hydroxide (milk of magnesia).\nIndicators:\n- Litmus: Extracted from lichens (natural indicator; turns red in acid, blue in base).\n- Phenolphthalein (synthetic): Colourless in acidic solution, deep pink in basic solution.\n- Turmeric: Stays yellow in acid, turns reddish-brown in base.\nNeutralisation:\nReaction between an acid and a base producing salt, water, and heat:\nAcid + Base --> Salt + Water + Heat\nExample: HCl + NaOH --> NaCl + H\u2082O + Heat\nEveryday Neutralisation:\n1. Indigestion: Excess stomach acid neutralised by antacid containing milk of magnesia [Mg(OH)\u2082].\n2. Ant Sting: Acidic formic acid neutralised by applying moist baking soda (sodium hydrogen carbonate) or calamine solution (zinc carbonate).\n3. Soil Treatment: Acidic soil treated with quicklime (CaO) or slaked lime [Ca(OH)\u2082]; basic soil treated with organic compost manure.\n4. Factory Waste: Acidic industrial effluents neutralised with basic substances before discharge into rivers.",
+    "formulas": [
+      "Acid + Base --> Salt + Water + Heat",
+      "HCl + NaOH --> NaCl + H\u2082O"
+    ],
+    "keyTerms": [
+      "Acids",
+      "Bases",
+      "Litmus",
+      "Phenolphthalein",
+      "Neutralisation",
+      "Antacid",
+      "Formic Acid",
+      "Milk of Magnesia",
+      "Calamine",
+      "Quicklime"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is neutralisation? Give one practical everyday example.",
+        "answer": "Neutralisation is the reaction between an acid and a base forming salt and water with heat release: HCl + NaOH -> NaCl + H2O. When stung by an ant (which injects acidic formic acid), rubbing moist baking soda (basic) neutralises the acid and relieves pain."
+      }
+    ],
+    "summary": "Acids turn litmus red; bases turn litmus blue. Neutralisation (Acid + Base -> Salt + Water + Heat) treats indigestion, ant stings, acidic farm soil, and factory waste."
+  },
+  {
+    "id": "ncert-c7-sci-ch6",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 6,
+    "chapterTitle": "Physical and Chemical Changes",
+    "sectionNumber": "6.1 - 6.4",
+    "sectionTitle": "Physical vs Chemical Changes, Rusting of Iron, Galvanisation & Crystallisation",
+    "pageNumber": 58,
+    "content": "Physical Changes:\nA change in which a substance undergoes a change in its physical properties (shape, size, colour, state) without forming any new substance. Generally reversible (melting of wax, boiling of water, tearing paper, stretching rubber band).\nChemical Changes:\nA change in which one or more completely new substances with different chemical properties are formed. Irreversible and accompanied by heat/light release, gas evolution, colour change, or smell.\nKey Chemical Reactions:\n- Burning Magnesium Ribbon:\n  2Mg(s) + O\u2082(g) --> 2MgO(s) [White ash]\n  MgO + H\u2082O --> Mg(OH)\u2082 [Basic solution turning red litmus blue].\n- Copper Sulphate and Iron:\n  CuSO\u2084 (Blue) + Fe --> FeSO\u2084 (Green) + Cu (Brown deposit on iron nail).\nRusting of Iron:\n- When iron is exposed to both Oxygen (air) and Water (moisture), it forms hydrated iron oxide (Rust):\n  4Fe + 3O\u2082 + 2x H\u2082O --> 2Fe\u2082O\u2083\u00b7xH\u2082O (Rust)\n- Prevention: Painting, greasing, and Galvanisation (depositing a protective layer of Zinc metal on iron to prevent contact with air and moisture).\nCrystallisation:\n- A physical purification method: obtaining large, pure crystals of a substance from its saturated hot solution on slow cooling (e.g., pure copper sulphate crystals from impure powder).",
+    "formulas": [
+      "4Fe + 3O\u2082 + 2xH\u2082O --> 2Fe\u2082O\u2083\u00b7xH\u2082O  (Rust Formation)",
+      "CuSO\u2084(blue) + Fe --> FeSO\u2084(green) + Cu(brown)"
+    ],
+    "keyTerms": [
+      "Physical Change",
+      "Chemical Change",
+      "Rusting",
+      "Galvanisation",
+      "Zinc Coating",
+      "Crystallisation",
+      "Magnesium Oxide",
+      "Copper Sulphate"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain why rusting of iron objects is faster in coastal areas than in deserts.",
+        "answer": "Rusting requires both oxygen and moisture. Coastal areas have significantly higher humidity (air moisture) and salt content in the atmosphere, both of which accelerate the chemical oxidation of iron into rust."
+      }
+    ],
+    "summary": "Physical changes form no new substance (melting). Chemical changes form new products (burning). Rusting requires Fe + O2 + H2O; prevented by galvanisation (zinc coating). Pure crystals form via crystallisation."
+  },
+  {
+    "id": "ncert-c7-sci-ch7",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 7,
+    "chapterTitle": "Weather, Climate and Adaptations of Animals to Climate",
+    "sectionNumber": "7.1 - 7.3",
+    "sectionTitle": "Elements of Weather, Maximum-Minimum Thermometer & Polar/Tropical Rainforest Adaptations",
+    "pageNumber": 68,
+    "content": "Weather vs Climate:\n- Weather: The day-to-day condition of the atmosphere at a place with respect to temperature, humidity, rainfall, wind speed. Measured using Maximum-Minimum Thermometer (maximum temp in afternoon, minimum in early morning). Rainfall measured by Rain Gauge.\n- Climate: The average weather pattern taken over a long period (about 25 years).\nAnimal Adaptations:\n1. Polar Regions (Arctic & Antarctic - Extreme Cold):\n   - Polar Bear: White fur for camouflage on snow; two thick layers of fur; thick layer of subcutaneous fat (blubber) for thermal insulation; curved sharp claws for walking on slippery ice; keen sense of smell to locate seals.\n   - Penguins: White chest and black back; thick skin and heavy fat layer; huddle together in large groups to conserve heat; streamlined bodies and webbed feet for swimming.\n   - Siberian Crane: Migrates thousands of kilometres to warmer wetlands (e.g., Bharatpur in India) to escape harsh winters.\n2. Tropical Rainforests (Warm, Abundant Rain, Dense Competition):\n   - Red-eyed Tree Frog: Sticky pads on feet to climb trees.\n   - Toucan: Long, large beak to reach fruits on weak branches.\n   - Lion-tailed Macaque: Spends life in tree canopy; silver-white mane; feeds on fruits, seeds, insects under bark.\n   - Elephant: Large trunk acts as nose and arm for picking food; modified incisors (tusks) tear bark; large ears flap to cool blood.",
+    "formulas": [
+      "Climate = Average 25-Year Weather Pattern"
+    ],
+    "keyTerms": [
+      "Weather",
+      "Climate",
+      "Rain Gauge",
+      "Maximum-Minimum Thermometer",
+      "Adaptation",
+      "Camouflage",
+      "Blubber",
+      "Migration",
+      "Tropical Rainforest"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Which features help a polar bear survive in the Arctic region?",
+        "answer": "White fur for snow camouflage, two thick layers of fur, a subcutaneous fat layer (blubber), curved wide claws for walking on snow, and a powerful sense of smell."
+      }
+    ],
+    "summary": "Weather is daily atmospheric condition; climate is 25-year average. Polar animals adapt with thick fur, blubber, and migration; rainforest animals adapt with camouflage, specialized beaks, and tree canopies."
+  },
+  {
+    "id": "ncert-c7-sci-ch8",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 8,
+    "chapterTitle": "Winds, Storms and Cyclones",
+    "sectionNumber": "8.1 - 8.7",
+    "sectionTitle": "Air Pressure, High Speed Winds & Reduced Pressure, Thunderstorms & Cyclones",
+    "pageNumber": 80,
+    "content": "Properties of Air:\n1. Air exerts pressure: Atmospheric pressure holds liquids and crushes heated sealed tins when cooled with cold water (steam condenses, reducing internal pressure).\n2. High-speed winds are accompanied by reduced air pressure (Bernoulli principle demonstration: blowing over a paper strip lifts it up).\n3. Air expands on heating and contracts on cooling. Warm air is lighter (less dense) than cold air and rises, creating a low-pressure area; cold air moves in to fill the void (wind generation).\nUneven Heating on Earth:\n- Uneven heating between equator and poles generates global wind circulation patterns.\n- Uneven heating of land and water generates Summer Monsoon winds (blowing from Indian ocean towards land carrying rain).\nThunderstorms and Cyclones:\n- Thunderstorm: Develops in hot, humid tropical regions. Rising warm air carrying moisture cools at high altitude; water droplets freeze and fall; friction between rising moisture and falling drops produces lightning and thunder.\n- Cyclone: Low-pressure center around which high-speed winds rotate violently. Formed when water vapour condenses to rain releasing latent heat into atmosphere, further warming surrounding air, dropping central pressure, and drawing in swirling spiraling winds. The calm center is called the 'Eye of the Cyclone'.",
+    "formulas": [
+      "High Wind Speed <-> Low Air Pressure; Warm Air Rises (Lower Density)"
+    ],
+    "keyTerms": [
+      "Air Pressure",
+      "Wind Speed",
+      "Anemometer",
+      "Monsoon",
+      "Thunderstorm",
+      "Lightning",
+      "Cyclone",
+      "Eye of Cyclone",
+      "Latent Heat"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain why high-speed winds blowing over a roof can blow the tin roof away.",
+        "answer": "High-speed winds blowing over the roof create a zone of low air pressure above it. The higher atmospheric pressure trapped inside the house pushes upward on the roof, lifting and blowing it away."
+      }
+    ],
+    "summary": "Air exerts pressure; warm air expands, rises, and creates low pressure. Wind blows from high to low pressure. Cyclones form around low-pressure 'eyes' driven by latent heat of condensing vapour."
+  },
+  {
+    "id": "ncert-c7-sci-ch9",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 9,
+    "chapterTitle": "Soil",
+    "sectionNumber": "9.1 - 9.7",
+    "sectionTitle": "Soil Profile (A, B, C Horizons, Bedrock), Sandy, Clayey & Loamy Soil, Percolation Rate",
+    "pageNumber": 96,
+    "content": "Soil is the uppermost weathered layer of Earth's crust supporting plant growth. It is formed by the breaking down of rocks by action of wind, water, and climate (Weathering).\nSoil Profile (Vertical Section):\n1. A-Horizon (Topsoil): Dark in colour, rich in organic Humus (decayed organic matter) and minerals. Soft, porous, retains high moisture; home to earthworms, rodents, microbes.\n2. B-Horizon (Subsoil): Harder and more compact, contains less humus but high accumulation of minerals.\n3. C-Horizon: Made of small lumps of rocks with cracks and crevices.\n4. Bedrock: Hard, unweathered solid rock layer below C-horizon, difficult to dig.\nTypes of Soil:\n- Sandy Soil: Large particles with large air spaces. Water drains quickly; light, dry, and well-aerated.\n- Clayey Soil: Tiny fine particles packed closely with very small spaces. Heavy, poor aeration, but holds maximum water.\n- Loamy Soil: Best topsoil for growing plants. Mixture of sand, clay, silt, and humus with optimal water-holding capacity and aeration.\nPercolation Rate of Water in Soil:\nPercolation Rate (mL/min) = Amount of water (mL) / Percolation time (minutes).\nSandy soil has highest percolation rate; clayey soil has lowest.",
+    "formulas": [
+      "Percolation Rate (mL/min) = Amount of Water (mL) / Time Taken (min)",
+      "Soil = Mineral Particles + Humus + Water + Air + Living Organisms"
+    ],
+    "keyTerms": [
+      "Weathering",
+      "Humus",
+      "Soil Profile",
+      "Topsoil (A-Horizon)",
+      "Subsoil (B-Horizon)",
+      "Bedrock",
+      "Sandy Soil",
+      "Clayey Soil",
+      "Loamy Soil",
+      "Percolation Rate",
+      "Soil Erosion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Calculate the percolation rate of a soil sample that takes 20 minutes for 200 mL of water to percolate.",
+        "answer": "Percolation rate = Amount of water / Time = 200 mL / 20 min = 10 mL/min."
+      }
+    ],
+    "summary": "Soil is formed by weathering. Profile has A (topsoil/humus), B (minerals), C, and bedrock. Loamy soil is ideal for crops. Percolation rate = water volume / time (mL/min)."
+  },
+  {
+    "id": "ncert-c7-sci-ch10",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 10,
+    "chapterTitle": "Respiration in Organisms",
+    "sectionNumber": "10.1 - 10.6",
+    "sectionTitle": "Aerobic vs Anaerobic Respiration, Inhalation/Exhalation Mechanism, Respiration in Fish & Earthworm",
+    "pageNumber": 108,
+    "content": "Cellular Respiration is the process of breakdown of food (glucose) in cells with the release of energy (ATP):\n1. Aerobic Respiration: Breakdown of glucose in the presence of Oxygen into carbon dioxide, water, and large energy:\n   Glucose + Oxygen --> Carbon Dioxide + Water + Energy\n2. Anaerobic Respiration: Breakdown of glucose in the absence of Oxygen:\n   - In Yeast (Fermentation): Glucose --> Alcohol (Ethanol) + Carbon Dioxide + Energy (used to brew wine/beer and bake bread).\n   - In Human Muscle Cells (during vigorous sprinting/exercise): When oxygen supply is insufficient:\n     Glucose --> Lactic Acid + Energy. Accumulation of lactic acid causes Muscle Cramps (relieved by hot water bath or massage which improves blood circulation and oxygen supply).\nMechanism of Human Breathing:\n- Inhalation: Ribs move up and outwards, Diaphragm moves downwards (flattens). Chest cavity volume increases, air pressure drops, air rushes into lungs.\n- Exhalation: Ribs move down and inwards, Diaphragm relaxes and moves upwards (arches). Chest cavity volume decreases, pushing air out.\n- Breathing Rate: 15 to 18 times per minute at rest.\nRespiration in Other Animals:\n- Cockroach: Breathes through tiny lateral openings called Spiracles connected to a network of air tubes called Tracheae.\n- Earthworm: Breathes through moist, slimy skin where gas exchange occurs directly into capillaries.\n- Fish: Breathes dissolved oxygen via Gills supplied with rich blood vessels.\n- Plants: Leaves exchange gases through Stomata; root cells breathe air from soil spaces.",
+    "formulas": [
+      "Aerobic: Glucose + O\u2082 --> CO\u2082 + H\u2082O + Energy",
+      "Anaerobic Yeast: Glucose --> Ethanol + CO\u2082 + Energy",
+      "Muscle Cramp: Glucose --> Lactic Acid + Energy"
+    ],
+    "keyTerms": [
+      "Cellular Respiration",
+      "Aerobic",
+      "Anaerobic",
+      "Lactic Acid",
+      "Fermentation",
+      "Inhalation",
+      "Exhalation",
+      "Diaphragm",
+      "Spiracles",
+      "Tracheae",
+      "Gills",
+      "Stomata"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why do we get muscle cramps after heavy physical exercise?",
+        "answer": "During heavy exercise, muscle cells respire anaerobically due to limited oxygen supply. Glucose breaks down into lactic acid. The accumulation of lactic acid crystals in muscles causes cramps."
+      }
+    ],
+    "summary": "Respiration breaks glucose into energy: aerobic yields CO2 + H2O, anaerobic yields ethanol (yeast) or lactic acid (muscle cramps). Diaphragm movement drives lung breathing; fish breathe via gills, earthworms via moist skin."
+  },
+  {
+    "id": "ncert-c7-sci-ch11",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 11,
+    "chapterTitle": "Transportation in Animals and Plants",
+    "sectionNumber": "11.1 - 11.3",
+    "sectionTitle": "Circulatory System (Heart, Arteries, Veins, Capillaries), Excretion & Xylem/Phloem",
+    "pageNumber": 121,
+    "content": "Human Circulatory System:\nBlood transports digested food, oxygen, and waste products.\n- Blood Composition:\n  1. Plasma: Fluid matrix carrying nutrients and hormones.\n  2. Red Blood Cells (RBCs): Contain iron-pigment Haemoglobin which binds and carries oxygen.\n  3. White Blood Cells (WBCs): Defend against germs and infections.\n  4. Platelets: Essential for blood clotting to stop bleeding from wounds.\n- Blood Vessels:\n  1. Arteries: Carry oxygen-rich blood away from heart under high pressure (thick elastic walls, no valves). Exception: Pulmonary artery carries deoxygenated blood to lungs.\n  2. Veins: Carry carbon dioxide-rich blood from body back to heart (thin walls, possess valves to prevent backflow). Exception: Pulmonary vein carries oxygenated blood from lungs to left atrium.\n  3. Capillaries: Extremely thin microscopic vessels where nutrient-gas exchange occurs with cells.\n- Human Heart:\n  Four chambers (Right Atrium, Right Ventricle, Left Atrium, Left Ventricle). Normal pulse rate is 72 to 80 beats per minute.\nHuman Excretory System:\n- Two Kidneys, two Ureters, Urinary Bladder, and Urethra.\n- Kidneys filter blood: useful substances reabsorbed, toxic nitrogenous waste (Urea) excreted in water as Urine (normal adult passes 1 - 1.8 L urine per day).\nTransportation in Plants:\n- Xylem: Transports water and dissolved minerals upwards from roots to leaves via suction pull generated by Transpiration.\n- Phloem: Transports synthesized food (sugars) bidirectionally from leaves to all plant parts.",
+    "formulas": [
+      "Pulse Rate = 72 - 80 beats per minute",
+      "Transport: Xylem (Water/Minerals, Upward) vs Phloem (Food/Sugars, Bidirectional)"
+    ],
+    "keyTerms": [
+      "Haemoglobin",
+      "RBC",
+      "WBC",
+      "Platelets",
+      "Arteries",
+      "Veins",
+      "Capillaries",
+      "Heart",
+      "Stethoscope",
+      "Kidneys",
+      "Urea",
+      "Xylem",
+      "Phloem",
+      "Transpiration Pull"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are the components of blood and what gives blood its red colour?",
+        "answer": "Blood consists of Plasma, Red Blood Cells (RBCs), White Blood Cells (WBCs), and Platelets. The presence of the iron-containing protein pigment Haemoglobin inside RBCs gives blood its red colour."
+      }
+    ],
+    "summary": "Blood (plasma, RBCs with haemoglobin, WBCs, platelets) circulates via thick arteries and valved veins pumped by a 4-chambered heart. Kidneys excrete urea. Plants transport water via xylem and food via phloem."
+  },
+  {
+    "id": "ncert-c7-sci-ch12",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 12,
+    "chapterTitle": "Reproduction in Plants",
+    "sectionNumber": "12.1 - 12.4",
+    "sectionTitle": "Asexual Reproduction (Vegetative, Budding, Fragmentation, Spores) & Sexual Reproduction in Flowers",
+    "pageNumber": 133,
+    "content": "Modes of Reproduction in Plants:\n1. Asexual Reproduction (Without seeds):\n   - Vegetative Propagation: New plants produced from vegetative parts (root, stem, leaf, bud):\n     Stem tubers with 'eyes' in Potato; rhizome in Ginger; leaf margin buds in Bryophyllum; roots in Sweet potato.\n   - Budding: A small bulb-like projection called a bud grows on parent cell, detaches, and matures (Yeast).\n   - Fragmentation: An alga breaks into two or more fragments, each growing into a new individual (Spirogyra).\n   - Spore Formation: Spores are asexual reproductive bodies covered by hard protective coat to survive harsh conditions, germinating when conditions are favorable (Bread mould fungus, Ferns, Moss).\n2. Sexual Reproduction (Involves Flowers & Seeds):\n   - Stamen (Male reproductive organ): Anther produces pollen grains containing male gametes.\n   - Pistil (Female reproductive organ): Stigma, style, and ovary containing ovules with female gametes (eggs).\n   - Pollination: Transfer of pollen grains from anther to stigma:\n     Self-pollination (same flower or plant) vs Cross-pollination (different plant of same kind via wind, water, insects).\n   - Fertilisation: Fusion of male and female gamete forms a Zygote:\n     Zygote --> Embryo inside Seed; Ovary matures into Fruit; Ovules become Seeds.\n   - Seed Dispersal: Carried by Wind (winged seeds of drumstick, maple), Water (spongy coconut), Animals (spiny hooked seeds of Xanthium), or Explosive Bursting (balsam, castor).",
+    "formulas": [
+      "Pollen (Male Gamete) + Egg (Female Gamete) --> Zygote --> Embryo (Seed)"
+    ],
+    "keyTerms": [
+      "Vegetative Propagation",
+      "Bryophyllum",
+      "Budding",
+      "Fragmentation",
+      "Spirogyra",
+      "Spores",
+      "Stamen",
+      "Pistil",
+      "Pollination",
+      "Fertilisation",
+      "Zygote",
+      "Seed Dispersal"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Describe the different methods of asexual reproduction in plants with examples.",
+        "answer": "1. Vegetative propagation (potato tubers, bryophyllum leaves). 2. Budding (yeast). 3. Fragmentation (spirogyra algae). 4. Spore formation (fungi bread mould)."
+      }
+    ],
+    "summary": "Plants reproduce asexually (vegetative propagation in Bryophyllum, budding in yeast, fragmentation in Spirogyra, spores in fungi) or sexually via flower pollination and fertilisation forming seeds inside fruits."
+  },
+  {
+    "id": "ncert-c7-sci-ch13",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 13,
+    "chapterTitle": "Motion and Time",
+    "sectionNumber": "13.1 - 13.5",
+    "sectionTitle": "Speed Formula, Simple Pendulum Periodic Motion & Distance-Time Graphs",
+    "pageNumber": 143,
+    "content": "Speed:\nDistance covered by an object in unit time is called its Speed:\nSpeed = Total Distance Covered / Total Time Taken (SI unit: m/s or km/h).\n- Conversion: 1 km/h = 1000 m / 3600 s = 5/18 m/s.\nMeasurement of Time:\n- Simple Pendulum: Consists of a small metallic ball (Bob) suspended from a rigid stand by a light thread.\n- Periodic / Oscillatory Motion: Motion of the bob from one extreme position to another and back is one complete oscillation.\n- Time Period (T): The time taken by the pendulum to complete one full oscillation. Galileo Galilei discovered that the time period of a pendulum of a given length is constant.\n- Basic unit of time is Second (s).\nInstruments in Vehicles:\n- Speedometer: Records vehicle speed directly in km/h.\n- Odometer: Measures total distance travelled by the vehicle in kilometres.\nDistance-Time Graphs:\n- Straight sloped line represents Uniform Speed (equal distance in equal intervals of time).\n- Horizontal line parallel to time axis represents an object at Rest.\n- Steeper the slope of the graph, higher the speed of the object.",
+    "formulas": [
+      "Speed = Distance / Time  (m/s)",
+      "Distance = Speed \u00d7 Time",
+      "Time = Distance / Speed",
+      "1 km/h = 5/18 m/s"
+    ],
+    "keyTerms": [
+      "Speed",
+      "Uniform Motion",
+      "Non-uniform Motion",
+      "Simple Pendulum",
+      "Bob",
+      "Oscillation",
+      "Time Period",
+      "Speedometer",
+      "Odometer",
+      "Distance-Time Graph"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A simple pendulum takes 32 s to complete 20 oscillations. What is the time period of the pendulum?",
+        "answer": "Time Period T = Total time / Number of oscillations = 32 s / 20 = 1.6 seconds."
+      }
+    ],
+    "summary": "Speed = Distance / Time (m/s). Simple pendulum has constant time period for fixed length. Speedometer measures km/h, odometer measures distance; distance-time graph slope gives speed."
+  },
+  {
+    "id": "ncert-c7-sci-ch14",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 14,
+    "chapterTitle": "Electric Current and Its Effects",
+    "sectionNumber": "14.1 - 14.4",
+    "sectionTitle": "Circuit Symbols, Heating Effect of Current (Joule Heating, Fuses) & Magnetic Effect (Electromagnets)",
+    "pageNumber": 160,
+    "content": "Standard Circuit Symbols:\n- Electric Cell: Long line represents positive (+) terminal, shorter thicker line represents negative (-) terminal.\n- Battery: Combination of two or more cells connected in series (+ connected to -).\n- Switch: Open switch (gap) vs Closed switch (connected).\n1. Heating Effect of Electric Current:\n- When electric current flows through a high-resistance wire (e.g., Nichrome), the wire gets red hot and produces heat. Used in electric iron, room heater, geyser, toaster.\n- Electric Fuse: A safety device containing a low-melting-point wire. If excessive current flows due to short-circuit or overloading, the fuse wire melts and breaks the circuit, preventing electrical fires. Modern installations use Miniature Circuit Breakers (MCBs) which trip automatically.\n2. Magnetic Effect of Electric Current (Hans Christian Oersted, 1820):\n- When electric current passes through a wire, the wire behaves like a magnet, deflecting a nearby compass needle.\n- Electromagnet: An insulated coil of wire wound around an iron piece. When current is switched on, it behaves as a magnet; when current is switched off, magnetism disappears.\n- Applications: Electric bells, scrap-metal cranes, maglev trains, audio speakers, and medical MRI.",
+    "formulas": [
+      "Heating Effect: Electrical Energy -> Thermal Heat Energy",
+      "Electromagnetism: Current flowing in coil creates magnetic field"
+    ],
+    "keyTerms": [
+      "Electric Cell",
+      "Battery",
+      "Heating Effect",
+      "Nichrome",
+      "Electric Fuse",
+      "MCB",
+      "Oersted Experiment",
+      "Magnetic Effect",
+      "Electromagnet",
+      "Electric Bell"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why is an electric fuse called a safety device?",
+        "answer": "An electric fuse has a wire with a specific low melting point. When excessive current passes due to an overload or short circuit, the wire melts and breaks the circuit, preventing fires and protecting appliances."
+      }
+    ],
+    "summary": "Current has heating effect (nichrome heaters, safety fuses, MCBs) and magnetic effect (Oersted deflection, electromagnets in cranes and electric bells)."
+  },
+  {
+    "id": "ncert-c7-sci-ch15",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 15,
+    "chapterTitle": "Light",
+    "sectionNumber": "15.1 - 15.6",
+    "sectionTitle": "Reflection, Concave & Convex Mirrors, Lenses (Converging & Diverging) & Newton's Disc (VIBGYOR)",
+    "pageNumber": 176,
+    "content": "Light travels in straight lines. Reflection is the bouncing back of light from a polished surface.\nPlane Mirror:\n- Forms virtual, erect image of same size as object, at equal distance behind mirror, showing lateral inversion.\nSpherical Mirrors:\n1. Concave Mirror (Curved inwards):\n   - Can form real and inverted images (at various distances) or virtual, erect, and magnified image (when object is very close to mirror).\n   - Applications: Dentist's mirror (magnified view of teeth), headlights of cars and torches (produces powerful parallel beam), solar furnaces.\n2. Convex Mirror (Curved outwards):\n   - Always forms virtual, erect, and diminished (smaller) image over a wide field of view.\n   - Applications: Rear-view mirrors in cars and buses.\nLenses:\n1. Convex Lens (Converging, thicker in middle):\n   - Converges light rays. Can form real, inverted image or virtual, erect, magnified image (used as a magnifying glass, in microscopes, and cameras).\n2. Concave Lens (Diverging, thinner in middle):\n   - Diverges light rays. Always forms virtual, erect, and diminished images.\nSunlight is White Light (Dispersion):\n- Sunlight consists of seven colours: Violet, Indigo, Blue, Green, Yellow, Orange, Red (VIBGYOR), as demonstrated by splitting light with a glass prism and recombining with Newton's Colour Disc.",
+    "formulas": [
+      "Convex Mirror: Always Virtual, Erect, Diminished (Wide field of view)",
+      "Dispersion: White light = 7 colours (VIBGYOR)"
+    ],
+    "keyTerms": [
+      "Reflection",
+      "Plane Mirror",
+      "Lateral Inversion",
+      "Concave Mirror",
+      "Convex Mirror",
+      "Real Image",
+      "Virtual Image",
+      "Convex Lens",
+      "Concave Lens",
+      "Magnifying Glass",
+      "Dispersion",
+      "Prism",
+      "VIBGYOR",
+      "Newton's Disc"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why are convex mirrors preferred as rear-view mirrors in vehicles?",
+        "answer": "Convex mirrors always form erect, diminished images, giving them a much wider field of view than plane mirrors. This enables drivers to see traffic behind them across a broad area."
+      }
+    ],
+    "summary": "Concave mirrors form magnified or real images (dentist/headlights); convex mirrors provide wide rear views. Convex lenses converge light (magnifiers); white light splits into 7 colours (VIBGYOR)."
+  },
+  {
+    "id": "ncert-c7-sci-ch16",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 16,
+    "chapterTitle": "Water: A Precious Resource",
+    "sectionNumber": "16.1 - 16.7",
+    "sectionTitle": "Water Table, Depletion of Groundwater, Infiltration & Drip Irrigation",
+    "pageNumber": 193,
+    "content": "Water availability on Earth: 71% of Earth's surface is covered with water, but 97.4% is saline seawater. Fresh water makes up only ~2.6%, of which most is locked in polar ice caps, leaving less than 0.01% as accessible freshwater.\nGroundwater and Water Table:\n- Water Table: The upper level of the underground layer where all spaces between soil particles and rocks are saturated with water.\n- Aquifer: Reservoir of water stored between layers of hard rock below the water table.\n- Infiltration: The process of seeping of water into the ground to recharge aquifers.\nCauses of Groundwater Depletion:\n1. Rapidly growing human population requiring more domestic water.\n2. Increasing industries consuming huge volumes of freshwater.\n3. Agricultural activities relying heavily on tube-well irrigation during dry seasons.\n4. Deforestation and extensive concrete construction preventing rainwater infiltration.\nWater Management:\n- Rainwater Harvesting: Recharging aquifers through collection pits.\n- Drip Irrigation: Method of watering crops through narrow tubes directly at the plant roots, minimizing evaporation and water wastage.",
+    "formulas": [
+      "Available Freshwater < 0.01% of total planetary water"
+    ],
+    "keyTerms": [
+      "Groundwater",
+      "Water Table",
+      "Aquifer",
+      "Infiltration",
+      "Recharge",
+      "Depletion",
+      "Drip Irrigation",
+      "Rainwater Harvesting"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is drip irrigation and why is it advantageous?",
+        "answer": "Drip irrigation is an efficient agricultural technique delivering water drop-by-drop directly to the root zones of plants through narrow tubings. It saves water by minimizing runoff, evaporation, and weed growth."
+      }
+    ],
+    "summary": "Freshwater is scarce. Water table is recharged by infiltration into aquifers. Depletion is caused by population, industry, and farming. Drip irrigation delivers water directly to roots with zero wastage."
+  },
+  {
+    "id": "ncert-c7-sci-ch17",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 17,
+    "chapterTitle": "Forests: Our Lifeline",
+    "sectionNumber": "17.1 - 17.4",
+    "sectionTitle": "Forest Layers (Canopy, Understorey), Food Web, Decomposers & Environmental Role",
+    "pageNumber": 206,
+    "content": "A forest is a dynamic living entity full of life and vitality, acting as the green lungs of our planet and a natural water purification system.\nVertical Structure of a Forest:\n- Canopy: The uppermost branches and leaves of tall trees forming a continuous roof over the forest.\n- Understorey: Different horizontal layers formed by crowns of smaller trees, shrubs, and tall grasses beneath the canopy.\n- Forest Floor: Covered with dead leaves, twigs, bark, fruits, and rich humus.\nEcological Balance:\n- Green plants produce food via photosynthesis (Autotrophs).\n- Herbivores eat plants, carnivores eat herbivores (Food Chain: Grass -> Insect -> Frog -> Snake -> Eagle).\n- Multiple food chains interlink to form a Food Web.\n- Decomposers: Microorganisms (bacteria, fungi) that break down dead plant and animal tissues into rich dark Humus, recycling nutrients back into soil for plant roots.\nEnvironmental Functions:\n1. Maintains balance between Oxygen and Carbon dioxide in atmosphere (lungs of nature).\n2. Roots bind soil tightly, preventing soil erosion by rain and wind.\n3. Acts as a natural sponge, absorbing rainwater and recharging underground water tables smoothly, preventing floods.",
+    "formulas": [
+      "Food Chain: Producer (Plant) -> Primary Consumer -> Secondary Consumer -> Decomposer (Humus)"
+    ],
+    "keyTerms": [
+      "Canopy",
+      "Understorey",
+      "Forest Floor",
+      "Humus",
+      "Food Chain",
+      "Food Web",
+      "Decomposers",
+      "Soil Erosion",
+      "Green Lungs"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why are forests called 'green lungs'?",
+        "answer": "Forests release huge amounts of oxygen through photosynthesis and absorb carbon dioxide produced by animal respiration and burning, maintaining atmospheric gas balance like planetary lungs."
+      }
+    ],
+    "summary": "Forests have a canopy, understorey, and floor. Decomposers recycle dead matter into humus. Forests balance oxygen/CO2, prevent floods/erosion, and sustain biodiversity."
+  },
+  {
+    "id": "ncert-c7-sci-ch18",
+    "classLevel": 7,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 7",
+    "chapterNumber": 18,
+    "chapterTitle": "Wastewater Story",
+    "sectionNumber": "18.1 - 18.6",
+    "sectionTitle": "Sewage Composition, Wastewater Treatment Plant (WWTP) & Better Housekeeping Practices",
+    "pageNumber": 218,
+    "content": "Sewage is liquid waste produced by homes, industries, hospitals, and offices. It contains suspended impurities, disease-causing bacteria, and organic/inorganic contaminants.\nSewage Treatment Stages in a Wastewater Treatment Plant (WWTP):\n1. Bar Screens: Wastewater passes through bar screens which remove large physical objects like rags, sticks, cans, plastic packets, and napkins.\n2. Grit and Sand Removal Tank: Water speed is slowed down to allow sand, grit, and pebbles to settle at the bottom.\n3. Clarifier / Sedimentation Tank: Water settles in a large tank sloped towards center. Solid human faeces settle at bottom as Sludge (scraped out and digested by anaerobic bacteria in digester to produce Biogas fuel). Oils and floatables are removed by a skimmer. The clarified water moves on.\n4. Aeration Tank: Air is pumped into clarified water to encourage growth of aerobic bacteria. These bacteria consume remaining human waste, food residue, and soaps.\n5. Clarified water is disinfected using Chlorine or Ozone before discharge into rivers.\nAlternative Sanitation: Septic tanks, biogas toilets, vermi-processing toilets.",
+    "formulas": [
+      "WWTP Pipeline: Bar Screens -> Grit Removal -> Clarifier (Sludge -> Biogas) -> Aeration -> Chlorination"
+    ],
+    "keyTerms": [
+      "Sewage",
+      "Contaminants",
+      "WWTP",
+      "Bar Screens",
+      "Grit Tank",
+      "Sludge",
+      "Biogas",
+      "Aeration Tank",
+      "Disinfection",
+      "Chlorination",
+      "Septic Tank"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is sludge? Explain how it is treated in a wastewater treatment plant.",
+        "answer": "Sludge is the solid organic matter (human faeces) that settles at the bottom of the primary sedimentation clarifier. It is scraped out and transferred to a closed anaerobic digester tank where anaerobic bacteria digest it to produce biogas used as clean fuel."
+      }
+    ],
+    "summary": "Sewage is liquid waste. WWTP purifies it via bar screens, grit removal, clarifier sedimentation (producing biogas from sludge), aeration with aerobic bacteria, and chlorination disinfection."
+  }
+]

@@ -1,0 +1,537 @@
+[
+  {
+    "id": "ncert-c6-sci-ch1",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 1,
+    "chapterTitle": "Food: Where Does it Come From?",
+    "sectionNumber": "1.1 - 1.4",
+    "sectionTitle": "Food Variety, Plant Parts & Animal Products, Herbivores, Carnivores & Omnivores",
+    "pageNumber": 1,
+    "content": "There is a wide variety of food eaten in different regions of India. The main sources of our food are plants and animals.\n- Plant Sources: Grains, cereals, vegetables, and fruits. Plants provide edible (eatable) parts: roots (carrot, radish), stems (potato, onion, ginger), leaves (spinach, cabbage), flowers (cauliflower), seeds (wheat, rice, mustard seeds yielding oil). Sprouted seeds (moong or chana) are rich in vitamins.\n- Animal Sources: Milk, meat, eggs, fish, and honey (collected by bees from flower nectar and stored in hives).\nClassification of Animals Based on Food Habits:\n1. Herbivores: Animals that eat only plants or plant products (e.g., cow, deer, goat).\n2. Carnivores: Animals that eat only other animals (e.g., lion, tiger, leopard).\n3. Omnivores: Animals that eat both plants and other animals (e.g., human, dog, crow, bear).",
+    "formulas": [
+      "Classification: Herbivores (Plants), Carnivores (Flesh), Omnivores (Both)"
+    ],
+    "keyTerms": [
+      "Ingredients",
+      "Edible",
+      "Nectar",
+      "Sprouted Seeds",
+      "Herbivore",
+      "Carnivore",
+      "Omnivore"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Do you find that all living beings need the same kind of food?",
+        "answer": "No. Living beings have different food requirements and are categorized as herbivores (plant eaters), carnivores (meat eaters), or omnivores (both)."
+      }
+    ],
+    "summary": "Food comes from plants (roots, stems, leaves, seeds) and animals (milk, eggs, meat, honey). Animals are herbivores, carnivores, or omnivores."
+  },
+  {
+    "id": "ncert-c6-sci-ch2",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 2,
+    "chapterTitle": "Components of Food",
+    "sectionNumber": "2.1 - 2.4",
+    "sectionTitle": "Carbohydrates, Fats, Proteins, Balanced Diet & Deficiency Diseases",
+    "pageNumber": 9,
+    "content": "Our food contains five major nutrients: Carbohydrates, Proteins, Fats, Vitamins, and Minerals, plus dietary fibre (roughage) and water.\nNutrient Tests:\n- Starch Test: Add dilute iodine solution to food. A blue-black colour confirms starch.\n- Protein Test: Add 2 drops of copper sulphate and 10 drops of caustic soda (NaOH) solution. A violet colour indicates proteins.\n- Fat Test: An oily patch on filter paper confirms presence of fat.\nBalanced Diet:\nA diet providing all required nutrients in right quantities, along with adequate roughage and water, without excess or deficiency.\nDeficiency Diseases:\n- Vitamin A: Loss of vision (Night blindness, poor vision in dim light).\n- Vitamin B1: Beriberi (weak muscles and very little energy to work).\n- Vitamin C: Scurvy (bleeding gums, wounds take longer time to heal).\n- Vitamin D: Rickets (bones become soft and bent).\n- Calcium: Bone and tooth decay (weak bones, tooth decay).\n- Iodine: Goitre (glands in neck appear swollen, mental disability in children).\n- Iron: Anaemia (weakness, fatigue, low haemoglobin).",
+    "formulas": [
+      "Energy Yield: 1g Fat \u2248 9 kcal > 1g Carbohydrate \u2248 4 kcal"
+    ],
+    "keyTerms": [
+      "Nutrients",
+      "Carbohydrates",
+      "Proteins",
+      "Fats",
+      "Roughage",
+      "Balanced Diet",
+      "Scurvy",
+      "Rickets",
+      "Beriberi",
+      "Goitre",
+      "Anaemia"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Name two foods each rich in: (a) Fats, (b) Starch, (c) Dietary fibre, (d) Protein.",
+        "answer": "(a) Fats: Butter, Groundnuts. (b) Starch: Rice, Potatoes. (c) Dietary fibre: Whole grains, Fresh fruits. (d) Protein: Pulses (dal), Milk/Eggs."
+      }
+    ],
+    "summary": "Balanced diet contains carbs/fats (energy), proteins (growth), vitamins/minerals (immunity). Deficiencies lead to scurvy, rickets, beriberi, and goitre."
+  },
+  {
+    "id": "ncert-c6-sci-ch3",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 3,
+    "chapterTitle": "Fibre to Fabric",
+    "sectionNumber": "3.1 - 3.6",
+    "sectionTitle": "Natural and Synthetic Fibres, Cotton Ginning, Spinning & Weaving",
+    "pageNumber": 18,
+    "content": "Fabrics are made from yarns, which are in turn made from fibres.\nTypes of Fibres:\n- Natural Fibres: Obtained from plants and animals (e.g., cotton from cotton bolls, jute from stem of jute plant, wool from fleece of sheep/goat, silk from cocoon of silkworm).\n- Synthetic Fibres: Manufactured from chemical substances derived from petroleum (e.g., nylon, polyester, acrylic).\nCotton and Jute Processing:\n- Ginning of Cotton: The process of separating cotton seeds from cotton bolls by combing.\n- Spinning: The process of making yarn from fibres (fibres drawn out and twisted). Traditional tools: Takli and Charkha.\n- Weaving: The process of arranging two sets of yarns together to make a fabric, performed on Handlooms or Powerlooms.\n- Knitting: A single yarn is used to make a piece of fabric (e.g., sweaters, socks).",
+    "formulas": [
+      "Fibre -> (Spinning) -> Yarn -> (Weaving/Knitting) -> Fabric"
+    ],
+    "keyTerms": [
+      "Fibre",
+      "Yarn",
+      "Fabric",
+      "Natural Fibres",
+      "Synthetic Fibres",
+      "Ginning",
+      "Spinning",
+      "Weaving",
+      "Knitting",
+      "Loom"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "From which parts of the plant are cotton and jute obtained?",
+        "answer": "Cotton is obtained from the fruit (cotton bolls) of the cotton plant, while jute is obtained from the stem of the jute plant."
+      }
+    ],
+    "summary": "Fibres are natural (cotton, jute, silk, wool) or synthetic (nylon, polyester). Ginning removes seeds, spinning twists fibre into yarn, and weaving on looms makes fabric."
+  },
+  {
+    "id": "ncert-c6-sci-ch4",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 4,
+    "chapterTitle": "Sorting Materials into Groups",
+    "sectionNumber": "4.1 - 4.4",
+    "sectionTitle": "Properties of Materials: Lustre, Hardness, Solubility, Transparency & Density",
+    "pageNumber": 26,
+    "content": "Objects around us are made of a large variety of materials. Grouping objects makes it convenient to study their properties.\nKey Properties of Materials:\n- Appearance & Lustre: Materials that have shiny lustre are usually metals (iron, copper, aluminium, gold). Non-metals generally lack lustre.\n- Hardness: Materials that can be compressed or scratched easily are soft (sponge, cotton); materials difficult to compress are hard (iron, stone, diamond).\n- Solubility: Substances that dissolve completely in water are soluble (salt, sugar); those that do not dissolve are insoluble (sand, chalk powder, sawdust).\n- Floatation: Insoluble materials float if their density is less than water (dry leaves, cork, oil) or sink if denser (iron nail, stone).\n- Transparency:\n  1. Transparent: Objects through which things can be seen clearly (clean glass, water, air).\n  2. Translucent: Objects through which things can be seen, but not clearly (butter paper, frosted glass, oiled paper).\n  3. Opaque: Objects through which you cannot see at all (wood, metals, cardboard).",
+    "formulas": [
+      "Density = Mass / Volume (Float if Density < Water, Sink if Density > Water)"
+    ],
+    "keyTerms": [
+      "Lustre",
+      "Hardness",
+      "Soluble",
+      "Insoluble",
+      "Miscible",
+      "Density",
+      "Transparent",
+      "Translucent",
+      "Opaque"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Differentiate between transparent, translucent, and opaque materials with examples.",
+        "answer": "Transparent allows light to pass clearly (clear glass); translucent allows partial light visibility (butter paper); opaque completely blocks light (wooden board)."
+      }
+    ],
+    "summary": "Materials are grouped by lustre (metallic shine), hardness, solubility in water, flotation (density), and transparency (transparent, translucent, opaque)."
+  },
+  {
+    "id": "ncert-c6-sci-ch5",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 5,
+    "chapterTitle": "Separation of Substances",
+    "sectionNumber": "5.1 - 5.5",
+    "sectionTitle": "Handpicking, Threshing, Winnowing, Sedimentation, Decantation, Filtration, Evaporation & Condensation",
+    "pageNumber": 35,
+    "content": "Methods of separating components of mixtures:\n- Handpicking: Picking out visible large impurities (stones from rice).\n- Threshing: Beating harvested stalks against hard surface to detach grain seeds.\n- Winnowing: Separating heavier grains from lighter husk using wind/air currents.\n- Sieving: Using a sieve with fine pores to separate particles of different sizes (bran from flour).\n- Sedimentation: Settling of heavier insoluble solids at the bottom of water.\n- Decantation: Pouring out the top liquid without disturbing the sediment.\n- Filtration: Using filter paper with microscopic pores to separate insoluble solids from liquids (e.g., paneer curd or mud from water).\n- Evaporation: Heating a liquid solution so water evaporates, leaving behind dissolved solid solute (common salt from sea water).\n- Condensation: The process of conversion of water vapour into its liquid form (e.g., drops forming under a cold lid).\n- Saturated Solution: A solution in which no more substance can be dissolved at a given temperature.",
+    "formulas": [
+      "Water Vapour --(Condensation)--> Liquid Water --(Evaporation)--> Water Vapour"
+    ],
+    "keyTerms": [
+      "Handpicking",
+      "Threshing",
+      "Winnowing",
+      "Sieving",
+      "Sedimentation",
+      "Decantation",
+      "Filtration",
+      "Evaporation",
+      "Condensation",
+      "Saturated Solution"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "How will you separate sand and water from their mixture?",
+        "answer": "Allow the mixture to stand undisturbed so sand settles at the bottom (sedimentation). Carefully pour out water into another container (decantation) or pass through filter paper (filtration)."
+      }
+    ],
+    "summary": "Substances are separated by handpicking, threshing, winnowing, sedimentation, decantation, filtration, and evaporation. Condensation reverses evaporation."
+  },
+  {
+    "id": "ncert-c6-sci-ch6",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 6,
+    "chapterTitle": "Changes Around Us",
+    "sectionNumber": "6.1 - 6.3",
+    "sectionTitle": "Reversible and Irreversible Changes, Expansion and Contraction",
+    "pageNumber": 46,
+    "content": "Changes happen around us continuously:\n1. Reversible Changes: Changes that can be undone to regain the original substance:\n   - Folding a paper to make a toy aeroplane.\n   - Melting of ice into water (freezing converts it back to ice).\n   - Inflating a balloon without bursting.\n   - Boiling water into steam (condensation recovers water).\n2. Irreversible Changes: Changes that cannot be reversed; new substances with different properties are formed:\n   - Burning a piece of paper or matchstick to ash and smoke.\n   - Cooking of food or baking bread.\n   - Curdling of milk into paneer/curd.\n   - Ripening of fruits or growth of a plant.\nExpansion and Contraction:\n- Metals expand (become slightly larger) on heating and contract (become smaller) on cooling.\n- Application: Iron rims of bullock cart wheels are made slightly smaller than the wooden wheel. On heating, the iron rim expands and fits over the wheel; when cooled with water, it contracts and grips tightly.",
+    "formulas": [
+      "Heating -> Expansion (Volume increases); Cooling -> Contraction (Volume decreases)"
+    ],
+    "keyTerms": [
+      "Reversible Change",
+      "Irreversible Change",
+      "Physical Change",
+      "Expansion",
+      "Contraction",
+      "Melting",
+      "Curdling"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A thick coating of a paste of Plaster of Paris (POP) is applied over the bandage on a fractured bone. It becomes hard on drying to keep the bone immobilised. Can the change in POP be reversed?",
+        "answer": "No, it is an irreversible chemical change because POP reacts with water to form a hard solid substance (gypsum) which cannot be converted back to original powder."
+      }
+    ],
+    "summary": "Reversible changes can be undone (melting ice, inflating balloons); irreversible changes cannot (burning, cooking). Metals expand on heating and contract on cooling."
+  },
+  {
+    "id": "ncert-c6-sci-ch7",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 7,
+    "chapterTitle": "Getting to Know Plants",
+    "sectionNumber": "7.1 - 7.5",
+    "sectionTitle": "Herbs, Shrubs, Trees, Leaf Venation, Root Systems & Flower Anatomy",
+    "pageNumber": 52,
+    "content": "Classification of Plants based on size and stem:\n- Herbs: Short plants with green and tender stems, few branches (tomato, wheat, grass).\n- Shrubs: Medium-height plants with hard, thin stem branching out near base (rose, lemon).\n- Trees: Very tall plants with hard, thick brown bark trunk branching in upper parts (neem, mango, banyan).\n- Creepers (weak stems crawling on ground, e.g., watermelon) and Climbers (take support of nearby structures, e.g., money plant, pea).\nLeaf Structure & Venation:\n- Petiole (stalk) and Lamina (broad green part).\n- Venation: Pattern of veins in leaf.\n  1. Reticulate Venation: Net-like design on both sides of midrib (rose, peepal, mango). Associated with Tap root.\n  2. Parallel Venation: Veins run parallel to each other (grass, wheat, maize, banana). Associated with Fibrous roots.\n- Transpiration: Evaporation of excess water from leaves as vapour through stomata.\nRoot Systems:\n- Tap Root: One main primary root with smaller lateral roots (carrot, gram, mustard).\n- Fibrous Root: Clustered bunch of roots arising from stem base without main root (grass, onion, wheat).\nFlower Parts:\n- Sepals: Outermost green leaf-like protective layer.\n- Petals: Coloured parts attracting pollinators.\n- Stamens (Male part): Anther (contains pollen) + Filament.\n- Pistil / Carpel (Female part): Stigma + Style + Ovary (contains Ovules which develop into seeds).",
+    "formulas": [
+      "Leaf Venation Link: Reticulate Venation <-> Tap Root; Parallel Venation <-> Fibrous Root"
+    ],
+    "keyTerms": [
+      "Herbs",
+      "Shrubs",
+      "Trees",
+      "Creepers",
+      "Climbers",
+      "Petiole",
+      "Lamina",
+      "Reticulate Venation",
+      "Parallel Venation",
+      "Transpiration",
+      "Tap Root",
+      "Fibrous Root",
+      "Sepals",
+      "Petals",
+      "Stamen",
+      "Pistil",
+      "Ovary"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the relationship between the type of leaf venation and the type of root in a plant?",
+        "answer": "Plants with reticulate venation have tap roots (e.g. mustard, bean), whereas plants with parallel venation have fibrous roots (e.g. grass, wheat)."
+      }
+    ],
+    "summary": "Plants are herbs, shrubs, or trees. Reticulate venation corresponds to tap roots; parallel venation corresponds to fibrous roots. Flowers contain sepals, petals, stamens, and pistil."
+  },
+  {
+    "id": "ncert-c6-sci-ch8",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 8,
+    "chapterTitle": "Body Movements",
+    "sectionNumber": "8.1 - 8.4",
+    "sectionTitle": "Human Skeleton, Joints (Ball & Socket, Hinge, Pivotal) & Locomotion in Animals",
+    "pageNumber": 66,
+    "content": "The framework of bones and cartilage that supports and protects human internal organs is called the Skeleton (206 bones in adults).\nTypes of Movable Joints:\n1. Ball and Socket Joint: Rounded head of one bone fits into the cavity (hollow space) of another, allowing movement in all directions (shoulder joint and hip joint).\n2. Pivotal Joint: A cylindrical bone turns inside a ring, allowing rotation from side to side and forward/backward (neck joint where head meets backbone).\n3. Hinge Joint: Allows movement in only one plane, back and forth like a door hinge (elbow and knee joints).\n4. Fixed Joints: Bones cannot move at all (joint between upper jaw and skull).\nCartilage & Muscles:\n- Cartilage: Softer, flexible connective tissue found in ear lobe and between vertebrae.\n- Muscles work in pairs by contraction (shorter and stiffer) and relaxation (pulling, cannot push).\nLocomotion in Animals:\n- Earthworm: Moves by alternating contraction and expansion of body segments using tiny bristles (setae).\n- Snail: Moves with a muscular foot producing wavy motions.\n- Cockroach: Walks with 3 pairs of jointed legs and flies with 2 pairs of wings powered by breast muscles.\n- Birds: Streamlined body, hollow light bones, modified forelimbs into wings.\n- Fish: Streamlined spindle-shaped body with fins and flexible backbone swimming via alternating side-to-side body curves.\n- Snake: Long backbone slithers forward in S-shaped multiple loops pressing against ground.",
+    "formulas": [
+      "Skeleton: 206 bones in adult human; Muscles work in antagonistic contraction-relaxation pairs"
+    ],
+    "keyTerms": [
+      "Skeleton",
+      "Cartilage",
+      "Ball and Socket Joint",
+      "Pivotal Joint",
+      "Hinge Joint",
+      "Fixed Joint",
+      "Earthworm (Setae)",
+      "Streamlined Shape"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is a ball and socket joint? Where is it located?",
+        "answer": "A joint where the rounded end of one bone fits into the cavity of another, allowing movement in all directions. Examples are the shoulder and hip joints."
+      }
+    ],
+    "summary": "Human skeleton has ball-and-socket, pivotal, hinge, and fixed joints. Muscles work in pulling pairs. Animals locomote via setae (earthworms), muscular foot (snails), fins (fish), or wings (birds)."
+  },
+  {
+    "id": "ncert-c6-sci-ch9",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 9,
+    "chapterTitle": "The Living Organisms and Their Surroundings",
+    "sectionNumber": "9.1 - 9.4",
+    "sectionTitle": "Habitat, Adaptations (Desert, Mountain, Aquatic), Biotic & Abiotic Components",
+    "pageNumber": 79,
+    "content": "The surroundings where living organisms live is called their Habitat (provides food, water, air, shelter).\nComponents of a Habitat:\n- Biotic Components: Living things (plants, animals, microorganisms).\n- Abiotic Components: Non-living factors (rocks, soil, air, water, sunlight, temperature).\nAdaptations in Different Habitats:\n1. Desert:\n   - Camel: Long legs keep body away from hot sand; stores fat in hump; excretes very little urine; dung is dry; does not sweat.\n   - Cactus: Leaves modified into spines to prevent transpiration; green stem carries out photosynthesis; thick waxy cuticle; deep roots.\n2. Mountain Regions:\n   - Trees are cone-shaped with sloping needle-like leaves so snow and rainwater slide off easily.\n   - Animals (Yak, Snow leopard) have thick skin and dense fur to protect from extreme cold.\n3. Aquatic (Ocean & Ponds):\n   - Fish have streamlined bodies, slippery scales, fins for balance, and gills to extract dissolved oxygen from water.\n   - Dolphins and Whales do not have gills; they breathe air through blowholes located at top of head.\nCharacteristics of Living Organisms: Need food, respire, respond to stimuli, excrete waste, reproduce, move, grow, and die.",
+    "formulas": [
+      "Ecosystem = Biotic Factors (Living) + Abiotic Factors (Non-living)"
+    ],
+    "keyTerms": [
+      "Habitat",
+      "Adaptation",
+      "Biotic Components",
+      "Abiotic Components",
+      "Transpiration Spines",
+      "Gills",
+      "Blowholes",
+      "Stimuli",
+      "Excretion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "How are cactus adapted to survive in deserts?",
+        "answer": "Cactus leaves are modified into sharp spines to minimize water loss by transpiration. Photosynthesis is carried out by green fleshy stems covered in waxy coating, and roots penetrate deep into soil for moisture."
+      }
+    ],
+    "summary": "Habitats comprise biotic (living) and abiotic (physical) elements. Organisms adapt to deserts (cactus spines, camel fat), mountains (cone trees, fur), and aquatic environments (gills, streamlined bodies)."
+  },
+  {
+    "id": "ncert-c6-sci-ch10",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 10,
+    "chapterTitle": "Motion and Measurement of Distances",
+    "sectionNumber": "10.1 - 10.8",
+    "sectionTitle": "Evolution of Transport, SI Units of Length, Rectilinear, Circular & Periodic Motion",
+    "pageNumber": 95,
+    "content": "Standardization of Measurement:\nAncient people used cubits, hand spans, and foot lengths which varied from person to person.\n- The International System of Units (SI Units) was adopted globally for uniformity.\n- The SI unit of length is Metre (m):\n  1 m = 100 cm = 1000 mm\n  1 km = 1000 m\nTypes of Motion:\n- Rectilinear Motion: Movement along a straight line (vehicles on a straight highway, falling apple, parade soldiers).\n- Circular Motion: Movement along a circular path at constant distance from center (blades of ceiling fan, tip of clock hand).\n- Periodic Motion: Motion that repeats itself at regular fixed intervals of time (pendulum of wall clock, string of guitar, heartbeat).\n- Rotational Motion: An object turning on its own axis (spinning top, rotation of Earth).",
+    "formulas": [
+      "1 m = 100 cm = 1000 mm",
+      "1 km = 1000 m",
+      "Speed = Distance / Time"
+    ],
+    "keyTerms": [
+      "SI Units",
+      "Metre",
+      "Standard Unit",
+      "Rectilinear Motion",
+      "Circular Motion",
+      "Periodic Motion",
+      "Rotational Motion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why could a pace or a footstep not be used as a standard unit of length?",
+        "answer": "Because the size of pace and footsteps varies among different human beings, leading to inconsistent measurements."
+      }
+    ],
+    "summary": "SI unit of length is the Metre (1 m = 100 cm = 1000 mm; 1 km = 1000 m). Motion is rectilinear (straight), circular (curved), periodic (repeating), or rotational (on axis)."
+  },
+  {
+    "id": "ncert-c6-sci-ch11",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 11,
+    "chapterTitle": "Light, Shadows and Reflections",
+    "sectionNumber": "11.1 - 11.4",
+    "sectionTitle": "Luminous Objects, Shadow Formation, Pinhole Camera & Plane Mirror Reflection",
+    "pageNumber": 107,
+    "content": "Light travels in straight lines (Rectilinear Propagation of Light).\n- Luminous Objects: Objects that emit their own light (Sun, stars, electric bulb, glowing torch, firefly).\n- Non-luminous Objects: Objects that reflect light falling on them (Moon, book, chair, wall).\nShadow Formation:\n- A shadow is formed when an opaque object blocks the path of light.\n- Requirements for shadow: 1. Source of light, 2. Opaque object, 3. Screen (ground, wall).\n- Shadows give information about shapes of objects but do not show colour or internal details; shadow length changes with sun angle.\nPinhole Camera:\n- Operates on rectilinear propagation of light.\n- Forms an inverted, real image of distant bright objects without requiring any glass lens.\nMirrors and Reflection:\n- A smooth polished surface like a plane mirror changes the direction of light falling on it (Reflection).\n- Image in plane mirror is erect, virtual, same size as object, and laterally inverted (left appears right, right appears left).",
+    "formulas": [
+      "Principle: Light travels in straight lines (Rectilinear Propagation)"
+    ],
+    "keyTerms": [
+      "Luminous",
+      "Non-luminous",
+      "Opaque",
+      "Transparent",
+      "Shadow",
+      "Pinhole Camera",
+      "Reflection",
+      "Lateral Inversion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Can you think of creating a shape that would give a circular shadow if held in one way and a rectangular shadow if held in another way?",
+        "answer": "Yes, a cylinder gives a circular shadow when its circular face faces the light source, and a rectangular shadow when illuminated from its curved side."
+      }
+    ],
+    "summary": "Light travels in straight lines. Opaque objects cast shadows on screens. Pinhole cameras create inverted images. Plane mirrors produce virtual, erect, laterally inverted reflections."
+  },
+  {
+    "id": "ncert-c6-sci-ch12",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 12,
+    "chapterTitle": "Electricity and Circuits",
+    "sectionNumber": "12.1 - 12.6",
+    "sectionTitle": "Electric Cell, Bulb Filament, Closed vs Open Circuits, Switch, Conductors & Insulators",
+    "pageNumber": 116,
+    "content": "Electric Cell:\n- Converts stored chemical energy into electrical energy.\n- Has two terminals: Positive terminal (metal cap with + sign) and Negative terminal (metal disc with - sign).\nBulb Anatomy:\n- Contains a thin coiled tungsten wire called the Filament that glows when electric current passes through it.\n- Supported by two thick wires, one connected to the metal casing and the other to the metal tip at the base.\nElectric Circuit:\n- Provides a complete closed conducting loop between positive and negative terminals of cell for current flow.\n- Conventional direction of current: from positive (+) to negative (-) terminal.\n- An open or broken circuit prevents current flow, bulb will not glow. If filament breaks, the bulb is 'fused'.\nSwitch:\n- An arrangement to open (break) or close (complete) the electrical circuit at will.\nConductors and Insulators:\n- Conductors: Allow electric current to pass through freely (metals like copper, aluminium, iron, human body, tap water).\n- Insulators: Do not permit electric current to flow (rubber, plastics, wood, dry glass). Used to coat electric wires and plug tops for safety.",
+    "formulas": [
+      "Direction of Conventional Current: (+) Terminal -> Load -> (-) Terminal"
+    ],
+    "keyTerms": [
+      "Electric Cell",
+      "Terminals",
+      "Filament",
+      "Electric Circuit",
+      "Closed Circuit",
+      "Open Circuit",
+      "Fused Bulb",
+      "Switch",
+      "Conductors",
+      "Insulators"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why should an electrician use rubber gloves while repairing an electric switch at your home?",
+        "answer": "Rubber is an electrical insulator that does not allow electric current to pass through. Wearing rubber gloves protects the electrician from electric shocks."
+      }
+    ],
+    "summary": "Electric cells provide current from (+) to (-) terminal. Closed circuits allow current flow; fused bulbs break the circuit. Conductors carry current; insulators provide shock protection."
+  },
+  {
+    "id": "ncert-c6-sci-ch13",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 13,
+    "chapterTitle": "Fun with Magnets",
+    "sectionNumber": "13.1 - 13.5",
+    "sectionTitle": "Natural Magnets (Magnetite), Magnetic vs Non-magnetic, Poles, Compass & Law of Attraction",
+    "pageNumber": 125,
+    "content": "Discovery of Magnets:\nLegend says an ancient Greek shepherd named Magnes discovered natural magnetic rock (Magnetite / Lodestone) when iron nails of his shoes stuck to a rock.\nMagnetic vs Non-magnetic Materials:\n- Magnetic Materials: Materials attracted by a magnet (Iron, Nickel, Cobalt, Steel).\n- Non-magnetic Materials: Materials not attracted by a magnet (Wood, Plastic, Aluminium, Paper, Rubber).\nPoles of a Magnet:\n- Every magnet has two poles: North Pole (N) and South Pole (S).\n- Maximum magnetic strength is concentrated at the two poles. Poles cannot be isolated (cutting a magnet in half creates two complete magnets, each with N and S poles).\nFinding Directions (Magnetic Compass):\n- A freely suspended bar magnet always aligns itself in the geographic North-South direction.\n- Magnetic Compass: Contains a magnetized needle pivoted to rotate freely inside a dial, always pointing North-South.\nLaw of Magnetic Attraction & Repulsion:\n- Like poles repel each other (North repels North, South repels South).\n- Unlike poles attract each other (North attracts South).",
+    "formulas": [
+      "Law of Poles: Like poles repel (N-N, S-S); Unlike poles attract (N-S)"
+    ],
+    "keyTerms": [
+      "Magnetite",
+      "Lodestone",
+      "Magnetic",
+      "Non-magnetic",
+      "North Pole",
+      "South Pole",
+      "Magnetic Compass",
+      "Attraction",
+      "Repulsion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Where are the poles of a bar magnet located?",
+        "answer": "The poles are located near the two extreme ends of the bar magnet, where magnetic attraction is strongest."
+      }
+    ],
+    "summary": "Magnets attract iron, nickel, cobalt. Magnets possess North and South poles; freely suspended magnets align North-South. Like poles repel, unlike poles attract."
+  },
+  {
+    "id": "ncert-c6-sci-ch14",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 14,
+    "chapterTitle": "Water",
+    "sectionNumber": "14.1 - 14.8",
+    "sectionTitle": "Water Cycle, Evaporation, Transpiration, Cloud Formation, Droughts & Rainwater Harvesting",
+    "pageNumber": 136,
+    "content": "Water is essential for all living organisms and agriculture.\nThe Water Cycle:\nContinuous circulation of water between Earth's surface and the atmosphere:\n1. Evaporation: Heat from the sun turns liquid water from oceans, rivers, and soil into water vapour.\n2. Transpiration: Plants release large quantities of water vapour through leaf stomata.\n3. Condensation: As warm water vapour rises into cooler high altitudes, it condenses around dust particles into tiny water droplets forming Clouds.\n4. Precipitation: Tiny droplets coalesce into heavy drops and fall as Rain, Snow, or Hail.\nExcess or Lack of Rains:\n- Floods: Heavy rainfall causes river overflow, submerging farmland, destroying crops, causing waterborne epidemics.\n- Drought: Lack of rainfall over long periods dries up soil, depletes groundwater, causes crop failure and famine.\nConservation:\n- Rainwater Harvesting: Collecting and storing rainwater directly where it falls:\n  1. Rooftop rainwater harvesting (diverting roof runoff through pipes to storage tanks or recharge pits).\n  2. Roadside drainage recharge pits replenishing underground aquifers directly.",
+    "formulas": [
+      "Water Cycle: Evaporation + Transpiration -> Condensation (Clouds) -> Precipitation (Rain)"
+    ],
+    "keyTerms": [
+      "Water Cycle",
+      "Evaporation",
+      "Transpiration",
+      "Condensation",
+      "Precipitation",
+      "Groundwater",
+      "Water Table",
+      "Drought",
+      "Flood",
+      "Rainwater Harvesting"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is rainwater harvesting?",
+        "answer": "Rainwater harvesting is the technique of collecting and storing rainwater from rooftops and surface runoffs for direct use and replenishing underground aquifers."
+      }
+    ],
+    "summary": "Water cycles through evaporation/transpiration, condensation into clouds, and rainfall precipitation. Excessive rain causes floods; deficiency causes droughts. Rainwater harvesting recharges groundwater."
+  },
+  {
+    "id": "ncert-c6-sci-ch15",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 15,
+    "chapterTitle": "Air Around Us",
+    "sectionNumber": "15.1 - 15.5",
+    "sectionTitle": "Atmosphere, Composition of Air (Nitrogen, Oxygen, CO2), Respiration & Windmill",
+    "pageNumber": 147,
+    "content": "The blanket of air surrounding Earth is called the Atmosphere. Air is a mixture of several gases:\nComposition of Air:\n1. Nitrogen (78%): Does not support burning; major component.\n2. Oxygen (21%): Essential for respiration of living organisms and combustion/burning of fuels.\n3. Carbon Dioxide (0.04%): Produced by respiration and burning; used by plants for photosynthesis.\n4. Water Vapour & Dust Particles: Responsible for cloud formation and humidity.\nRespiration in Soil and Aquatic Organisms:\n- Animals in soil (earthworms) breathe air trapped in pore spaces between soil particles.\n- Aquatic animals (fish) breathe dissolved oxygen from water using gills.\nWind Energy:\n- Moving air is called Wind. Windmills harness wind kinetic energy to draw groundwater from tube wells and generate electricity.",
+    "formulas": [
+      "Composition: Nitrogen ~78%, Oxygen ~21%, Carbon Dioxide + Argon + Others ~1%"
+    ],
+    "keyTerms": [
+      "Atmosphere",
+      "Nitrogen",
+      "Oxygen",
+      "Carbon Dioxide",
+      "Combustion",
+      "Dissolved Oxygen",
+      "Wind",
+      "Windmill"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Which gas in the atmosphere is essential for respiration?",
+        "answer": "Oxygen gas (O2), which makes up approximately 21% of atmospheric air, is essential for respiration."
+      }
+    ],
+    "summary": "Atmosphere contains 78% Nitrogen, 21% Oxygen, and small amounts of CO2, water vapour, and dust. Oxygen sustains life respiration and fuel combustion. Moving air powers windmills."
+  },
+  {
+    "id": "ncert-c6-sci-ch16",
+    "classLevel": 6,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 6",
+    "chapterNumber": 16,
+    "chapterTitle": "Garbage In, Garbage Out",
+    "sectionNumber": "16.1 - 16.5",
+    "sectionTitle": "Biodegradable vs Non-biodegradable Waste, Vermicomposting & 3Rs (Reduce, Reuse, Recycle)",
+    "pageNumber": 155,
+    "content": "Waste Management & Types of Garbage:\n1. Biodegradable Waste: Waste from plant and animal origin that decays and rots naturally by microorganisms into manure (fruit/vegetable peels, leftover food, paper, fallen leaves).\n2. Non-biodegradable Waste: Waste that does not rot naturally, persisting for hundreds of years (plastics, polythene bags, glass, metal cans).\nComposting and Vermicomposting:\n- Composting: Converting rotten plant/animal waste into nutrient-rich organic manure.\n- Vermicomposting: Using Redworms (Eisenia foetida) to convert kitchen kitchen waste into high-quality vermicompost. Redworms possess a gizzard that grinds food particles.\nThe 3 R's of Waste Management:\n- Reduce: Minimize waste generation by avoiding single-use items.\n- Reuse: Use discarded items again (jars, bottles, old clothes).\n- Recycle: Reprocess waste materials (plastic, glass, paper, metals) into new products.",
+    "formulas": [
+      "Waste Hierarchy: Reduce > Reuse > Recycle (3 R's)"
+    ],
+    "keyTerms": [
+      "Biodegradable",
+      "Non-biodegradable",
+      "Landfill",
+      "Composting",
+      "Vermicomposting",
+      "Redworms",
+      "Gizzard",
+      "Recycling",
+      "3 R's"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What kind of garbage is not converted into compost by the redworms?",
+        "answer": "Non-biodegradable wastes like plastic pieces, polythene bags, broken glass, aluminium foil, and synthetic fibres cannot be broken down by redworms."
+      }
+    ],
+    "summary": "Waste is biodegradable (organic) or non-biodegradable (plastic/glass). Vermicomposting uses redworms to turn food waste into rich manure. Follow 3 R's: Reduce, Reuse, Recycle."
+  }
+]

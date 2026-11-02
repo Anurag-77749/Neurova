@@ -1,0 +1,665 @@
+[
+  {
+    "id": "ncert-c8-sci-ch1",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 1,
+    "chapterTitle": "Crop Production and Management",
+    "sectionNumber": "1.1 - 1.10",
+    "sectionTitle": "Kharif vs Rabi Crops, Agricultural Practices (Tilling to Storage) & Irrigation",
+    "pageNumber": 1,
+    "content": "Crops are classified based on cropping seasons:\n- Kharif Crops: Sown in the rainy season (June to September). Require abundant water (Paddy, Maize, Soyabean, Groundnut, Cotton).\n- Rabi Crops: Grown in winter season (October to March). (Wheat, Gram, Pea, Mustard, Linseed).\nKey Agricultural Practices:\n1. Soil Preparation: Ploughing/tilling loosens soil, enhances aeration, and brings nutrient-rich soil to the top.\n2. Sowing: Selecting clean, healthy, high-yielding seeds using seed drills.\n3. Adding Manure and Fertilisers:\n   - Manure: Natural organic substance prepared by decomposition of plant/animal waste, enriches humus and improves soil texture.\n   - Fertilisers: Factory-made chemical salts rich in specific inorganic nutrients (NPK: Nitrogen, Phosphorus, Potassium; Urea, Ammonium sulphate). Overuse damages soil fertility.\n   - Crop Rotation: Alternate growing of leguminous crops (which fix nitrogen via Rhizobium) restores nitrogen naturally.\n4. Irrigation: Supplying water to crops at regular intervals:\n   - Modern Methods: Sprinkler System (ideal for uneven sandy soil) and Drip System (delivers water drop-by-drop directly to roots; saves maximum water).\n5. Protection from Weeds: Removing undesirable wild plants using weedicides (2,4-D).\n6. Harvesting & Threshing: Cutting mature crop using combines; separating grain from chaff (threshing).\n7. Storage: Dried grains stored in Silos and Granaries with chemical treatments to prevent pests, rats, and fungi.",
+    "formulas": [
+      "Cropping Seasons: Kharif (Monsoon: Paddy, Maize) vs Rabi (Winter: Wheat, Mustard)"
+    ],
+    "keyTerms": [
+      "Kharif",
+      "Rabi",
+      "Ploughing",
+      "Manure",
+      "Fertiliser",
+      "NPK",
+      "Rhizobium",
+      "Drip Irrigation",
+      "Sprinkler System",
+      "Weeding",
+      "Combine",
+      "Silos"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Differentiate between fertilisers and manure.",
+        "answer": "Fertilisers are factory-made inorganic chemical salts rich in specific plant nutrients (NPK) but add no humus. Manure is natural organic decomposed waste that provides immense humus and improves soil water-retaining texture."
+      }
+    ],
+    "summary": "Crops are Kharif (monsoon) or Rabi (winter). Practices include ploughing, sowing, adding manure/fertilisers, drip irrigation, weeding, harvesting, and silo storage."
+  },
+  {
+    "id": "ncert-c8-sci-ch2",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 2,
+    "chapterTitle": "Microorganisms: Friend and Foe",
+    "sectionNumber": "2.1 - 2.7",
+    "sectionTitle": "Bacteria, Fungi, Protozoa, Algae, Viruses, Antibiotics, Vaccines & Food Preservation",
+    "pageNumber": 17,
+    "content": "Microorganisms are tiny living organisms invisible to naked eye, grouped into Bacteria, Fungi, Protozoa, and Algae. Viruses reproduce only inside host cells.\nFriendly Microorganisms:\n- Lactobacillus bacterium promotes conversion of milk into curd.\n- Yeast ferments sugar into alcohol (brewing) and produces CO\u2082 gas that leavens bread and cakes.\n- Antibiotics: Medicines produced from bacteria and fungi that kill or stop the growth of disease-causing microbes (e.g., Penicillin discovered by Alexander Fleming, Streptomycin, Tetracycline).\n- Vaccines (Immunisation): Dead or weakened microbes introduced into body to stimulate production of Antibodies (Edward Jenner discovered smallpox vaccine in 1798).\n- Nitrogen Fixation: Rhizobium bacteria fix atmospheric N\u2082 into nitrates in root nodules of legumes.\nHarmful Microorganisms (Pathogens):\n- Communicable Diseases: Spread from infected to healthy person through air, water, food, or vectors (e.g., Cholera by bacteria, Common cold by virus, Malaria by female Anopheles mosquito, Dengue by female Aedes mosquito).\nFood Preservation Methods:\n- Chemical preservatives (Sodium benzoate, sodium metabisulphite), common salt (curing meat/pickles), sugar (jams/jellies), oil and vinegar.\n- Pasteurisation (Louis Pasteur): Heating milk to 70\u00b0C for 15 to 30 seconds and suddenly chilling it to kill harmful microbes without altering taste.",
+    "formulas": [
+      "Pasteurisation: Heat milk to 70\u00b0C (15-30s) -> Rapidly Chill to <10\u00b0C"
+    ],
+    "keyTerms": [
+      "Microorganisms",
+      "Bacteria",
+      "Fungi",
+      "Protozoa",
+      "Viruses",
+      "Lactobacillus",
+      "Yeast",
+      "Fermentation",
+      "Antibiotics",
+      "Penicillin",
+      "Vaccine",
+      "Antibodies",
+      "Pathogen",
+      "Pasteurisation"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are antibiotics? What precautions must be taken while taking them?",
+        "answer": "Antibiotics are medicines produced from microorganisms that kill or inhibit disease-causing bacteria. Precautions: Take only on doctor's prescription, complete the full prescribed course, and do not take them unnecessarily for viral infections like cold or flu."
+      }
+    ],
+    "summary": "Microbes are beneficial (curd, fermentation, penicillin, vaccines, nitrogen fixation) or pathogenic (cholera, malaria vectors). Food is preserved by salting, sugar, and pasteurisation."
+  },
+  {
+    "id": "ncert-c8-sci-ch3",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 3,
+    "chapterTitle": "Synthetic Fibres and Plastics",
+    "sectionNumber": "3.1 - 3.5",
+    "sectionTitle": "Rayon, Nylon, Polyester, Acrylic, Thermoplastics vs Thermosetting Plastics & Environment",
+    "pageNumber": 32,
+    "content": "A synthetic fibre is a chain of small chemical repeating units called Monomers joined together to form a large single unit called a Polymer.\nMajor Synthetic Fibres:\n1. Rayon (Artificial Silk): Prepared by chemical treatment of natural wood pulp. Soft, drapes well, cheaper than natural silk.\n2. Nylon: First fully synthetic fibre (1931), synthesized from coal, water, and air. Strong, elastic, lightweight, lustrous, easy to wash. Stronger than a steel wire of same diameter (used in parachutes, climbing ropes, socks).\n3. Polyester (Terylene / PET): Wrinkle-resistant, retains crisp shape, easily washable. PET is widely used for making plastic bottles and jars.\n4. Acrylic (Artificial Wool): Cheap alternative to natural wool for sweaters and blankets.\nPlastics:\n- Thermoplastics: Plastics that get deformed easily on heating and can be bent and remoulded repeatedly (Polythene, PVC; used for toys, combs, pipes).\n- Thermosetting Plastics: Plastics that, once moulded, cannot be softened by heating (Bakelite: poor conductor of heat/electricity used for electrical switches and handle of utensils; Melamine: fire-resistant, used for floor tiles and kitchenware).\nEnvironmental Impact:\nPlastics are non-biodegradable, take hundreds of years to decompose, release toxic fumes when burned, and choke drains/animals. Follow the 5 R principle: Reduce, Reuse, Recycle, Recover, and Refuse.",
+    "formulas": [
+      "5 R Principle: Reduce, Reuse, Recycle, Recover, Refuse"
+    ],
+    "keyTerms": [
+      "Polymer",
+      "Monomer",
+      "Rayon",
+      "Nylon",
+      "Polyester",
+      "PET",
+      "Acrylic",
+      "Thermoplastics",
+      "Thermosetting",
+      "Bakelite",
+      "Melamine",
+      "Non-biodegradable"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain why plastic containers are favoured for storing food and chemicals.",
+        "answer": "Plastics are non-reactive (do not corrode with water or air), lightweight, strong, durable, poor conductors of heat and electricity, and can be moulded into varied shapes."
+      }
+    ],
+    "summary": "Synthetic fibres include Rayon (wood pulp), Nylon (high tensile strength), Polyester (PET), and Acrylic. Thermoplastics remelt; thermosetting plastics (Bakelite, Melamine) do not soften."
+  },
+  {
+    "id": "ncert-c8-sci-ch4",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 4,
+    "chapterTitle": "Materials: Metals and Non-Metals",
+    "sectionNumber": "4.1 - 4.4",
+    "sectionTitle": "Malleability, Ductility, Sonority, Reactivity Series & Displacement Reactions",
+    "pageNumber": 44,
+    "content": "Physical Properties:\n- Metals: Lustrous, hard, Malleable (beaten into thin sheets, e.g., aluminium foil), Ductile (drawn into thin wires, e.g., copper), Sonorous (produce ringing sound when struck), Good conductors of heat and electricity.\n  * Exceptions: Mercury is liquid at room temperature; Sodium and Potassium are soft metals that can be cut with a knife.\n- Non-Metals: Dull appearance, brittle (break into powder on hammering), non-sonorous, poor conductors of heat/electricity.\n  * Exceptions: Diamond (allotrope of carbon) is the hardest substance; Graphite conducts electricity; Iodine is a lustrous non-metal.\nChemical Properties:\n1. Reaction with Oxygen:\n   - Metals form basic oxides: 2Mg + O\u2082 --> 2MgO (basic, turns red litmus blue).\n   - Non-metals form acidic oxides: S + O\u2082 --> SO\u2082; SO\u2082 + H\u2082O --> H\u2082SO\u2083 (sulphurous acid, turns blue litmus red).\n2. Reaction with Water: Sodium reacts vigorously with water producing hydrogen gas and heat (stored in kerosene). Non-metals do not react with water (phosphorus stored in water to prevent reaction with air).\n3. Reaction with Acids: Metals react with dilute acids to produce metal salt and Hydrogen gas (burns with a 'pop' sound).\n4. Displacement Reaction: A more reactive metal displaces a less reactive metal from its salt solution:\n   Fe + CuSO\u2084 (blue) --> FeSO\u2084 (green) + Cu (reddish-brown). Copper cannot displace iron from FeSO\u2084.",
+    "formulas": [
+      "2Mg + O\u2082 --> 2MgO  (Basic Metal Oxide)",
+      "S + O\u2082 --> SO\u2082  (Acidic Non-metal Oxide)",
+      "Fe + CuSO\u2084(blue) --> FeSO\u2084(green) + Cu"
+    ],
+    "keyTerms": [
+      "Malleability",
+      "Ductility",
+      "Sonorous",
+      "Lustre",
+      "Metal Oxides (Basic)",
+      "Non-metal Oxides (Acidic)",
+      "Pop Sound (H\u2082)",
+      "Displacement Reaction",
+      "Reactivity Series"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why is sodium metal stored under kerosene?",
+        "answer": "Sodium is an extremely reactive alkali metal. It reacts vigorously with oxygen and moisture in air, catching fire and releasing tremendous heat. Storing under kerosene prevents contact with air and moisture."
+      }
+    ],
+    "summary": "Metals are malleable, ductile, sonorous conductors forming basic oxides. Non-metals form acidic oxides. More reactive metals displace less reactive ones from salt solutions (Fe displaces Cu)."
+  },
+  {
+    "id": "ncert-c8-sci-ch5",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 5,
+    "chapterTitle": "Coal and Petroleum",
+    "sectionNumber": "5.1 - 5.4",
+    "sectionTitle": "Fossil Fuels, Carbonisation, Coal Products (Coke, Coal Tar, Coal Gas) & Fractional Distillation",
+    "pageNumber": 56,
+    "content": "Natural resources are Exhaustible (coal, petroleum, natural gas, forests) or Inexhaustible (sunlight, air).\nFossil Fuels: Formed from the dead remains of living organisms buried under high temperature and high pressure over millions of years.\nCoal & Carbonisation:\n- Carbonisation: The slow chemical process of conversion of dead vegetation into coal under high pressure and temperature.\n- Products of Destructive Distillation of Coal:\n  1. Coke: Almost pure form of carbon, tough, porous, black. Used in steel manufacturing and metal extraction.\n  2. Coal Tar: Thick black liquid with unpleasant smell, mixture of ~200 substances used to manufacture dyes, drugs, perfumes, plastics, and naphthalene balls.\n  3. Coal Gas: Obtained during processing of coal into coke; used as industrial heating fuel.\nPetroleum & Fractional Distillation:\n- Formed from organisms living in the sea that died and were buried under sand and clay under heat and pressure.\n- Refining: Separating petroleum into useful fractions in a fractional distillation column based on boiling points:\n  1. Petroleum Gas (LPG for domestic cooking).\n  2. Petrol (motor fuel, aviation spirit).\n  3. Kerosene (fuel for stoves, lamps, jet aircraft).\n  4. Diesel (heavy motor vehicles, electric generators).\n  5. Lubricating oil, Paraffin wax (candles, vaseline), and Bitumen (surfacing road).\nNatural Gas (CNG): Compressed Natural Gas is a cleaner fuel with high calorific value, transported through pipelines.",
+    "formulas": [
+      "Carbonisation: Dead Vegetation --(High T, P, Millions of Years)--> Coal"
+    ],
+    "keyTerms": [
+      "Exhaustible Resources",
+      "Fossil Fuels",
+      "Carbonisation",
+      "Coke",
+      "Coal Tar",
+      "Coal Gas",
+      "Petroleum Refining",
+      "Fractional Distillation",
+      "LPG",
+      "CNG",
+      "Bitumen"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are the advantages of using CNG and LPG as fuels?",
+        "answer": "They are clean burning fuels that leave no ash residue, cause very low air pollution, have high calorific values, and can be easily transported directly through pipelines."
+      }
+    ],
+    "summary": "Coal, petroleum, and natural gas are fossil fuels. Carbonisation converts biomass to coal (yielding coke, coal tar, coal gas). Fractional distillation of crude oil yields petrol, diesel, and kerosene."
+  },
+  {
+    "id": "ncert-c8-sci-ch6",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 6,
+    "chapterTitle": "Combustion and Flame",
+    "sectionNumber": "6.1 - 6.6",
+    "sectionTitle": "Ignition Temperature, Fire Extinguishers, Zones of Candle Flame & Calorific Value",
+    "pageNumber": 64,
+    "content": "Combustion is a chemical process in which a substance reacts with Oxygen to give off heat and light.\nConditions Necessary for Combustion:\n1. Combustible substance (fuel).\n2. Supporter of combustion (Oxygen / Air).\n3. Ignition Temperature: The lowest temperature at which a substance catches fire. Substances with very low ignition temperature are Inflammable (petrol, alcohol, LPG).\nFire Fighting:\n- Water cools combustible material below its ignition temperature, but CANNOT be used for electrical fires (water conducts electricity) or oil/petrol fires (oil floats on water and keeps burning).\n- Carbon dioxide (CO\u2082): Best extinguisher for electrical and inflammable liquid fires. Being denser than oxygen, it blankets the fire and cuts off oxygen supply.\nTypes of Combustion: Rapid combustion (LPG gas stove), Spontaneous combustion (white phosphorus catches fire in air), Explosion (fireworks).\nStructure of a Candle Flame (Three Zones):\n1. Innermost Zone (Dark): Around the wick, contains unburnt wax vapours; least hot.\n2. Middle Zone (Luminous / Yellow): Incomplete combustion due to limited air; produces carbon soot particles; moderately hot.\n3. Outermost Zone (Non-luminous / Blue): Complete combustion with abundant oxygen; hottest zone (goldsmiths blow this zone with a metallic blowpipe to melt gold and silver).\nFuel Efficiency & Calorific Value:\n- Calorific Value: Amount of heat energy produced on complete combustion of 1 kg of fuel, expressed in kiloJoules per kg (kJ/kg).\n  Hydrogen has highest calorific value (150,000 kJ/kg); Wood ~17,000 kJ/kg; LPG ~55,000 kJ/kg.\n- Incomplete burning releases toxic Carbon Monoxide (CO, fatal poison) and unburnt carbon particles (respiratory asthma). Burning coal/diesel releases SO\u2082 and NO\u2082 causing Acid Rain.",
+    "formulas": [
+      "Calorific Value (kJ/kg) = Heat Energy Produced (kJ) / Mass of Fuel (kg)",
+      "Flame Zones: Outermost Blue (Hottest) > Middle Yellow > Innermost Dark (Least hot)"
+    ],
+    "keyTerms": [
+      "Combustion",
+      "Ignition Temperature",
+      "Inflammable Substances",
+      "Fire Extinguisher",
+      "CO\u2082 Extinguisher",
+      "Flame Zones",
+      "Calorific Value",
+      "Carbon Monoxide",
+      "Acid Rain"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Which zone of a flame does a goldsmith use for melting gold and silver and why?",
+        "answer": "A goldsmith uses the outermost non-luminous blue zone of the flame because it undergoes complete combustion and is the hottest zone of the flame."
+      }
+    ],
+    "summary": "Combustion requires fuel, oxygen, and ignition temperature. Candle flame has 3 zones: outermost blue (hottest, complete combustion), middle yellow, inner dark. Calorific value measured in kJ/kg."
+  },
+  {
+    "id": "ncert-c8-sci-ch7",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 7,
+    "chapterTitle": "Conservation of Plants and Animals",
+    "sectionNumber": "7.1 - 7.10",
+    "sectionTitle": "Deforestation, Desertification, Biosphere Reserves, National Parks & Red Data Book",
+    "pageNumber": 77,
+    "content": "Deforestation and Consequences:\nClearing of forests for agriculture, urbanization, and timber.\nConsequences:\n1. Increase in atmospheric CO\u2082 leading to Global Warming.\n2. Depletion of groundwater and disruption of rainfall pattern (droughts).\n3. Desertification: Removal of topsoil by erosion exposes hard rocky layers lacking humus, turning fertile land into desert.\nProtected Areas for Biodiversity Conservation:\n- Sanctuary: Area where animals are protected from disturbance to them and their habitat.\n- National Park: Areas reserved for wildlife where they can freely use habitats and natural resources (e.g., Jim Corbett, Kaziranga).\n- Biosphere Reserve: Large protected area for conservation of biodiversity and traditional tribal lifestyles (e.g., Pachmarhi Biosphere Reserve). Contains core, buffer, and transition zones.\nKey Terms:\n- Flora (plants) and Fauna (animals) of a specific geographical area.\n- Endemic Species: Species of plants and animals found exclusively in a particular geographical area and nowhere else (e.g., Wild mango and Giant squirrel in Pachmarhi).\n- Red Data Book: Official reference source book maintained internationally by IUCN recording all Endangered species of animals and plants.\n- Migration: Seasonal movement of birds (migratory birds like Siberian Crane) over long distances to escape inhospitable cold climates for breeding.\n- Reforestation: Restocking of destroyed forests by planting new trees (Forest Conservation Act 1980).",
+    "formulas": [
+      "Deforestation -> Soil Erosion -> Humus Loss -> Desertification"
+    ],
+    "keyTerms": [
+      "Deforestation",
+      "Desertification",
+      "Biodiversity",
+      "Biosphere Reserve",
+      "Sanctuary",
+      "National Park",
+      "Flora",
+      "Fauna",
+      "Endemic Species",
+      "Endangered",
+      "Red Data Book",
+      "Reforestation"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the Red Data Book?",
+        "answer": "The Red Data Book is the international document maintained by IUCN that keeps a complete catalogue and record of all endangered animal and plant species."
+      }
+    ],
+    "summary": "Deforestation causes global warming and desertification. Biodiversity is protected in Biosphere Reserves, Sanctuaries, and National Parks. Endangered species are listed in the Red Data Book."
+  },
+  {
+    "id": "ncert-c8-sci-ch8",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 8,
+    "chapterTitle": "Cell \u2013 Structure and Functions",
+    "sectionNumber": "8.1 - 8.6",
+    "sectionTitle": "Discovery of Cell (Robert Hooke), Plant vs Animal Cells, Nucleus, Chromosomes & Organelles",
+    "pageNumber": 90,
+    "content": "The cell is the basic structural and functional unit of living organisms, discovered by Robert Hooke in 1665 in thin slices of cork under a microscope.\nOrganism Classification:\n- Unicellular: Single-celled organisms performing all life functions (Amoeba, Paramecium).\n- Multicellular: Composed of millions of specialized cells organized into tissues, organs, and organ systems.\nParts of a Cell:\n1. Cell Membrane (Plasma Membrane): Porous boundary regulating entry and exit of substances.\n2. Cell Wall (Plants only): Tough outer protective layer made of Cellulose providing mechanical support against temperature variations, high wind speed, and atmospheric moisture.\n3. Cytoplasm: Jelly-like substance between cell membrane and nucleus containing organelles (mitochondria, ribosomes, Golgi bodies).\n4. Nucleus: Spherical central control center:\n   - Nuclear membrane separates it from cytoplasm.\n   - Nucleolus: Dense spherical body inside nucleus.\n   - Chromosomes: Thread-like structures carrying Genes (units of inheritance passing genetic traits from parents to offspring).\n5. Vacuoles: Fluid-filled storage spaces (very large in plant cells; small and numerous in animal cells).\n6. Plastids (Plants only): Chloroplasts containing green chlorophyll for photosynthesis.\nProkaryotes vs Eukaryotes:\n- Prokaryotes: Cells lacking a well-organized nuclear membrane (Bacteria, Blue-green algae).\n- Eukaryotes: Cells having a well-defined nucleus enclosed by a nuclear membrane (Plants, Animals, Fungi).",
+    "formulas": [
+      "Plant Cell Exclusive: Cell Wall (Cellulose) + Plastids (Chloroplasts) + Large Central Vacuole"
+    ],
+    "keyTerms": [
+      "Cell",
+      "Robert Hooke",
+      "Unicellular",
+      "Multicellular",
+      "Plasma Membrane",
+      "Cell Wall",
+      "Cytoplasm",
+      "Nucleus",
+      "Chromosomes",
+      "Genes",
+      "Chloroplast",
+      "Prokaryote",
+      "Eukaryote"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "State three differences between plant and animal cells.",
+        "answer": "1. Plant cells have a rigid cellulose cell wall; animal cells do not. 2. Plant cells contain plastids (chloroplasts); animal cells lack plastids. 3. Plant cells have one large central vacuole; animal cells have small temporary vacuoles."
+      }
+    ],
+    "summary": "Cells have membrane, cytoplasm, and nucleus (containing DNA genes). Plant cells uniquely possess a cell wall, large central vacuole, and plastids. Prokaryotes lack a nuclear membrane."
+  },
+  {
+    "id": "ncert-c8-sci-ch9",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 9,
+    "chapterTitle": "Reproduction in Animals",
+    "sectionNumber": "9.1 - 9.3",
+    "sectionTitle": "Sexual vs Asexual Reproduction, Internal/External Fertilisation, Metamorphosis & Cloning",
+    "pageNumber": 100,
+    "content": "Modes of Reproduction:\n1. Sexual Reproduction:\n   - Involves fusion of male gamete (Sperm produced by Testes) and female gamete (Ovum/Egg produced by Ovaries).\n   - Fertilisation: Fusion of sperm nucleus with ovum nucleus to form a single-celled diploid Zygote:\n     * Internal Fertilisation: Occurs inside female body (humans, cows, birds, dogs).\n     * External Fertilisation: Occurs outside female body in water (frogs, toads, fish). Female lays hundreds of jelly-coated eggs, male deposits sperm over them.\n   - Development of Embryo: Zygote divides repeatedly into a ball of cells (Embryo) which implants into the uterine wall. The stage of embryo where all body parts can be identified is called a Foetus.\n   - Viviparous Animals: Give birth to young ones directly (humans, mammals).\n   - Oviparous Animals: Lay eggs that hatch into young ones outside (birds, reptiles, frogs).\nMetamorphosis:\nThe biological transformation of a larva into an adult through drastic morphological changes (e.g., Tadpole with tail and gills transforming into an adult lung-breathing Frog; silkworm caterpillar into moth). Controlled by insect hormones and Thyroxine (requires iodine in water).\n2. Asexual Reproduction (Single parent, no gametes):\n   - Binary Fission: A single cell divides into two identical daughter cells (Amoeba).\n   - Budding: New individuals develop from an outgrowth/bud on parent body (Hydra).\nCloning (Dolly the Sheep, 1996 by Ian Wilmut): Production of an exact genetic replica of a cell or whole organism.",
+    "formulas": [
+      "Sperm (Male) + Ovum (Female) --> Zygote --> Embryo (Implantation in Uterus) -> Foetus"
+    ],
+    "keyTerms": [
+      "Sexual Reproduction",
+      "Sperm",
+      "Ovum",
+      "Fertilisation",
+      "Internal Fertilisation",
+      "External Fertilisation",
+      "Zygote",
+      "Embryo",
+      "Foetus",
+      "Viviparous",
+      "Oviparous",
+      "Metamorphosis",
+      "Binary Fission",
+      "Budding",
+      "Cloning"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Explain the difference between internal fertilisation and external fertilisation.",
+        "answer": "Internal fertilisation occurs inside the female reproductive tract (e.g., humans, dogs), ensuring high fertilisation success. External fertilisation occurs outside the body in water (e.g., frogs, fish), requiring thousands of gametes to offset environmental predation."
+      }
+    ],
+    "summary": "Sexual reproduction involves sperm + egg -> zygote -> embryo. Fertilisation is internal (viviparous humans) or external (oviparous frogs). Metamorphosis transforms larvae into adults. Asexual: budding and binary fission."
+  },
+  {
+    "id": "ncert-c8-sci-ch10",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 10,
+    "chapterTitle": "Reaching the Age of Adolescence",
+    "sectionNumber": "10.1 - 10.9",
+    "sectionTitle": "Puberty, Secondary Sexual Characters, Endocrine Glands, Hormones & Sex Chromosomes",
+    "pageNumber": 113,
+    "content": "Adolescence is the period of life between childhood and adulthood (approx. 11 to 19 years, 'teenagers') leading to reproductive maturity.\nChanges at Puberty:\n1. Sudden increase in height (long bones of arms and legs elongate).\n2. Change in body shape (broadening shoulders in boys; widening pelvic hips in girls).\n3. Voice change: Larynx (voice box) grows larger in boys, visible as Adam's Apple in throat, producing a deeper voice. Girls develop high-pitched voice.\n4. Increased activity of sweat and sebaceous (oil) glands causing acne and pimples.\n5. Development of sex organs and Secondary Sexual Characters (facial hair/mustache in boys, breast development in girls).\nEndocrine Glands and Hormones:\nEndocrine glands are ductless glands that release chemical messengers (Hormones) directly into the bloodstream to reach target sites:\n- Pituitary Gland ('Master Gland' at brain base): Secretes Growth Hormone and stimulates testes and ovaries.\n- Thyroid Gland: Secretes Thyroxine (requires dietary Iodine; deficiency causes Goitre).\n- Pancreas: Secretes Insulin (regulates blood glucose; deficiency causes Diabetes).\n- Adrenal Glands: Secrete Adrenaline (helps body adjust to stress, fear, anger, emergency 'fight or flight').\n- Testes: Secrete Testosterone (male hormone).\n- Ovaries: Secrete Estrogen (female hormone regulating menstrual cycle).\nSex Determination:\n- Females have XX chromosomes; Males have XY chromosomes.\n- Unfertilized human egg always carries an X chromosome. Sperm carries either X or Y chromosome.\n- X-sperm + X-egg = XX (Girl child); Y-sperm + X-egg = XY (Boy child). Father's sperm decides the baby's sex.",
+    "formulas": [
+      "Height Estimation: Current Height (cm) / % Full Height at this age \u00d7 100",
+      "Sex: Egg(X) + Sperm(X) = Female (XX); Egg(X) + Sperm(Y) = Male (XY)"
+    ],
+    "keyTerms": [
+      "Adolescence",
+      "Puberty",
+      "Adam's Apple",
+      "Secondary Sexual Characters",
+      "Endocrine Glands",
+      "Hormones",
+      "Pituitary",
+      "Thyroxine",
+      "Insulin",
+      "Adrenaline",
+      "Testosterone",
+      "Estrogen",
+      "Menstruation",
+      "Sex Chromosomes"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are hormones? Name the hormone produced by thyroid, pancreas, and adrenal glands.",
+        "answer": "Hormones are chemical secretions released by ductless endocrine glands directly into the blood. Thyroid produces Thyroxine, Pancreas produces Insulin, and Adrenals produce Adrenaline."
+      }
+    ],
+    "summary": "Puberty brings growth spurts, voice deepening (Adam's apple), and reproductive maturity driven by hormones (pituitary, thyroxine, insulin, adrenaline, testosterone, estrogen). Paternal Y chromosome determines male sex."
+  },
+  {
+    "id": "ncert-c8-sci-ch11",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 11,
+    "chapterTitle": "Force and Pressure",
+    "sectionNumber": "11.1 - 11.10",
+    "sectionTitle": "Contact vs Non-contact Forces, Pressure (P = F/A), Liquid Pressure & Atmospheric Column",
+    "pageNumber": 127,
+    "content": "Force is a push or pull on an object resulting from an interaction.\nEffects of Force:\n- Can change the state of motion (accelerate, decelerate, stop a moving object, or change direction).\n- Can change the shape or size of an object (stretching spring, squeezing rubber ball).\nTypes of Forces:\n1. Contact Forces:\n   - Muscular Force: Exerted by human or animal muscles.\n   - Frictional Force: Force that opposes relative motion between surfaces in contact.\n2. Non-contact Forces (Action-at-a-distance):\n   - Magnetic Force: Attraction/repulsion between magnetic poles.\n   - Electrostatic Force: Force exerted by an electrically charged body on another charged or uncharged body.\n   - Gravitational Force: Attractive force exerted by all masses in the universe on each other (Earth pulls objects toward its center).\nPressure:\nThe physical force exerted per unit surface area:\nPressure (P) = Force / Area (P = F / A)\n- SI Unit: Pascal (Pa), where 1 Pa = 1 N/m\u00b2.\n- Inverse relation to Area: For a given force, smaller area results in enormous pressure (sharp tip of a sewing needle, sharpened edge of a kitchen knife).\nPressure Exerted by Liquids and Gases:\n- Liquids exert pressure on bottom and sideways on the walls of containers. Liquid pressure increases proportionally with depth (deep-sea divers wear pressurized suits).\n- Atmospheric Pressure: The downward weight force exerted by the vast column of air above unit area on Earth's surface (~101.3 kPa at sea level), capable of supporting a 76 cm column of liquid mercury.",
+    "formulas": [
+      "Pressure = Force / Area  (P = F / A)",
+      "SI Unit: 1 Pascal (Pa) = 1 Newton / meter\u00b2 (N/m\u00b2)",
+      "Liquid Pressure \u221d Depth (h)"
+    ],
+    "keyTerms": [
+      "Force",
+      "Contact Force",
+      "Friction",
+      "Electrostatic Force",
+      "Gravity",
+      "Pressure",
+      "Pascal (Pa)",
+      "Liquid Pressure",
+      "Atmospheric Pressure"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A force of 100 N acts on an area of 0.02 m\u00b2. Calculate the pressure exerted.",
+        "answer": "Pressure P = Force / Area = 100 N / 0.02 m\u00b2 = 5000 Pa (5 kPa)."
+      }
+    ],
+    "summary": "Force (push/pull) alters speed, direction, or shape. Contact forces: friction, muscular; non-contact: gravity, magnetic, electrostatic. Pressure = F/A in Pascals; atmospheric pressure is the weight of overlying air."
+  },
+  {
+    "id": "ncert-c8-sci-ch12",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 12,
+    "chapterTitle": "Friction",
+    "sectionNumber": "12.1 - 12.6",
+    "sectionTitle": "Causes of Friction, Static vs Sliding vs Rolling, Friction Reduction & Fluid Drag",
+    "pageNumber": 146,
+    "content": "Friction is a contact force that opposes the relative motion between two surfaces in contact, acting in a direction opposite to applied force.\nCauses of Friction:\n- Microscopic irregularities (hills and valleys) on surfaces interlock with each other when pressed together.\n- Depends on the roughness of surfaces and the normal force pressing the surfaces together.\nTypes of Friction:\n1. Static Friction: The opposing force present when an object is at rest just before it begins to slide. Maximum static friction is Limiting Friction.\n2. Sliding Friction: The opposing force when an object is sliding over another surface at constant speed. Sliding friction is slightly smaller than static friction because interlocking points do not get enough time to bond.\n3. Rolling Friction: The opposing force when an object rolls over a surface. Rolling friction is vastly smaller than sliding friction (reason why wheels and ball bearings are used in machines).\nOrder: Static Friction > Sliding Friction > Rolling Friction.\nFriction - A Necessary Evil:\n- Essential: Allows walking without slipping, writing on paper with chalk/pen, braking vehicles, holding nails in walls.\n- Harmful: Wears out machine components, car tyres, shoe soles; generates wasteful heat.\n- Methods to Reduce: Applying lubricants (oil, grease, graphite), using ball bearings, streamlining shapes in fluids.\nFluid Friction (Drag):\nFrictional force exerted by fluids (liquids and gases) on moving objects. Depends on object speed, fluid viscosity, and object shape. Birds, fish, and airplanes have streamlined spindle shapes to reduce drag.",
+    "formulas": [
+      "Magnitude Order: Static Friction > Sliding Friction > Rolling Friction"
+    ],
+    "keyTerms": [
+      "Friction",
+      "Interlocking",
+      "Static Friction",
+      "Sliding Friction",
+      "Rolling Friction",
+      "Ball Bearings",
+      "Lubricant",
+      "Fluid Friction",
+      "Drag",
+      "Streamlining"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why are wheels used in luggage trolleys and vehicles?",
+        "answer": "When an object rolls, the friction opposing its motion is rolling friction, which is far smaller than sliding friction. Wheels reduce friction drastically, making pulling heavy loads effortless."
+      }
+    ],
+    "summary": "Friction opposes relative motion due to surface irregularities. Static > Sliding > Rolling friction. Lubricants and ball bearings reduce wear; streamlined shapes reduce fluid drag."
+  },
+  {
+    "id": "ncert-c8-sci-ch13",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 13,
+    "chapterTitle": "Sound",
+    "sectionNumber": "13.1 - 13.7",
+    "sectionTitle": "Vibration, Larynx, Wave Characteristics (Amplitude, Frequency), Human Hearing & Decibels",
+    "pageNumber": 157,
+    "content": "Production & Propagation of Sound:\n- Sound is produced by vibrating bodies. In humans, sound is generated by the vocal cords in the voice box (Larynx).\n- Sound is a mechanical wave requiring a material medium (solid, liquid, gas) to travel. It CANNOT travel in vacuum.\n- Speed of sound: Fastest in solids (~5000 m/s in steel), slower in liquids (~1500 m/s in water), slowest in air (~343 m/s).\nWave Characteristics:\n1. Amplitude: Maximum displacement of vibrating particle from central rest position. Loudness \u221d (Amplitude)\u00b2. Larger amplitude = louder sound (measured in decibels, dB; sounds >80 dB cause noise pollution and ear damage).\n2. Frequency: Number of complete oscillations per second, measured in Hertz (Hz). Determines Pitch / Shrillness. Higher frequency = higher pitch (female voice, bird chirp); lower frequency = lower pitch/bass (male voice, drum).\n3. Time Period (T): Time taken for one complete oscillation: T = 1 / Frequency.\nHuman Hearing System:\n- Audible frequency range: 20 Hz to 20,000 Hz.\n- Infrasonic: Below 20 Hz (whales, elephants, earthquakes).\n- Ultrasonic: Above 20,000 Hz (bats, dog whistles, SONAR, medical ultrasound scans).\n- Ear mechanism: Pinna funnel collects sound -> Ear canal -> Eardrum vibrates -> Three tiny bones (Hammer, Anvil, Stirrup) amplify -> Cochlea turns vibrations into nerve signals sent to brain.",
+    "formulas": [
+      "Frequency (f) = Number of oscillations / Time (seconds)  [Hertz, Hz]",
+      "Time Period T = 1 / f",
+      "Loudness \u221d (Amplitude)\u00b2",
+      "Human Audible Range: 20 Hz to 20,000 Hz"
+    ],
+    "keyTerms": [
+      "Sound",
+      "Vibration",
+      "Larynx",
+      "Medium",
+      "Amplitude",
+      "Frequency",
+      "Hertz (Hz)",
+      "Loudness",
+      "Decibel (dB)",
+      "Pitch",
+      "Eardrum",
+      "Cochlea",
+      "Infrasonic",
+      "Ultrasound",
+      "Noise Pollution"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A pendulum oscillates 40 times in 4 seconds. Find its time period and frequency.",
+        "answer": "Frequency = Oscillations / Time = 40 / 4 = 10 Hz. Time period T = 1 / Frequency = 1 / 10 = 0.1 seconds."
+      }
+    ],
+    "summary": "Sound requires a medium (no vacuum). Loudness depends on amplitude\u00b2 (dB); pitch depends on frequency (Hz). Human hearing is 20 Hz to 20,000 Hz. Eardrum and cochlea transduce sound to brain."
+  },
+  {
+    "id": "ncert-c8-sci-ch14",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 14,
+    "chapterTitle": "Chemical Effects of Electric Current",
+    "sectionNumber": "14.1 - 14.3",
+    "sectionTitle": "Conduction in Liquids, Electrolytes, Chemical Effects (Electrolysis) & Electroplating",
+    "pageNumber": 172,
+    "content": "Electrical Conductivity of Liquids:\n- Pure distilled water is a poor conductor of electricity (insulator).\n- When acids, bases, or mineral salts dissolve in water, they dissociate into mobile positive and negative ions, making water an Electrolyte (conductor).\nChemical Effects of Current (Electrolysis):\nWhen electric current passes through a conducting solution, it causes chemical changes:\n1. Gas Evolution: Passing current through acidified water produces Hydrogen gas bubbles at the cathode (negative electrode) and Oxygen gas bubbles at the anode (positive electrode) in 2:1 volume ratio.\n2. Metal Deposition: Deposition of metal on electrodes.\n3. Colour Changes: Colour changes in solution due to chemical reactions.\nElectroplating:\nThe process of depositing a thin layer of any superior desired metal over another cheaper metal object by passing electric current through an electrolyte.\n- Mechanism:\n  To plate copper on an iron spoon:\n  - Anode (+): Pure copper plate.\n  - Cathode (-): Iron spoon (object to be plated).\n  - Electrolyte: Copper sulphate (CuSO\u2084) solution.\n  Copper ions (Cu\u00b2\u207a) from solution deposit on the iron spoon; equal copper dissolves from anode plate into solution.\n- Practical Applications:\n  1. Chromium plating on bicycle handlebars and car bumpers for shiny corrosion-resistant, scratch-free surface.\n  2. Gold and silver electroplating on inexpensive artificial jewellery.\n  3. Tin electroplated on iron cans for storing food (tin is less reactive than iron).\n  4. Zinc galvanised on iron bridges and automobile bodies to prevent rust.",
+    "formulas": [
+      "Electrolysis of Water: 2H\u2082O --(Electric Current)--> 2H\u2082(Cathode) + O\u2082(Anode)"
+    ],
+    "keyTerms": [
+      "Electrolyte",
+      "Electrolysis",
+      "Electrodes",
+      "Anode (+)",
+      "Cathode (-)",
+      "Electroplating",
+      "Copper Sulphate",
+      "Chromium Plating",
+      "Galvanisation"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is electroplating? Why is chromium plated on car parts?",
+        "answer": "Electroplating is the electrolytic process of coating a superior metal onto another metal. Chromium is plated on car parts because it has a bright shiny lustre, does not corrode, and resists scratches."
+      }
+    ],
+    "summary": "Solutions of acids, bases, and salts conduct electricity. Electrolysis causes gas evolution or metal deposition. Electroplating deposits decorative or anti-corrosive metal coats (chromium, zinc, gold)."
+  },
+  {
+    "id": "ncert-c8-sci-ch15",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 15,
+    "chapterTitle": "Some Natural Phenomena",
+    "sectionNumber": "15.1 - 15.7",
+    "sectionTitle": "Static Electric Charges, Lightning Conductor, Earthquakes, Richter Scale & Seismograph",
+    "pageNumber": 184,
+    "content": "Static Electric Charges & Lightning:\n- Charging by Rubbing (Triboelectric effect): Rubbing amber/glass rod with silk acquires positive charge; rubbing ebonite rod with fur acquires negative charge.\n- Like charges repel, unlike charges attract.\n- Electroscope: Device used to detect whether an object is carrying an electric charge (metal leaves diverge when like charge is transferred).\n- Earthing: The process of transferring electrical charge from a charged body directly into the earth for safety.\n- Lightning: Massive atmospheric electrostatic discharge between oppositely charged clouds or between clouds and the ground.\n- Lightning Conductor: A thick copper rod with sharp spikes installed on rooftops higher than the building, running down to an earth plate in deep soil, safely channeling lightning currents harmlessly into earth.\nEarthquakes:\n- Sudden trembling or shaking of Earth's crust caused by disturbance deep inside the earth's lithosphere.\n- Crust is divided into tectonic plates which constantly slide past or collide. Strain energy builds at plate boundaries (Fault / Seismic Zones) and suddenly releases as seismic waves.\n- Focus: Point inside earth's crust where seismic fracture originates.\n- Epicentre: Point on Earth's surface directly vertically above the focus.\n- Measurement:\n  - Seismograph: Instrument that records seismic tremors as wave graphs on rotating drum.\n  - Richter Scale: Logarithmic scale measuring earthquake magnitude (magnitude > 7 causes severe devastation).",
+    "formulas": [
+      "Richter Scale: Each unit increase represents a 30-fold increase in destructive energy"
+    ],
+    "keyTerms": [
+      "Static Charge",
+      "Electroscope",
+      "Earthing",
+      "Lightning",
+      "Lightning Conductor",
+      "Tectonic Plates",
+      "Fault Zones",
+      "Earthquake",
+      "Focus",
+      "Epicentre",
+      "Seismograph",
+      "Richter Scale"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "How does a lightning conductor protect a tall building from lightning strikes?",
+        "answer": "A lightning conductor provides an easy low-resistance metallic pathway for massive atmospheric electrical charges to flow safely from its pointed rooftop spikes directly into the deep ground, bypassing building walls."
+      }
+    ],
+    "summary": "Frictional rubbing produces static charges. Lightning is massive static discharge neutralized by lightning conductors. Earthquakes occur along tectonic fault zones; magnitude is measured logarithmically on the Richter scale."
+  },
+  {
+    "id": "ncert-c8-sci-ch16",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 16,
+    "chapterTitle": "Light",
+    "sectionNumber": "16.1 - 16.9",
+    "sectionTitle": "Laws of Reflection, Regular vs Diffused Reflection, Human Eye Anatomy & Defects of Vision",
+    "pageNumber": 199,
+    "content": "Laws of Reflection of Light:\n1. The angle of incidence (\u2220i) is always equal to the angle of reflection (\u2220r): \u2220i = \u2220r.\n2. The incident ray, the normal at the point of incidence, and the reflected ray all lie in the same plane.\nTypes of Reflection:\n- Regular Reflection: Parallel rays reflecting from a smooth polished plane surface (mirror) remain parallel, forming clear images.\n- Diffused / Irregular Reflection: Parallel rays reflecting from a rough uneven surface (paper, wood) scatter in all directions due to irregular surface normals; does not form images.\nMultiple Images & Kaleidoscope:\nTwo mirrors placed at an angle \u03b8 form multiple images: Number of images n = (360\u00b0/\u03b8) - 1. A kaleidoscope uses 3 rectangular mirrors inclined at 60\u00b0 to create beautiful symmetrical patterns.\nStructure of the Human Eye:\n- Cornea: Transparent curved outer front membrane.\n- Iris: Coloured diaphragm that regulates the size of the Pupil (controlling light entering eye).\n- Eye Lens: Flexible convex crystalline lens whose focal length is adjusted by Ciliary Muscles (Power of Accommodation).\n- Retina: Light-sensitive back screen containing two types of photoreceptor cells:\n  1. Cones: Sensitive to bright light and colour.\n  2. Rods: Sensitive to dim light.\n- Blind Spot: Junction of optic nerve and retina devoid of rods and cones where no vision is possible.\n- Persistence of Vision: Impression of an image persists on human retina for about 1/16th of a second (basis for cinema animation movies shown at 24 frames/sec).\nCare of the Eyes & Braille System:\n- Normal near point of distinct vision is 25 cm.\n- Braille: Tactile writing system of raised dots developed by Louis Braille (1821) allowing visually impaired persons to read and write.",
+    "formulas": [
+      "\u2220i = \u2220r  (Law of Reflection)",
+      "Number of Images n = (360\u00b0 / \u03b8) - 1",
+      "Near point of distinct vision = 25 cm",
+      "Persistence of vision = 1/16 second"
+    ],
+    "keyTerms": [
+      "Reflection",
+      "Angle of Incidence",
+      "Angle of Reflection",
+      "Regular Reflection",
+      "Diffused Reflection",
+      "Kaleidoscope",
+      "Cornea",
+      "Iris",
+      "Pupil",
+      "Ciliary Muscles",
+      "Retina",
+      "Cones",
+      "Rods",
+      "Blind Spot",
+      "Persistence of Vision",
+      "Braille"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "State the laws of reflection. Explain what happens during diffused reflection.",
+        "answer": "Laws: 1. Angle of incidence equals angle of reflection (\u2220i = \u2220r). 2. Incident ray, normal, and reflected ray all lie in the same plane. In diffused reflection, light hits a rough surface and scatters irregularly because microscopic normals point in different directions."
+      }
+    ],
+    "summary": "Light obeys \u2220i = \u2220r. Human eye contains cornea, iris, pupil, convex lens, and retina (rods/cones). Images persist for 1/16 s. Braille system enables reading for visually challenged."
+  },
+  {
+    "id": "ncert-c8-sci-ch17",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 17,
+    "chapterTitle": "Stars and The Solar System",
+    "sectionNumber": "17.1 - 17.5",
+    "sectionTitle": "Celestial Bodies, Moon Phases, Constellations (Ursa Major, Orion), Planets & Artificial Satellites",
+    "pageNumber": 215,
+    "content": "Celestial Units & Distances:\n- Light Year: Distance travelled by light in one year:\n  1 Light Year = 300,000 km/s \u00d7 365.25 \u00d7 24 \u00d7 3600 s \u2248 9.46 \u00d7 10\u00b9\u00b2 km.\nPhases of the Moon:\nThe Moon is a non-luminous body reflecting sunlight. The day-to-day changes in the visible illuminated portion of the Moon as seen from Earth are called Phases of the Moon (from New Moon to Full Moon cycle takes 29.5 days).\nConstellations:\nIdentifiable group of stars forming a recognizable pattern:\n- Ursa Major (Great Bear / Saptarishi): Seven prominent stars shaped like a ladle; pointer stars point directly to the Pole Star (Polaris).\n- Orion (The Hunter): Bright winter constellation with three middle stars representing Orion's belt pointing towards Sirius (brightest star in night sky).\n- Cassiopeia: Distinctive W or M shape in northern sky.\nThe Solar System:\nThe Sun and 8 revolving planets:\n- Terrestrial Inner Planets: Mercury, Venus (Morning/Evening star, hottest due to thick CO\u2082), Earth, Mars (Red planet with iron oxide soil).\n- Jovian Outer Gas Giants: Jupiter (largest planet, Great Red Spot), Saturn (spectacular ring system), Uranus, Neptune.\nAsteroids & Comets:\n- Asteroid Belt between Mars and Jupiter.\n- Comets: Celestial bodies of ice and dust revolving in highly elliptical orbits, developing a brilliant glowing tail pointing away from the sun (e.g., Halley's Comet seen every 76 years).\n- Meteors (shooting stars) burn up in atmosphere; surviving fragments on ground are Meteorites.\nArtificial Satellites:\nHuman-made spacecraft orbiting Earth (Aryabhata launched in 1975, INSAT, IRS) used for weather forecasting, telecommunication, and GPS navigation.",
+    "formulas": [
+      "1 Light Year \u2248 9.46 \u00d7 10\u00b9\u00b2 km",
+      "Speed of Light c = 3 \u00d7 10\u2078 m/s"
+    ],
+    "keyTerms": [
+      "Light Year",
+      "Moon Phases",
+      "Constellations",
+      "Ursa Major",
+      "Pole Star",
+      "Orion",
+      "Sirius",
+      "Inner Planets",
+      "Outer Planets",
+      "Asteroids",
+      "Comets",
+      "Meteors",
+      "Artificial Satellites"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why is Venus called the morning or evening star even though it is a planet?",
+        "answer": "Venus appears in the eastern sky before sunrise and in the western sky just after sunset because its orbit lies inside Earth's orbit. Due to its high reflectivity, it shines brilliantly like a bright star."
+      }
+    ],
+    "summary": "1 light year \u2248 9.46\u00d710\u00b9\u00b2 km. Moon exhibits phases. Constellations include Ursa Major and Orion pointing to Sirius. Solar system has 8 planets, asteroids, comets, and artificial satellites for GPS and weather."
+  },
+  {
+    "id": "ncert-c8-sci-ch18",
+    "classLevel": 8,
+    "subject": "Science",
+    "textbookName": "NCERT Science Class 8",
+    "chapterNumber": 18,
+    "chapterTitle": "Pollution of Air and Water",
+    "sectionNumber": "18.1 - 18.7",
+    "sectionTitle": "Air Pollutants (Smog, Acid Rain, CFCs), Greenhouse Effect, Global Warming & Ganga Action Plan",
+    "pageNumber": 239,
+    "content": "Air Pollution:\nContamination of air by harmful substances that have a damaging effect on living and non-living things.\nMajor Air Pollutants:\n1. Carbon Monoxide (CO): Produced by incomplete burning of fuels; binds with haemoglobin preventing oxygen transport in blood.\n2. Smog: Mixture of Smoke and Fog containing nitrogen oxides, causing severe breathing difficulties and asthma in winter.\n3. Sulphur Dioxide (SO\u2082) & Nitrogen Dioxide (NO\u2082): Released by thermal power plants and petroleum refineries. React with atmospheric water vapour to form Sulphuric acid (H\u2082SO\u2084) and Nitric acid (HNO\u2083), causing Acid Rain (corrodes marble buildings like the Taj Mahal, called 'Marble Cancer').\n4. Chlorofluorocarbons (CFCs): Used in refrigerators, air conditioners, and aerosol sprays; deplete the protective Ozone layer of atmosphere.\nGreenhouse Effect and Global Warming:\n- Greenhouse Gases: Carbon dioxide (CO\u2082), Methane (CH\u2084), Nitrous oxide, and Water vapour trap reflected infrared heat radiation, warming Earth's surface.\n- Excessive CO\u2082 emissions from fossil fuels accelerate the greenhouse effect, causing Global Warming (melting polar glaciers, rising sea levels, extreme climate disasters).\nWater Pollution:\n- Contamination of water bodies by untreated sewage, industrial effluents (arsenic, lead, mercury), and agricultural pesticides/fertilisers.\n- Eutrophication: Excessive fertiliser runoff leads to algal blooms; when algae die, decomposers consume all dissolved oxygen, suffocating fish.\n- Ganga Action Plan (GAP, 1985) & Namami Gange (2014) launched to clean and revive River Ganga.\n- Potable Water: Water suitable for safe drinking, purified by boiling, chlorination, or modern reverse osmosis (RO).",
+    "formulas": [
+      "Acid Rain: SO\u2082 + H\u2082O -> H\u2082SO\u2083; NO\u2082 + H\u2082O -> HNO\u2083"
+    ],
+    "keyTerms": [
+      "Air Pollution",
+      "Smog",
+      "Acid Rain",
+      "Marble Cancer",
+      "CFCs",
+      "Ozone Depletion",
+      "Greenhouse Effect",
+      "Global Warming",
+      "Water Pollution",
+      "Eutrophication",
+      "Ganga Action Plan",
+      "Potable Water",
+      "Chlorination"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the greenhouse effect? How does it lead to global warming?",
+        "answer": "The greenhouse effect is the trapping of heat by greenhouse gases (CO2, methane, water vapour) in Earth's atmosphere. Excessive emissions from burning fossil fuels amplify this heat trapping, raising Earth's average global temperature."
+      }
+    ],
+    "summary": "Air pollution causes smog, acid rain (marble cancer), and ozone depletion (CFCs). Excess CO2 causes global warming. Water pollution causes eutrophication; drinking water must be potable and chlorinated."
+  }
+]

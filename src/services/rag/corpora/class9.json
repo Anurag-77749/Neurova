@@ -1,0 +1,579 @@
+[
+  {
+    "id": "ncert-c9-sci-ch1",
+    "classLevel": 9,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 1,
+    "chapterTitle": "Matter in Our Surroundings",
+    "sectionNumber": "1.1 - 1.5",
+    "sectionTitle": "Particulate Nature of Matter, States of Matter, Latent Heat & Evaporation",
+    "pageNumber": 1,
+    "content": "Matter is anything that occupies space and has mass. Matter is particulate and particles possess kinetic energy, spaces between them, and mutual attraction.\nThree States of Matter:\n1. Solid: Definite shape, distinct boundaries, fixed volume, negligible compressibility, high density, particles tightly packed in lattice vibrating in place.\n2. Liquid: No fixed shape (takes container shape), fixed volume, low compressibility, particles slide over one another.\n3. Gas: No fixed shape, no fixed volume, highly compressible, particles move randomly at high speeds exerting pressure on container walls.\nChange of State and Latent Heat:\n- Melting Point: Temperature at which solid melts to liquid at 1 atm (Ice melts at 0\u00b0C = 273.15 K).\n- Latent Heat of Fusion: Amount of heat energy required to change 1 kg of a solid into liquid at atmospheric pressure at its melting point.\n- Boiling Point: Temperature at which liquid boils into vapour (Water boils at 100\u00b0C = 373.15 K).\n- Latent Heat of Vaporisation: Heat energy required to convert 1 kg of liquid into gas at its boiling point (steam at 100\u00b0C causes more severe burns than boiling water due to extra latent heat).\n- Sublimation: Change of state directly from solid to gas without changing into liquid (Camphor, Ammonium chloride, Dry Ice / Solid CO\u2082).\nEvaporation & Cooling:\n- The phenomenon of change of liquid into vapours at any temperature below its boiling point.\n- Factors: Increases with surface area, temperature, and wind speed; decreases with humidity.\n- Cooling Effect: Particles absorb latent heat of vaporisation from surroundings (cooling in earthen pots, sweating, wearing cotton clothes in summer).",
+    "formulas": [
+      "Temperature Conversion: T(K) = T(\u00b0C) + 273.15",
+      "Density = Mass / Volume  (kg/m\u00b3)",
+      "Solid --(Fusion)--> Liquid --(Vaporisation)--> Gas"
+    ],
+    "keyTerms": [
+      "Matter",
+      "Diffusion",
+      "Kinetic Energy",
+      "Latent Heat of Fusion",
+      "Latent Heat of Vaporisation",
+      "Sublimation",
+      "Evaporation",
+      "Dry Ice",
+      "Cooling Effect"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why does water kept in an earthen pot (matka) become cool during summer?",
+        "answer": "An earthen pot has microscopic pores through which water continuously seeps out and evaporates from the outer surface. Evaporating water particles absorb the necessary latent heat of vaporisation from the remaining water and pot, keeping it cool."
+      }
+    ],
+    "summary": "Matter exists as solid, liquid, or gas. Phase transitions involve latent heat of fusion and vaporisation. Evaporation below boiling point causes cooling. Sublimation converts solid directly to gas."
+  },
+  {
+    "id": "ncert-c9-sci-ch2",
+    "classLevel": 9,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 2,
+    "chapterTitle": "Is Matter Around Us Pure",
+    "sectionNumber": "2.1 - 2.5",
+    "sectionTitle": "Pure Substances, Mixtures, Solutions, Colloids, Suspensions & Tyndall Effect",
+    "pageNumber": 14,
+    "content": "Classification of Matter:\n- Pure Substance: Consists of a single type of particle with fixed composition:\n  1. Elements: Cannot be broken down into simpler substances (Copper, Iron, Hydrogen, Gold).\n  2. Compounds: Substance composed of two or more elements chemically combined in a fixed ratio (Water H\u2082O, Salt NaCl).\n- Mixtures: Contain more than one substance physically mixed in any proportion:\n  1. Homogeneous Mixture: Uniform composition throughout (True Solution: Salt in water, Brass alloy = 70% Cu + 30% Zn).\n  2. Heterogeneous Mixture: Non-uniform composition (Suspensions and Colloids).\nTrue Solutions, Suspensions & Colloids:\n- True Solution: Homogeneous, particle size < 1 nm, stable, passes through filter paper, does not scatter light (no Tyndall effect).\n  Concentration = (Mass of Solute / Mass of Solution) \u00d7 100%.\n- Suspension: Heterogeneous, particle size > 100 nm, unstable (particles settle on standing), visible to naked eye, scatters light (muddy water, chalk powder in water).\n- Colloid: Heterogeneous, particle size 1 - 100 nm, appears homogeneous, stable, passes through ordinary filter paper, scatters a beam of light (Tyndall Effect).\n  Components: Dispersed Phase (solute-like) + Dispersing Medium (solvent-like).\n  Examples: Fog/Clouds (Liquid in Gas - Aerosol), Milk (Liquid in Liquid - Emulsion), Shaving cream (Gas in Liquid - Foam).",
+    "formulas": [
+      "Mass % of Solution = [Mass of Solute / Mass of Solution] \u00d7 100",
+      "Mass of Solution = Mass of Solute + Mass of Solvent",
+      "Particle Size: Solution (<1 nm) < Colloid (1-100 nm) < Suspension (>100 nm)"
+    ],
+    "keyTerms": [
+      "Pure Substance",
+      "Element",
+      "Compound",
+      "Mixture",
+      "Homogeneous",
+      "Heterogeneous",
+      "True Solution",
+      "Concentration",
+      "Suspension",
+      "Colloid",
+      "Tyndall Effect",
+      "Dispersed Phase",
+      "Emulsion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the Tyndall effect? Name two mixtures that show it.",
+        "answer": "The scattering of a beam of light by colloidal particles when passed through a colloidal solution or fine mist, making the light path visible. Examples: Milk and fog/mist in a dense forest canopy."
+      }
+    ],
+    "summary": "Matter is divided into pure elements/compounds or mixtures. Solutions (<1 nm) are homogeneous. Colloids (1-100 nm) scatter light via the Tyndall effect. Suspensions (>100 nm) settle upon standing."
+  },
+  {
+    "id": "ncert-c9-sci-ch3",
+    "classLevel": 9,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 3,
+    "chapterTitle": "Atoms and Molecules",
+    "sectionNumber": "3.1 - 3.5",
+    "sectionTitle": "Laws of Chemical Combination, Dalton's Atomic Theory, Valency & The Mole Concept",
+    "pageNumber": 31,
+    "content": "Laws of Chemical Combination:\n1. Law of Conservation of Mass (Lavoisier, 1774): Mass can neither be created nor destroyed in a chemical reaction (Total mass of reactants = Total mass of products).\n2. Law of Definite Proportions (Proust, 1799): In a chemical compound, elements are always present in definite proportions by mass (In water H\u2082O, mass ratio H:O is always 1:8).\nDalton's Atomic Theory (1808):\n- All matter is made of indivisible particles called Atoms.\n- Atoms of a given element are identical in mass and chemical properties.\n- Atoms combine in the ratio of small whole numbers to form compounds.\nAtomic Mass Unit (u):\nMass unit equal to exactly 1/12th the mass of one carbon-12 atom.\nChemical Formulae & Valency:\n- Valency: Combining capacity of an element. Formula determined by criss-cross method (e.g., Al\u00b3\u207a and O\u00b2\u207b criss-cross to form Al\u2082O\u2083).\nThe Mole Concept:\n- 1 Mole of any substance is that amount of substance which contains exactly 6.022 \u00d7 10\u00b2\u00b3 elementary entities (Avogadro Constant, N_A).\n- Molar Mass: The mass of 1 mole of a substance in grams, numerically equal to its molecular mass in atomic mass units (u).\n  Formulas:\n  Number of Moles (n) = Given Mass (m) / Molar Mass (M)\n  Number of Particles (N) = n \u00d7 N_A = (m / M) \u00d7 6.022 \u00d7 10\u00b2\u00b3",
+    "formulas": [
+      "1 Mole = 6.022 \u00d7 10\u00b2\u00b3 particles  (Avogadro's Number N_A)",
+      "Number of moles n = Given Mass (m) / Molar Mass (M)",
+      "Number of particles N = n \u00b7 N_A = (m / M) \u00b7 6.022 \u00d7 10\u00b2\u00b3",
+      "Criss-cross rule: Al\u00b3\u207a + O\u00b2\u207b => Al\u2082O\u2083"
+    ],
+    "keyTerms": [
+      "Conservation of Mass",
+      "Definite Proportions",
+      "Dalton's Theory",
+      "Atom",
+      "Molecule",
+      "Atomic Mass Unit (u)",
+      "Valency",
+      "Polyatomic Ions",
+      "Mole Concept",
+      "Avogadro Constant",
+      "Molar Mass"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Calculate the mass of: (a) 0.5 mole of N\u2082 gas, (b) 3.011 \u00d7 10\u00b2\u00b3 number of N atoms.",
+        "answer": "(a) Molar mass of N\u2082 = 28 g/mol. Mass = n \u00d7 M = 0.5 \u00d7 28 = 14 g. (b) Moles n = N / N_A = (3.011 \u00d7 10\u00b2\u00b3) / (6.022 \u00d7 10\u00b2\u00b3) = 0.5 mole. Mass = 0.5 \u00d7 14 = 7 g."
+      }
+    ],
+    "summary": "Chemical reactions conserve mass and follow definite proportions. 1 mole = 6.022 \u00d7 10\u00b2\u00b3 particles (Avogadro's number). Moles n = mass / molar mass."
+  },
+  {
+    "id": "ncert-c9-sci-ch4",
+    "classLevel": 9,
+    "subject": "Chemistry",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 4,
+    "chapterTitle": "Structure of the Atom",
+    "sectionNumber": "4.1 - 4.6",
+    "sectionTitle": "Subatomic Particles (e, p, n), Rutherford's Alpha Scattering, Bohr Model, Valency, Isotopes & Isobars",
+    "pageNumber": 46,
+    "content": "Discovery of Subatomic Particles:\n- Electron (e\u207b): Discovered by J.J. Thomson (1897) in cathode ray tube; negative charge (-1), mass ~ 1/1840 u.\n- Proton (p\u207a): Discovered by E. Goldstein (1886) in canal rays; positive charge (+1), mass ~ 1 u.\n- Neutron (n\u2070): Discovered by James Chadwick (1932); neutral charge (0), mass ~ 1 u, located in nucleus.\nAtomic Models:\n1. Thomson's Plum Pudding Model: Atom is a positive sphere with electrons embedded like raisins.\n2. Rutherford's Gold Foil Alpha Scattering Experiment:\n   - Observations: Most \u03b1-particles passed undeflected; some deflected by small angles; 1 in 12,000 rebounded by 180\u00b0.\n   - Conclusions: Most space inside atom is empty; positive charge and nearly all mass is concentrated in an extremely dense, tiny central core called the Nucleus.\n3. Bohr's Model of Atom (Neils Bohr, 1913):\n   - Electrons revolve only in certain discrete circular orbits (energy levels / shells: K, L, M, N or n = 1, 2, 3, 4) without radiating energy.\n   - Bohr-Bury Scheme: Maximum electrons in nth shell = 2n\u00b2 (K shell = 2, L = 8, M = 18, N = 32). Outermost shell holds max 8 electrons (octet rule).\nAtomic Number and Mass Number:\n- Atomic Number (Z) = Number of protons = Number of electrons (in neutral atom).\n- Mass Number (A) = Number of protons + Number of neutrons (Nucleons).\nIsotopes and Isobars:\n- Isotopes: Atoms of same element having same atomic number (Z) but different mass numbers (A). E.g., Protium (\u00b9\u2081H), Deuterium (\u00b2\u2081H), Tritium (\u00b3\u2081H); Carbon-12 and Carbon-14 (used in carbon dating); Uranium-235 (used in nuclear reactors); Cobalt-60 (cancer therapy).\n- Isobars: Atoms of different elements having different atomic numbers but same mass number (e.g., \u2074\u2070\u2081\u2088Ar and \u2074\u2070\u2082\u2080Ca).",
+    "formulas": [
+      "Max electrons in nth shell = 2n\u00b2  (K=2, L=8, M=18, N=32)",
+      "Mass Number (A) = Protons (Z) + Neutrons (n)",
+      "Isotopes: Same Z, Different A; Isobars: Different Z, Same A"
+    ],
+    "keyTerms": [
+      "Electrons",
+      "Protons",
+      "Neutrons",
+      "Rutherford Model",
+      "Nucleus",
+      "Bohr Model",
+      "Energy Shells",
+      "Bohr-Bury Scheme",
+      "Valency",
+      "Octet Rule",
+      "Atomic Number",
+      "Mass Number",
+      "Isotopes",
+      "Isobars"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What were the conclusions drawn by Rutherford from his alpha particle scattering experiment?",
+        "answer": "1. Most space inside the atom is empty. 2. The entire positive charge and mass of the atom is concentrated in an extremely tiny, dense region called the nucleus. 3. Electrons revolve around the nucleus in circular paths."
+      }
+    ],
+    "summary": "Atoms consist of protons and neutrons in nucleus with electrons in discrete quantized energy shells (2n\u00b2 max). Isotopes share same Z but differ in A (C-12, C-14); isobars share same A."
+  },
+  {
+    "id": "ncert-c9-sci-ch5",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 5,
+    "chapterTitle": "The Fundamental Unit of Life",
+    "sectionNumber": "5.1 - 5.4",
+    "sectionTitle": "Cell Theory, Plasma Membrane (Osmosis), Nucleus & Organelles (Mitochondria, Lysosomes, Plastids)",
+    "pageNumber": 57,
+    "content": "Discovery of Cell:\nRobert Hooke (1665) discovered cells in cork. Leeuwenhoek (1674) observed living cells in pond water. Robert Brown (1831) discovered the Nucleus.\nCell Theory (Schleiden, Schwann & Virchow):\n1. All living organisms are composed of one or more cells.\n2. The cell is the fundamental unit of life.\n3. All cells arise from pre-existing cells (Omnis cellula-e-cellula).\nPlasma Membrane and Transport:\n- Phospholipid bilayer: flexible, selectively permeable.\n- Diffusion: Spontaneous net movement of substance from region of high concentration to low concentration (O\u2082, CO\u2082).\n- Osmosis: Passage of water across selectively permeable membrane:\n  1. Hypotonic solution (dilute): Cell gains water and swells.\n  2. Isotonic solution: No net water movement.\n  3. Hypertonic solution (concentrated): Cell loses water and shrinks (Plasmolysis in plant cells).\nCell Organelles:\n- Endoplasmic Reticulum (ER): RER (studded with ribosomes; synthesizes proteins) and SER (synthesizes lipids, detoxifies drugs in liver).\n- Golgi Apparatus (Camillo Golgi): Modifies, packages, and stores cellular secretions in vesicles; forms lysosomes.\n- Lysosomes: 'Suicide Bags' containing digestive hydrolytic enzymes; break down worn-out organelles and foreign pathogens; can burst and autolyse damaged cell.\n- Mitochondria: 'Powerhouse of the Cell' possessing double membrane (inner folded into cristae); produces ATP (Adenosine Triphosphate, energy currency) via aerobic respiration. Has own DNA and ribosomes.\n- Plastids (Plants only): Chloroplasts (contain chlorophyll for photosynthesis), Chromoplasts (colour pigments), Leucoplasts (starch/oil storage). Have own DNA.\n- Vacuoles: Large central sap vacuole in plants providing turgidity and rigidity.",
+    "formulas": [
+      "Osmosis: Net water movement across semipermeable membrane down water potential",
+      "ATP = Adenosine Triphosphate (Cellular Energy Currency)"
+    ],
+    "keyTerms": [
+      "Cell Theory",
+      "Plasma Membrane",
+      "Diffusion",
+      "Osmosis",
+      "Plasmolysis",
+      "Endoplasmic Reticulum",
+      "Golgi Apparatus",
+      "Lysosomes",
+      "Mitochondria",
+      "ATP",
+      "Plastids",
+      "Chloroplast",
+      "Vacuole"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why are lysosomes known as suicide bags and mitochondria as powerhouses of the cell?",
+        "answer": "Lysosomes contain hydrolytic digestive enzymes that break down cell components. When a cell is severely damaged, lysosomes burst and the enzymes digest their own cell. Mitochondria generate ATP energy via aerobic respiration."
+      }
+    ],
+    "summary": "Cells are the fundamental unit of life. Osmosis regulates water transport. Organelles: RER/SER (proteins/lipids), Golgi (packaging), lysosomes (suicide bags), mitochondria (ATP powerhouse), and chloroplasts (photosynthesis)."
+  },
+  {
+    "id": "ncert-c9-sci-ch6",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 6,
+    "chapterTitle": "Tissues",
+    "sectionNumber": "6.1 - 6.4",
+    "sectionTitle": "Plant Tissues (Meristematic, Parenchyma, Xylem, Phloem) & Animal Tissues (Epithelial, Connective, Muscular, Nervous)",
+    "pageNumber": 68,
+    "content": "A tissue is a cluster of similar cells working together to perform a specialized function.\nI. Plant Tissues:\n1. Meristematic Tissues (Dividing cells, dense cytoplasm, thin cellulose walls, no vacuoles):\n   - Apical Meristem: Tips of roots and shoots, increases length.\n   - Lateral Meristem (Cambium): Increases girth/thickness of stem and root.\n   - Intercalary Meristem: Located at nodes, elongates internodes.\n2. Permanent Tissues:\n   - Simple Permanent: Parenchyma (living, thin walls, stores food, forms chlorenchyma with chlorophyll or aerenchyma in aquatic plants), Collenchyma (living, flexible, mechanical support without breaking), Sclerenchyma (dead, lignified thick walls providing extreme hardness, e.g., coconut husk, grittiness of pear).\n   - Complex Permanent (Vascular Bundles):\n     * Xylem: Transports water/minerals unidirectionally from roots to leaves (Tracheids, Vessels, Xylem parenchyma, Xylem fibres).\n     * Phloem: Translocates food bidirectionally from leaves to plant parts (Sieve tubes, Companion cells, Phloem parenchyma, Phloem fibres).\nII. Animal Tissues:\n1. Epithelial Tissue: Protective continuous covering sheet (Squamous in mouth lining/alveoli, Cuboidal in kidney tubules, Columnar ciliated in respiratory tract, Stratified in skin).\n2. Connective Tissue: Binds and supports organs:\n   - Blood (Fluid plasma + RBCs, WBCs, Platelets).\n   - Bone (Hard matrix of Calcium and Phosphorus).\n   - Cartilage (Flexible matrix of proteins and sugars in nose, ear, trachea).\n   - Ligament (Connects Bone to Bone, highly elastic) vs Tendon (Connects Muscle to Bone, fibrous, tough).\n   - Areolar tissue (fills space inside organs) and Adipose tissue (stores fat cells under skin, thermal insulation).\n3. Muscular Tissue (Contains contractile proteins actin/myosin for movement):\n   - Striated / Skeletal: Voluntary, multinucleated, striped.\n   - Smooth / Unstriated: Involuntary, spindle-shaped, uninucleate (in stomach, blood vessels, iris).\n   - Cardiac: Involuntary, branched, rhythmic uninucleate muscles of heart.\n4. Nervous Tissue: Composed of Neurons (Cell body / Cyton with nucleus, branched Dendrites, long Axon with myelin sheath, terminal nerve endings) transmitting electrochemical impulses.",
+    "formulas": [
+      "Ligament = Bone to Bone; Tendon = Muscle to Bone",
+      "Neuron Impulse Flow: Dendrite -> Cyton -> Axon -> Synapse"
+    ],
+    "keyTerms": [
+      "Meristematic",
+      "Apical Meristem",
+      "Cambium",
+      "Parenchyma",
+      "Collenchyma",
+      "Sclerenchyma",
+      "Lignin",
+      "Xylem",
+      "Phloem",
+      "Epithelium",
+      "Connective Tissue",
+      "Ligament",
+      "Tendon",
+      "Cartilage",
+      "Adipose",
+      "Neuron",
+      "Axon",
+      "Dendrite"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Differentiate between bone and cartilage, and between tendon and ligament.",
+        "answer": "Bone has a rigid non-flexible matrix rich in calcium and phosphorus; cartilage has a flexible protein-sugar matrix (ear lobe). Tendons connect muscle to bone with great strength but limited flexibility; ligaments connect bone to bone with high elasticity."
+      }
+    ],
+    "summary": "Plant tissues: meristematic (growth) and permanent (parenchyma, sclerenchyma, xylem, phloem). Animal tissues: epithelial (protective), connective (blood, bone, tendon, ligament), muscular (striated, cardiac), and nervous (neurons)."
+  },
+  {
+    "id": "ncert-c9-sci-ch7",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 7,
+    "chapterTitle": "Diversity in Living Organisms",
+    "sectionNumber": "7.1 - 7.5",
+    "sectionTitle": "Five Kingdom Classification (Whittaker), Plant Kingdom & Animal Phyla",
+    "pageNumber": 80,
+    "content": "Basis of Classification (Robert Whittaker, 1969 - Five Kingdom System):\nBased on cellular structure (prokaryotic vs eukaryotic), body organization (unicellular vs multicellular), mode of nutrition (autotrophic vs heterotrophic).\nFive Kingdoms:\n1. Monera: Prokaryotic, unicellular, lack cell organelles (Bacteria, Blue-green algae / Cyanobacteria).\n2. Protista: Eukaryotic, unicellular (Amoeba, Paramecium, Euglena).\n3. Fungi: Eukaryotic, heterotrophic saprophytes, cell wall of Chitin (Yeast, Moulds, Mushrooms).\n4. Plantae: Multicellular autotrophic eukaryotes with cellulose cell walls:\n   - Thallophyta (Algae: Spirogyra, Ulothrix).\n   - Bryophyta (Amphibians of plant kingdom: Moss / Funaria, Marchantia).\n   - Pteridophyta (Vascular cryptogams: Ferns, Marsilea).\n   - Gymnosperms (Naked seeds, non-flowering: Pinus, Cycas).\n   - Angiosperms (Flowering plants, enclosed seeds inside fruit; divided into Monocots and Dicots).\n5. Animalia: Multicellular heterotrophic eukaryotes without cell walls:\n   - Non-chordates: Porifera (sponges with pores/canals), Coelenterata / Cnidaria (Hydra, jellyfish), Platyhelminthes (flatworms, tapeworm), Nematoda (roundworms, Ascaris), Annelida (segmented, earthworm, leech), Arthropoda (largest phylum, jointed legs, chitin exoskeleton, open circulation: insects, prawn), Mollusca (soft-bodied, shell, octopus), Echinodermata (spiny-skinned, water vascular system: starfish).\n   - Chordates / Vertebrates (possess notochord and dorsal nerve cord):\n     * Pisces (Fish: gills, 2-chambered heart, cold-blooded).\n     * Amphibia (Frogs: moist skin, 3-chambered heart, live in land and water).\n     * Reptilia (Lizards, snakes, crocodiles: dry scaly skin, cold-blooded, lay leathery eggs).\n     * Aves (Birds: feathers, wings, hollow bones, 4-chambered heart, warm-blooded).\n     * Mammalia (Humans, whales, bats: mammary glands for milk, hair/sweat glands, 4-chambered heart, viviparous).\nBinomial Nomenclature (Carolus Linnaeus): Genus (capitalized) + species (lowercase) in italics (e.g., Homo sapiens, Mangifera indica).",
+    "formulas": [
+      "Taxonomic Hierarchy: Kingdom -> Phylum -> Class -> Order -> Family -> Genus -> Species"
+    ],
+    "keyTerms": [
+      "Whittaker",
+      "Monera",
+      "Protista",
+      "Fungi",
+      "Chitin",
+      "Bryophyta",
+      "Pteridophyta",
+      "Gymnosperms",
+      "Angiosperms",
+      "Arthropoda",
+      "Annelida",
+      "Vertebrates",
+      "Pisces",
+      "Amphibia",
+      "Mammalia",
+      "Binomial Nomenclature"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the basis for classifying organisms into the five kingdoms?",
+        "answer": "1. Complexity of cell structure (Prokaryotic vs Eukaryotic). 2. Complexity of body organization (Unicellular vs Multicellular). 3. Mode of nutrition (Autotrophic vs Heterotrophic/Saprophytic)."
+      }
+    ],
+    "summary": "Whittaker's 5 kingdoms: Monera, Protista, Fungi, Plantae, Animalia. Plants range from thallophytes to angiosperms. Animals range from porifera to chordates (pisces, amphibians, reptiles, birds, mammals)."
+  },
+  {
+    "id": "ncert-c9-sci-ch8",
+    "classLevel": 9,
+    "subject": "Physics",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 8,
+    "chapterTitle": "Motion",
+    "sectionNumber": "8.1 - 8.6",
+    "sectionTitle": "Kinematics, Distance vs Displacement, Uniform Acceleration & Three Equations of Motion",
+    "pageNumber": 98,
+    "content": "Motion is described relative to a reference point.\nPhysical Quantities:\n- Distance: Total path length covered (scalar, SI unit: metre, m).\n- Displacement: Shortest straight-line distance from initial to final position (vector, can be zero even if distance is positive, e.g., completing circular track).\n- Speed = Distance / Time (scalar, m/s).\n- Velocity = Displacement / Time (vector, m/s). Average Velocity = (u + v) / 2 for uniform acceleration.\n- Acceleration (a): Rate of change of velocity: a = (v - u) / t (SI unit: m/s\u00b2). Negative acceleration is Retardation / Deceleration.\nThree Equations of Uniformly Accelerated Motion (Algebraic & Graphical Derivations):\n1. First Equation (Velocity-Time Relation):\n   v = u + a \u00b7 t\n2. Second Equation (Position-Time / Displacement Relation):\n   s = u \u00b7 t + 1/2 \u00b7 a \u00b7 t\u00b2\n3. Third Equation (Position-Velocity Relation):\n   v\u00b2 = u\u00b2 + 2 \u00b7 a \u00b7 s\nWhere:\nu = initial velocity (m/s), v = final velocity (m/s), a = uniform acceleration (m/s\u00b2), t = time (s), s = distance/displacement (m).\nUniform Circular Motion:\nWhen an object moves along a circular path of radius r with constant speed v, its direction of motion changes continuously at every point, making it an accelerated motion:\nv = (2 \u00b7 \u03c0 \u00b7 r) / t.",
+    "formulas": [
+      "v = u + a \u00b7 t",
+      "s = u \u00b7 t + 1/2 \u00b7 a \u00b7 t\u00b2",
+      "v\u00b2 = u\u00b2 + 2 \u00b7 a \u00b7 s",
+      "v_circular = 2 \u00b7 \u03c0 \u00b7 r / t",
+      "Acceleration a = (v - u) / t"
+    ],
+    "keyTerms": [
+      "Distance",
+      "Displacement",
+      "Speed",
+      "Velocity",
+      "Acceleration",
+      "Retardation",
+      "Uniform Acceleration",
+      "Equations of Motion",
+      "Velocity-Time Graph",
+      "Circular Motion"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A bus starting from rest moves with a uniform acceleration of 0.1 m/s\u00b2 for 2 minutes. Find (a) the speed acquired, (b) the distance travelled.",
+        "answer": "u = 0, a = 0.1 m/s\u00b2, t = 2 \u00d7 60 = 120 s. (a) v = u + at = 0 + (0.1 \u00d7 120) = 12 m/s. (b) s = ut + 1/2at\u00b2 = 0 + 1/2 \u00d7 0.1 \u00d7 120\u00b2 = 720 m."
+      }
+    ],
+    "summary": "Motion equations: v = u + at, s = ut + 1/2at\u00b2, and v\u00b2 = u\u00b2 + 2as. Distance is scalar; displacement is vector. Circular motion with constant speed is accelerated motion due to changing direction."
+  },
+  {
+    "id": "ncert-c9-sci-ch9",
+    "classLevel": 9,
+    "subject": "Physics",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 9,
+    "chapterTitle": "Force and Laws of Motion",
+    "sectionNumber": "9.1 - 9.6",
+    "sectionTitle": "Balanced/Unbalanced Forces, Newton's Three Laws & Conservation of Linear Momentum",
+    "pageNumber": 114,
+    "content": "Force: An external agent capable of changing an object's state of rest, motion, or direction. Balanced forces produce zero net acceleration; unbalanced forces cause acceleration.\nNewton's Three Laws of Motion:\n1. Newton's First Law (Law of Inertia):\n   An object remains in a state of rest or of uniform motion in a straight line unless acted upon by an external unbalanced force.\n   Inertia is the natural resistance of a body to change its state of rest or motion. Mass is the quantitative measure of inertia (heavier object has greater inertia).\n2. Newton's Second Law:\n   The rate of change of momentum of an object is directly proportional to the applied unbalanced force in the direction of force.\n   Linear Momentum (p) = mass \u00b7 velocity (p = m \u00b7 v, unit: kg\u00b7m/s).\n   Mathematical Formulation:\n   F \u221d \u0394p / t = m(v - u) / t = m \u00b7 a\n   => F = m \u00b7 a  (Force in Newtons, N = kg\u00b7m/s\u00b2).\n   1 Newton is the force that produces an acceleration of 1 m/s\u00b2 in an object of mass 1 kg.\n3. Newton's Third Law:\n   To every action, there is always an equal and opposite reaction; they act on two mutually interacting different bodies simultaneously: F_AB = - F_BA (recoil of gun, rocket propulsion, walking).\nLaw of Conservation of Linear Momentum:\nIn an isolated system where no external unbalanced force acts, the total momentum before collision equals total momentum after collision:\nm\u2081 \u00b7 u\u2081 + m\u2082 \u00b7 u\u2082 = m\u2081 \u00b7 v\u2081 + m\u2082 \u00b7 v\u2082.",
+    "formulas": [
+      "p = m \u00b7 v  (Linear Momentum in kg\u00b7m/s)",
+      "F = m \u00b7 a  (Newton's Second Law, Force in Newtons N)",
+      "F_AB = - F_BA  (Newton's Third Law)",
+      "m\u2081\u00b7u\u2081 + m\u2082\u00b7u\u2082 = m\u2081\u00b7v\u2081 + m\u2082\u00b7v\u2082  (Conservation of Momentum)"
+    ],
+    "keyTerms": [
+      "Inertia",
+      "Newton's First Law",
+      "Linear Momentum",
+      "Newton's Second Law",
+      "Newton (N)",
+      "Newton's Third Law",
+      "Action-Reaction",
+      "Conservation of Momentum",
+      "Recoil Velocity"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A bullet of mass 20 g is horizontally fired with a velocity 150 m/s from a pistol of mass 2 kg. What is the recoil velocity of the pistol?",
+        "answer": "By conservation of momentum: m\u2081u\u2081 + m\u2082u\u2082 = m\u2081v\u2081 + m\u2082v\u2082. Initially at rest, total initial momentum = 0. 0 = (0.02 kg \u00d7 150 m/s) + (2 kg \u00d7 v_recoil) => 3 + 2 v_recoil = 0 => v_recoil = -1.5 m/s (opposite direction)."
+      }
+    ],
+    "summary": "1st law defines inertia (mass). 2nd law defines force F = ma and momentum p = mv. 3rd law states action = -reaction. Momentum is conserved in collisions (m1u1 + m2u2 = m1v1 + m2v2)."
+  },
+  {
+    "id": "ncert-c9-sci-ch10",
+    "classLevel": 9,
+    "subject": "Physics",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 10,
+    "chapterTitle": "Gravitation",
+    "sectionNumber": "10.1 - 10.7",
+    "sectionTitle": "Universal Law of Gravitation, Free Fall (g = 9.8 m/s\u00b2), Mass vs Weight & Archimedes' Principle",
+    "pageNumber": 131,
+    "content": "Universal Law of Gravitation (Sir Isaac Newton):\nEvery object in the universe attracts every other object with a force directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers:\nF = G \u00b7 (M \u00b7 m) / d\u00b2\n- Universal Gravitational Constant G = 6.673 \u00d7 10\u207b\u00b9\u00b9 N\u00b7m\u00b2/kg\u00b2 (determined by Henry Cavendish).\nAcceleration Due to Gravity (g):\nThe uniform acceleration experienced by a freely falling body solely due to Earth's gravitational pull:\ng = G \u00b7 M_earth / R_earth\u00b2 \u2248 9.8 m/s\u00b2 at Earth's surface.\nEquations of Motion for Free Fall (replacing a with g):\n1. v = u + g\u00b7t\n2. h = u\u00b7t + 1/2\u00b7g\u00b7t\u00b2\n3. v\u00b2 = u\u00b2 + 2\u00b7g\u00b7h  (for upward throw, g is taken as -9.8 m/s\u00b2).\nMass vs Weight:\n- Mass (m): Quantity of matter in an object, constant everywhere, scalar quantity, SI unit: kg.\n- Weight (W): Gravitational force with which Earth attracts an object: W = m \u00b7 g (vector quantity, SI unit: Newton, N).\n  Weight of an object on the Moon is 1/6th of its weight on Earth (W_moon = 1/6 \u00b7 W_earth) because moon's mass and radius yield g_moon \u2248 1.63 m/s\u00b2.\nThrust, Pressure and Archimedes' Principle:\n- Thrust: Force acting perpendicularly on a surface. Pressure = Thrust / Area (P = F / A, Pa).\n- Buoyancy / Upthrust: Upward force exerted by a fluid on an immersed body.\n- Archimedes' Principle: When a body is immersed fully or partially in a fluid, it experiences an upward buoyant force equal to the weight of the fluid displaced by it. Used in designing ships, submarines, hydrometers (fluid density), and lactometers (milk purity).\n- Relative Density = Density of substance / Density of water (dimensionless ratio).",
+    "formulas": [
+      "F = G \u00b7 (M \u00b7 m) / d\u00b2  (Universal Gravitation)",
+      "G = 6.673 \u00d7 10\u207b\u00b9\u00b9 N\u00b7m\u00b2/kg\u00b2",
+      "g = G \u00b7 M / R\u00b2 \u2248 9.8 m/s\u00b2",
+      "Weight W = m \u00b7 g  (Newtons N)",
+      "W_moon = 1/6 \u00b7 W_earth",
+      "Relative Density = Density(substance) / Density(water)"
+    ],
+    "keyTerms": [
+      "Universal Law of Gravitation",
+      "Gravitational Constant G",
+      "Free Fall",
+      "Acceleration due to Gravity (g)",
+      "Mass",
+      "Weight",
+      "Thrust",
+      "Pressure",
+      "Buoyancy",
+      "Archimedes' Principle",
+      "Relative Density"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the magnitude of the gravitational force between Earth and a 1 kg object on its surface? (Mass of Earth = 6 \u00d7 10\u00b2\u2074 kg, Radius of Earth = 6.4 \u00d7 10\u2076 m).",
+        "answer": "F = G \u00b7 (M \u00b7 m) / R\u00b2 = (6.67 \u00d7 10\u207b\u00b9\u00b9 \u00d7 6 \u00d7 10\u00b2\u2074 \u00d7 1) / (6.4 \u00d7 10\u2076)\u00b2 = 40.02 \u00d7 10\u00b9\u00b3 / 4.096 \u00d7 10\u00b9\u00b3 \u2248 9.8 N."
+      }
+    ],
+    "summary": "Universal gravitation: F = G\u00b7M\u00b7m/d\u00b2. Free fall acceleration g = 9.8 m/s\u00b2. Mass is constant (kg); weight W = mg varies with gravity (N). Archimedes' principle states buoyant force equals weight of displaced fluid."
+  },
+  {
+    "id": "ncert-c9-sci-ch11",
+    "classLevel": 9,
+    "subject": "Physics",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 11,
+    "chapterTitle": "Work and Energy",
+    "sectionNumber": "11.1 - 11.4",
+    "sectionTitle": "Scientific Concept of Work, Kinetic Energy (1/2 mv\u00b2), Potential Energy (mgh), Conservation of Energy & Power",
+    "pageNumber": 146,
+    "content": "Scientific Concept of Work:\nWork is done when a force acting on an object causes a displacement in the direction of force:\nWork Done (W) = Force (F) \u00d7 Displacement (s) \u00d7 cos(\u03b8)\n- When displacement is in the direction of force: W = F \u00b7 s.\n- SI unit: Joule (J). 1 Joule = 1 Newton \u00d7 1 metre (1 J = 1 N\u00b7m).\n- Work can be positive (force and displacement in same direction), negative (opposing friction, W = - F \u00b7 s), or zero (carrying a load on head walking horizontally, force of gravity is perpendicular to displacement).\nEnergy:\nCapacity of doing work (SI unit: Joule).\n1. Kinetic Energy (E_k): Energy possessed by an object due to its motion:\n   Derivation: From v\u00b2 - u\u00b2 = 2as => s = (v\u00b2 - u\u00b2) / (2a).\n   Work done W = F \u00b7 s = (m \u00b7 a) \u00b7 [(v\u00b2 - u\u00b2) / (2a)] = 1/2 m(v\u00b2 - u\u00b2).\n   Starting from rest (u = 0):\n   E_k = 1/2 \u00b7 m \u00b7 v\u00b2\n2. Gravitational Potential Energy (E_p): Energy possessed by an object due to its position or height above ground:\n   Work done against gravity W = Force \u00d7 Height = (m \u00b7 g) \u00b7 h\n   E_p = m \u00b7 g \u00b7 h\nLaw of Conservation of Energy:\nEnergy can neither be created nor destroyed; it can only be transformed from one form to another. Total mechanical energy of an isolated system remains constant:\nE_total = E_k + E_p = 1/2 m v\u00b2 + m g h = Constant.\nPower:\nThe rate of doing work or rate of energy consumption:\nPower (P) = Work Done / Time = W / t\n- SI unit: Watt (W). 1 Watt = 1 Joule / 1 second (1 W = 1 J/s).\n- Commercial Unit of Electrical Energy: 1 Kilowatt-hour (kWh) / 'Unit':\n  1 kWh = 1000 W \u00d7 3600 s = 3.6 \u00d7 10\u2076 Joules.",
+    "formulas": [
+      "Work Done W = F \u00b7 s  (Joules, J)",
+      "Kinetic Energy E_k = 1/2 \u00b7 m \u00b7 v\u00b2",
+      "Potential Energy E_p = m \u00b7 g \u00b7 h",
+      "Law of Conservation: E_k + E_p = Constant",
+      "Power P = W / t  (Watts, W)",
+      "1 kWh = 3.6 \u00d7 10\u2076 J  (Commercial Electrical Unit)"
+    ],
+    "keyTerms": [
+      "Work",
+      "Joule",
+      "Positive Work",
+      "Negative Work",
+      "Kinetic Energy",
+      "Potential Energy",
+      "Conservation of Energy",
+      "Power",
+      "Watt",
+      "Kilowatt-hour (kWh)"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "An object of mass 15 kg is moving with a uniform velocity of 4 m/s. What is the kinetic energy possessed by the object?",
+        "answer": "E_k = 1/2 \u00b7 m \u00b7 v\u00b2 = 1/2 \u00d7 15 kg \u00d7 (4 m/s)\u00b2 = 1/2 \u00d7 15 \u00d7 16 = 120 Joules."
+      }
+    ],
+    "summary": "Work W = F\u00b7s in Joules. Kinetic energy is 1/2\u00b7m\u00b7v\u00b2; potential energy is m\u00b7g\u00b7h. Total energy is conserved (E_k + E_p = constant). Power P = W/t in Watts (1 kWh = 3.6\u00d710\u2076 J)."
+  },
+  {
+    "id": "ncert-c9-sci-ch12",
+    "classLevel": 9,
+    "subject": "Physics",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 12,
+    "chapterTitle": "Sound",
+    "sectionNumber": "12.1 - 12.6",
+    "sectionTitle": "Longitudinal Waves (Compressions & Rarefactions), Wave Speed (v = f\u00b7\u03bb), Echo, Reverberation & SONAR",
+    "pageNumber": 160,
+    "content": "Nature & Propagation of Sound Waves:\nSound travels through a medium as a Longitudinal Mechanical Wave composed of alternating Compressions (regions of high density and pressure) and Rarefactions (regions of low density and pressure). Sound CANNOT travel in vacuum.\nWave Characteristics:\n1. Wavelength (\u03bb): Distance between two consecutive compressions or rarefactions (SI unit: metre, m).\n2. Frequency (\u03bd or f): Number of complete wave oscillations passing a point per second (SI unit: Hertz, Hz).\n3. Time Period (T): Time taken for one complete wave oscillation: T = 1 / f.\n4. Amplitude (A): Maximum displacement from mean position, determining loudness.\n5. Wave Speed Relationship:\n   Speed (v) = Wavelength / Time Period = Wavelength \u00d7 Frequency:\n   v = f \u00b7 \u03bb\nReflection of Sound:\n- Obeys laws of reflection (angle of incidence = angle of reflection).\n- Echo: Repetition of sound caused by reflection from a distant hard obstacle. To hear a distinct echo in air (v = 344 m/s), minimum time interval must be 0.1 s, requiring a minimum distance d = (v \u00b7 t) / 2 = (344 \u00d7 0.1) / 2 = 17.2 metres.\n- Reverberation: Persistence of sound due to repeated multiple reflections in an auditorium, reduced by using sound-absorbent acoustic boards and heavy draperies.\nUltrasound & Applications:\n- High frequency sound (> 20,000 Hz) able to travel along well-defined paths and penetrate deep:\n  1. Industrial flaw detection in metal blocks.\n  2. Echocardiography & Ultrasonography for internal organ imaging.\n  3. SONAR (Sound Navigation and Ranging): Uses ultrasonic waves transmitted from ships to measure ocean depth and locate underwater submarines/icebergs: 2d = v \u00b7 t.",
+    "formulas": [
+      "v = f \u00b7 \u03bb  (Wave Speed Equation)",
+      "Time Period T = 1 / f",
+      "Minimum distance for Echo: d_min = 17.2 m (at 20\u00b0C in air)",
+      "SONAR Depth: 2d = v \u00b7 t  =>  d = (v \u00b7 t) / 2"
+    ],
+    "keyTerms": [
+      "Longitudinal Wave",
+      "Compression",
+      "Rarefaction",
+      "Wavelength (\u03bb)",
+      "Frequency (f)",
+      "Time Period (T)",
+      "Wave Speed (v = f\u03bb)",
+      "Echo",
+      "Reverberation",
+      "Ultrasound",
+      "SONAR",
+      "Cochlea"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "A sound wave has a frequency of 2 kHz and wavelength 35 cm. How long will it take to travel 1.5 km?",
+        "answer": "f = 2000 Hz, \u03bb = 0.35 m. Speed v = f \u00d7 \u03bb = 2000 \u00d7 0.35 = 700 m/s. Distance s = 1500 m. Time t = s / v = 1500 / 700 = 2.14 seconds."
+      }
+    ],
+    "summary": "Sound is a longitudinal wave (compressions/rarefactions) obeying v = f\u00b7\u03bb. Echoes require minimum 17.2 m distance. Ultrasound (>20 kHz) powers medical sonography and submarine SONAR (2d = v\u00b7t)."
+  },
+  {
+    "id": "ncert-c9-sci-ch13",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 13,
+    "chapterTitle": "Why Do We Fall Ill",
+    "sectionNumber": "13.1 - 13.4",
+    "sectionTitle": "Health vs Disease, Acute vs Chronic, Infectious Agents, Vectors & Principles of Prevention/Immunisation",
+    "pageNumber": 176,
+    "content": "Health is a state of complete physical, mental, and social well-being, not merely the absence of disease.\nClassification of Diseases:\n- Acute Diseases: Occur suddenly and last for only short periods of time without causing long-term damage (common cold, viral fever, malaria).\n- Chronic Diseases: Develop gradually and persist for long durations or lifetime, causing drastic weight loss and fatigue (Tuberculosis, Elephantiasis, Diabetes, Cancer).\n- Congenital (from birth) vs Acquired Diseases:\n  * Infectious (Communicable): Caused by external biological pathogens and transmitted through air, water, food, physical contact, or animal vectors (e.g., Covid-19, Cholera, Typhoid, Malaria).\n  * Non-infectious: Caused by internal genetic, physiological, or nutritional factors (Hypertension, Scurvy, Cancer).\nInfectious Agents:\n- Viruses: Common cold, Influenza, Dengue, AIDS (HIV).\n- Bacteria: Typhoid (Salmonella typhi), Cholera, Tuberculosis (Mycobacterium tuberculosis), Anthrax, Peptic Ulcers (Helicobacter pylori, discovered by Marshall & Warren).\n- Fungi: Skin ringworm infections.\n- Protozoa: Malaria (Plasmodium via female Anopheles), Kala-azar (Leishmania via sandfly), Sleeping sickness (Trypanosoma).\n- Worms: Ascariasis (roundworm in intestine), Elephantiasis (Wuchereria bancrofti filarial worm).\nPrinciples of Treatment & Prevention:\n- Antibiotics block essential biochemical synthesis pathways (like cell wall construction) in bacteria. Antibiotics DO NOT work against viruses because viruses use host cell machinery.\n- Immunisation / Vaccination: Introducing weakened/killed pathogens to produce memory T/B cells and antibodies without causing disease.",
+    "formulas": [
+      "Treatment: Symptom Reduction + Pathogen Eradication (Antibiotics for Bacteria, Antivirals)"
+    ],
+    "keyTerms": [
+      "Health",
+      "Acute Disease",
+      "Chronic Disease",
+      "Infectious",
+      "Non-infectious",
+      "Pathogens",
+      "Vectors",
+      "Antibiotics",
+      "Immunisation",
+      "Vaccine",
+      "Helicobacter pylori"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "Why do antibiotics not work against viral infections like common cold?",
+        "answer": "Antibiotics selectively target bacterial biochemical mechanisms (such as synthesizing peptidoglycan cell walls). Viruses lack their own metabolic pathways and replicate inside host human cells, making bacterial antibiotics ineffective against them."
+      }
+    ],
+    "summary": "Health is physical, mental, and social well-being. Acute diseases are brief; chronic diseases persist long-term. Infectious agents: bacteria (cured by antibiotics), viruses, fungi, protozoa. Vaccines stimulate antibodies."
+  },
+  {
+    "id": "ncert-c9-sci-ch14",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 14,
+    "chapterTitle": "Natural Resources",
+    "sectionNumber": "14.1 - 14.5",
+    "sectionTitle": "Biogeochemical Cycles (Water, Nitrogen, Carbon, Oxygen), Ozone Layer & Greenhouse Effect",
+    "pageNumber": 189,
+    "content": "The abiotic resources of Earth include the Lithosphere (land), Hydrosphere (water), and Atmosphere (air), sustaining the Biosphere (zone of life).\nBiogeochemical Cycles:\n1. Water Cycle: Evaporation and transpiration -> Condensation -> Precipitation -> Infiltration.\n2. Nitrogen Cycle:\n   Atmospheric N\u2082 (78%) cannot be used directly by plants.\n   - Nitrogen Fixation: Rhizobium bacteria in legume root nodules and lightning convert N\u2082 into usable Nitrites and Nitrates.\n   - Nitrification: Ammonia converted to nitrites and nitrates by soil nitrifying bacteria.\n   - Assimilation: Plants absorb nitrates to make plant proteins; animals eat plants to form animal proteins.\n   - Ammonification & Denitrification: Decomposers release ammonia; Denitrifying bacteria (Pseudomonas) convert soil nitrates back into atmospheric N\u2082 gas.\n3. Carbon Cycle:\n   - Photosynthesis incorporates CO\u2082 into organic carbohydrates.\n   - Respiration, combustion of fossil fuels, and decomposition return CO\u2082 to atmosphere.\n   - Limestone rocks (CaCO\u2083) store vast geological carbon reserves.\n4. Oxygen Cycle:\n   - Photosynthesis is the sole natural process releasing O\u2082 into atmosphere.\n   - Respiration, combustion, and formation of oxides of nitrogen/metals consume oxygen.\nThe Ozone Layer (O\u2083):\nLocated in the Stratosphere, ozone molecules absorb harmful solar ultraviolet (UV) radiation, protecting living organisms from skin cancer, cataract, and genetic mutations. Depleted by Chlorofluorocarbons (CFCs).",
+    "formulas": [
+      "Nitrogen Cycle: N\u2082 -> Fixation -> Nitrates -> Plant Protein -> Ammonification -> Denitrification -> N\u2082",
+      "Ozone Formation: O\u2082 + UV -> O + O; O + O\u2082 -> O\u2083"
+    ],
+    "keyTerms": [
+      "Biosphere",
+      "Biogeochemical Cycles",
+      "Water Cycle",
+      "Nitrogen Cycle",
+      "Rhizobium",
+      "Nitrification",
+      "Denitrification",
+      "Carbon Cycle",
+      "Oxygen Cycle",
+      "Ozone Layer (O\u2083)",
+      "CFCs",
+      "Greenhouse Effect"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What is the biological importance of the ozone layer and what is causing its depletion?",
+        "answer": "The stratospheric ozone layer filters out lethal solar ultraviolet (UV) radiation, preventing skin cancer, cataract, and DNA damage. Synthetic Chlorofluorocarbons (CFCs) from aerosol sprays and refrigerants release chlorine atoms that break down ozone."
+      }
+    ],
+    "summary": "Biogeochemical cycles circulate matter through biosphere: Nitrogen cycle (fixation via Rhizobium, nitrification, denitrification), carbon cycle (photosynthesis vs combustion), and water cycle. Stratospheric ozone (O3) shields against UV."
+  },
+  {
+    "id": "ncert-c9-sci-ch15",
+    "classLevel": 9,
+    "subject": "Biology",
+    "textbookName": "NCERT Science Class 9",
+    "chapterNumber": 15,
+    "chapterTitle": "Improvement in Food Resources",
+    "sectionNumber": "15.1 - 15.3",
+    "sectionTitle": "Crop Variety Improvement, Nutrient Management (Macronutrients, Micronutrients), Animal Husbandry & Pisciculture",
+    "pageNumber": 204,
+    "content": "Meeting food demand for growing populations requires sustainable agricultural practices (Green Revolution for grains, White Revolution for milk).\nI. Crop Production Improvement:\n1. Crop Variety Improvement: Developing high-yielding varieties resistant to biotic stresses (insects, diseases) and abiotic stresses (drought, salinity, frost) through Hybridisation (inter-varietal or inter-generic cross breeding) and genetic modification.\n2. Crop Nutrient Management:\n   - Plants require 16 essential nutrients:\n     * From Air: Carbon, Oxygen.\n     * From Water: Hydrogen, Oxygen.\n     * From Soil:\n       - 6 Macronutrients (required in large quantities): Nitrogen (N), Phosphorus (P), Potassium (K), Calcium, Magnesium, Sulphur.\n       - 7 Micronutrients (trace amounts): Iron, Manganese, Boron, Zinc, Copper, Molybdenum, Chlorine.\n   - Manure (organic, adds humus) vs Fertilisers (inorganic chemical salts: NPK, urea).\n3. Cropping Patterns:\n   - Mixed Cropping: Growing two or more crops simultaneously on same land (wheat + gram, groundnut + sunflower) to reduce risk.\n   - Intercropping: Growing two or more crops simultaneously in a definite row pattern (soyabean + maize).\n   - Crop Rotation: Growing different crops in pre-planned succession (legumes followed by cereals).\nII. Animal Husbandry:\n- Cattle Farming: Dairy cows/buffaloes for milk (lactation period) and draught labour. Cross-breeding exotic breeds (Jersey, Brown Swiss) with indigenous breeds (Red Sindhi, Sahiwal) for high milk yield and disease resistance.\n- Poultry Farming: Broilers (meat) and Layers (eggs).\n- Fish Production (Pisciculture): Capture fishing vs Culture fisheries. Composite Fish Culture: farming 5-6 complementary species together in one pond (Catla surface feeders, Rohu column feeders, Mrigal and Common Carp bottom feeders) without food competition.\n- Apiculture: Bee-keeping for honey and beeswax using Italian bee (Apis mellifera, high honey yield and gentle).",
+    "formulas": [
+      "16 Essential Nutrients: 2 from Air, 2 from Water, 6 Soil Macronutrients (NPK, Ca, Mg, S), 7 Micronutrients",
+      "Composite Fish Culture: Catla (Surface) + Rohu (Middle) + Mrigal (Bottom)"
+    ],
+    "keyTerms": [
+      "Green Revolution",
+      "Hybridisation",
+      "Macronutrients",
+      "Micronutrients",
+      "NPK",
+      "Manure",
+      "Mixed Cropping",
+      "Intercropping",
+      "Crop Rotation",
+      "Animal Husbandry",
+      "Lactation",
+      "Broilers",
+      "Composite Fish Culture",
+      "Apiculture",
+      "Apis mellifera"
+    ],
+    "ncertQuestions": [
+      {
+        "question": "What are the advantages of composite fish culture?",
+        "answer": "Composite fish culture combines 5 to 6 fish species with non-overlapping food habits in the same pond (e.g. Catla feeds at surface, Rohu at middle, Mrigal at bottom). They utilize all available pond food resources without competing, producing extraordinarily high fish yields."
+      }
+    ],
+    "summary": "Food resource improvement uses variety breeding (hybridisation), 16 essential nutrients (NPK macronutrients), mixed/intercropping, cattle cross-breeding, composite fish culture, and apiculture (Italian bee Apis mellifera)."
+  }
+]
