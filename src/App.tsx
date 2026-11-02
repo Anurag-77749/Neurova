@@ -238,11 +238,14 @@ export const App: React.FC = () => {
       }
 
       // Strict credential check against registered account
+      const plainLower = (account.plainPassword || '').trim().toLowerCase();
+      const cleanPassLower = cleanPass.toLowerCase();
+
       const isMatch =
         cleanPass === '1234' ||
         cleanPass === 'pass' ||
         cleanPass === 'password' ||
-        (account.plainPassword && cleanPass.toLowerCase() === account.plainPassword.toLowerCase()) ||
+        (plainLower && cleanPassLower === plainLower) ||
         (await verifyPassword(cleanPass, account.passwordHash));
 
       if (!isMatch) {

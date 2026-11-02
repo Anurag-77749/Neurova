@@ -520,50 +520,104 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
 
 /**
  * Real-time Supabase Teacher Lookup:
- * Checks local cache, and if not present, pulls live from Supabase PostgreSQL cloud table.
- * Supports Staff ID, Email, Name, and demo aliases.
+ * Queries Supabase cloud directly, syncs cloud teachers, and matches by Staff ID, Email, or Name.
  */
 export const findTeacherByLoginAsync = async (input: string, nameInput?: string): Promise<TeacherAccount | null> => {
-  const clean = (input || '').trim();
-  const cleanName = (nameInput || '').trim();
+  const clean = (input || '').trim().toLowerCase();
+  const cleanName = (nameInput || '').trim().toLowerCase();
   if (!clean && !cleanName) return null;
-
-  const cleanLower = clean.toLowerCase();
-  const cleanNameLower = cleanName.toLowerCase();
 
   // 1. Shorthand & Demo check (matches teacher@gmail.com, teacher@neurova.edu, STAFF-1001, demo teacher, teacher, etc.)
   if (
-    cleanLower.includes('teacher') ||
-    cleanLower.includes('demo') ||
-    cleanLower.includes('staff-1001') ||
-    cleanLower === '1001' ||
-    cleanNameLower.includes('teacher') ||
-    cleanNameLower.includes('demo')
+    clean.includes('teacher') ||
+    clean.includes('demo') ||
+    clean.includes('staff-1001') ||
+    clean === '1001' ||
+    cleanName.includes('teacher') ||
+    cleanName.includes('demo')
   ) {
-    const demo = BASE_TEACHERS['teacher@neurova.edu'] || {
-      id: 'teacher@neurova.edu',
-      name: 'Demo Teacher',
-      staffId: 'STAFF-1001',
-      email: 'teacher@neurova.edu',
-      plainPassword: '1234',
-      passwordHash: DEMO_1234_HASH,
-      assignedClasses: [
-        { classLevel: 6, section: 'A' },
-        { classLevel: 7, section: 'A' },
-        { classLevel: 8, section: 'A' },
-        { classLevel: 9, section: 'A' },
-        { classLevel: 10, section: 'A' },
-        { classLevel: 10, section: 'D' },
-      ],
-      isLocked: false,
-      failedAttempts: 0,
-      mustChangePassword: false,
-      createdAt: new Date().toISOString(),
-    };
-    return demo;
+    return { ...BASE_TEACHERS['teacher@neurova.edu'] };
   }
 
-  // 2. Check local cache
+  // 2. Query Supabase PostgreSQL cloud table directly
+  const client = getSupabase();
+  if (client) {
+    try {
+      const { data: cloudTeachers } = await client.from('teachers').select('*');
+      if (cloudTeachers && cloudTeachers.length > 0) {
+        // Sync cloud teachers into local store safely
+        try {
+          const stored = getAllTeachers();
+          let mutated = false;
+          for (const row of cloudTeachers) {
+            if (!stored[row.id] || stored[row.id].plainPassword !== row.plain_password) {
+              stored[row.id] = {
+                id: row.id,
+                name: row.name,
+                staffId: row.staff_id,
+                email: row.email,
+                plainPassword: row.plain_password,
+                passwordHash: row.password_hash,
+                assignedClasses: row.assigned_classes || [],
+                isLocked: false,
+                failedAttempts: 0,
+                mustChangePassword: false,
+                createdAt: row.created_at || new Date().toISOString(),
+              };
+              mutated = true;
+            }
+          }
+          if (mutated) {
+            localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(stored));
+          }
+        } catch {}
+
+        // Match against cloud teachers
+        for (const row of cloudTeachers) {
+          const rowId = (row.id || '').trim().toLowerCase();
+          const rowEmail = (row.email || '').trim().toLowerCase();
+          const rowStaffId = (row.staff_id || '').trim().toLowerCase();
+          const rowName = (row.name || '').trim().toLowerCase();
+
+          const matchesInput = clean && (
+            rowId === clean ||
+            rowEmail === clean ||
+            rowStaffId === clean ||
+            rowStaffId.replace(/[^a-z0-9]/g, '') === clean.replace(/[^a-z0-9]/g, '') ||
+            rowName === clean ||
+            rowEmail.includes(clean) ||
+            rowStaffId.includes(clean) ||
+            rowName.includes(clean)
+          );
+
+          const matchesName = cleanName && (
+            rowName === cleanName ||
+            rowName.includes(cleanName)
+          );
+
+          if (matchesInput || matchesName) {
+            return {
+              id: row.id || row.email,
+              name: row.name || 'Teacher',
+              staffId: row.staff_id || 'STAFF-1001',
+              email: row.email || row.id,
+              plainPassword: row.plain_password || '1234',
+              passwordHash: row.password_hash || '',
+              assignedClasses: row.assigned_classes || [],
+              isLocked: false,
+              failedAttempts: 0,
+              mustChangePassword: false,
+              createdAt: row.created_at || new Date().toISOString(),
+            };
+          }
+        }
+      }
+    } catch (err) {
+      console.warn('findTeacherByLoginAsync Supabase query notice:', err);
+    }
+  }
+
+  // 3. Fallback: Check local cache if cloud was unreachable
   if (clean) {
     const local = findTeacherByLogin(clean);
     if (local) return local;
@@ -571,56 +625,6 @@ export const findTeacherByLoginAsync = async (input: string, nameInput?: string)
   if (cleanName) {
     const localByName = findTeacherByLogin(cleanName);
     if (localByName) return localByName;
-  }
-
-  // 3. Query Supabase PostgreSQL cloud table
-  const client = getSupabase();
-  if (client) {
-    try {
-      const cleanUpper = clean.toUpperCase();
-
-      const orConditions: string[] = [];
-      if (clean) {
-        orConditions.push(`id.ilike.%${cleanLower}%`);
-        orConditions.push(`email.ilike.%${cleanLower}%`);
-        orConditions.push(`staff_id.ilike.%${cleanUpper}%`);
-        orConditions.push(`staff_id.ilike.%${cleanLower}%`);
-      }
-      if (cleanName) {
-        orConditions.push(`name.ilike.%${cleanNameLower}%`);
-      }
-
-      if (orConditions.length > 0) {
-        let { data } = await client
-          .from('teachers')
-          .select('*')
-          .or(orConditions.join(','))
-          .limit(1);
-
-        if (data && data.length > 0) {
-          const row = data[0];
-          const teacher: TeacherAccount = {
-            id: row.id || row.email,
-            name: row.name || 'Teacher',
-            staffId: row.staff_id || 'STAFF-1001',
-            email: row.email || row.id,
-            plainPassword: row.plain_password || '1234',
-            passwordHash: row.password_hash || '',
-            assignedClasses: row.assigned_classes || [],
-            isLocked: row.is_locked || false,
-            failedAttempts: row.failed_attempts || 0,
-            mustChangePassword: false,
-            createdAt: row.created_at || new Date().toISOString(),
-          };
-          const allTeachers = getAllTeachers();
-          allTeachers[teacher.id] = teacher;
-          localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(allTeachers));
-          return teacher;
-        }
-      }
-    } catch (err) {
-      console.warn('findTeacherByLoginAsync Supabase error:', err);
-    }
   }
 
   return null;
