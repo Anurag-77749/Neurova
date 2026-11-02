@@ -6,7 +6,8 @@ import {
   Layers,
   ClipboardList,
   LineChart,
-  Users
+  Users,
+  X
 } from 'lucide-react';
 import { NeurovaLogo } from './NeurovaLogo';
 import { UserSession, TeacherTab } from '../types';
@@ -19,6 +20,7 @@ interface TeacherSidebarProps {
   session: UserSession;
   submissionsCount?: number;
   onSignOut: () => void;
+  onCloseMobile?: () => void;
 }
 
 export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
@@ -27,15 +29,30 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
   session,
   submissionsCount = 0,
   onSignOut,
+  onCloseMobile,
 }) => {
   const assigned = session.assignedClasses || [];
 
+  const handleTabClick = (tab: TeacherTab) => {
+    onSelectTab(tab);
+    onCloseMobile?.();
+  };
+
   return (
-    <aside className="w-full md:w-72 bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 min-h-screen relative z-20">
+    <aside className="w-full md:w-72 bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full min-h-screen overflow-y-auto relative z-20">
       <div className="space-y-6">
         {/* Brand Header */}
-        <div className="pb-2">
+        <div className="pb-2 flex items-center justify-between">
           <NeurovaLogo size="md" showText={true} />
+          {onCloseMobile && (
+            <button
+              onClick={onCloseMobile}
+              className="md:hidden p-1.5 rounded-xl border border-slate-200 dark:border-[#222430] text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors"
+              aria-label="Close menu"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          )}
         </div>
 
         {/* Teacher Role Badge Card */}
@@ -70,7 +87,7 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
         <nav className="space-y-1.5">
           {/* 1. Publish Homework */}
           <button
-            onClick={() => onSelectTab('publish-hw')}
+            onClick={() => handleTabClick('publish-hw')}
             className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'publish-hw'
                 ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -88,7 +105,7 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
 
           {/* 2. Student Submissions (Live Receipt & AI Review) */}
           <button
-            onClick={() => onSelectTab('submissions')}
+            onClick={() => handleTabClick('submissions')}
             className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'submissions'
                 ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -110,7 +127,7 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
 
           {/* 3. Students Progress */}
           <button
-            onClick={() => onSelectTab('students-progress')}
+            onClick={() => handleTabClick('students-progress')}
             className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'students-progress'
                 ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -128,7 +145,7 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
 
           {/* 4. My Assigned Classes */}
           <button
-            onClick={() => onSelectTab('my-classes')}
+            onClick={() => handleTabClick('my-classes')}
             className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'my-classes'
                 ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -159,4 +176,3 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
     </aside>
   );
 };
-

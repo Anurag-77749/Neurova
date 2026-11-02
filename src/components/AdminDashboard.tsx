@@ -23,7 +23,9 @@ import {
   UserCheck,
   Check,
   Smartphone,
-  Shield
+  Shield,
+  Menu,
+  X
 } from 'lucide-react';
 import { 
   getAllStudents, 
@@ -50,6 +52,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   onSignOut,
 }) => {
   const [activeTab, setActiveTab] = useState<'students' | 'teachers' | 'audit' | 'security'>('students');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
 
   // Live Data
@@ -215,11 +218,47 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
   return (
     <div className="min-h-screen bg-[#F8FAFB] dark:bg-[#0B0B0F] text-[#0F172A] dark:text-[#F3F4F6] flex flex-col md:flex-row antialiased">
-      {/* Admin Sidebar */}
-      <aside className="w-full md:w-72 bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 min-h-screen relative z-20">
+      {/* Mobile Top Header */}
+      <header className="md:hidden flex items-center justify-between px-4 py-3 bg-white dark:bg-[#0B0B0F] border-b border-slate-200 dark:border-[#222430] sticky top-0 z-30">
+        <div className="flex items-center gap-2">
+          <NeurovaLogo size="sm" showText={true} />
+          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+            Admin
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-xl border border-slate-200 dark:border-[#222430] bg-slate-50 dark:bg-[#15161C] text-slate-700 dark:text-slate-200"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Admin Sidebar (Slide drawer on mobile, static on desktop) */}
+      <aside className={`
+        fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full min-h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:z-20 md:w-72
+        ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
         <div className="space-y-6">
-          <div className="pb-2">
+          <div className="pb-2 flex items-center justify-between">
             <NeurovaLogo size="md" showText={true} />
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="md:hidden p-1.5 rounded-xl border border-slate-200 dark:border-[#222430] text-slate-500 hover:text-slate-900 dark:hover:text-white"
+            >
+              <X className="w-5 h-5" />
+            </button>
           </div>
 
           {/* Admin Identity Card */}
@@ -242,7 +281,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
           <nav className="space-y-1.5">
             <button
-              onClick={() => setActiveTab('students')}
+              onClick={() => { setActiveTab('students'); setMobileMenuOpen(false); }}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'students'
                   ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -259,7 +298,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </button>
 
             <button
-              onClick={() => setActiveTab('teachers')}
+              onClick={() => { setActiveTab('teachers'); setMobileMenuOpen(false); }}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'teachers'
                   ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -276,7 +315,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </button>
 
             <button
-              onClick={() => setActiveTab('audit')}
+              onClick={() => { setActiveTab('audit'); setMobileMenuOpen(false); }}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'audit'
                   ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -293,7 +332,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
             </button>
 
             <button
-              onClick={() => setActiveTab('security')}
+              onClick={() => { setActiveTab('security'); setMobileMenuOpen(false); }}
               className={`w-full flex items-center justify-between px-4 py-3 rounded-2xl text-xs sm:text-sm font-semibold transition-all ${
                 activeTab === 'security'
                   ? 'bg-[#0D9488] dark:bg-gradient-to-r dark:from-[#14B8A6] dark:to-[#0D9488] text-white dark:text-[#0B0B0F] shadow-lg dark:shadow-[0_0_25px_rgba(20,184,166,0.35)]'
@@ -322,7 +361,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
       {/* Main Admin Content Stage */}
       <div className="flex-1 min-w-0 min-h-screen flex flex-col">
-        <header className="px-6 sm:px-8 py-4 border-b border-slate-200 dark:border-[#222430] bg-white/60 dark:bg-[#0B0B0F]/60 backdrop-blur-sm sticky top-0 z-10 flex items-center justify-between">
+        <header className="hidden md:flex px-6 sm:px-8 py-4 border-b border-slate-200 dark:border-[#222430] bg-white/60 dark:bg-[#0B0B0F]/60 backdrop-blur-sm sticky top-0 z-10 items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-[#9CA3AF]">
             <span>Admin Console</span>
             <span>/</span>

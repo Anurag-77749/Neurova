@@ -23,7 +23,8 @@ import {
   Eye,
   Check,
   X,
-  MessageSquare
+  MessageSquare,
+  Menu
 } from 'lucide-react';
 import { UserSession, ClassLevel, Section, HomeworkQuestion, Homework, AssignedClass, StudentSubmission } from '../types';
 import { 
@@ -37,6 +38,7 @@ import {
 import { TeacherStudentsProgress } from './TeacherStudentsProgress';
 import { getAllStudents } from '../services/adminStore';
 import { TeacherSidebar, TeacherTab } from './TeacherSidebar';
+import { NeurovaLogo } from './NeurovaLogo';
 
 interface TeacherDashboardProps {
   session: UserSession;
@@ -48,6 +50,7 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
   onSignOut,
 }) => {
   const [activeTab, setActiveTab] = useState<TeacherTab>('publish-hw');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null);
 
   // Assigned classes by Admin
@@ -285,18 +288,54 @@ export const TeacherDashboard: React.FC<TeacherDashboardProps> = ({
 
   return (
     <div className="min-h-screen bg-[#F8FAFB] dark:bg-[#0B0B0F] text-[#0F172A] dark:text-[#F3F4F6] flex flex-col md:flex-row antialiased">
-      {/* Teacher Sidebar */}
-      <TeacherSidebar
-        activeTab={activeTab}
-        onSelectTab={setActiveTab}
-        session={session}
-        submissionsCount={submissionsList.length}
-        onSignOut={onSignOut}
-      />
+      {/* Mobile Top Header */}
+      <header className="md:hidden flex items-center justify-between px-4 py-3 bg-white dark:bg-[#0B0B0F] border-b border-slate-200 dark:border-[#222430] sticky top-0 z-30">
+        <div className="flex items-center gap-2">
+          <NeurovaLogo size="sm" showText={true} />
+          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#0D9488]/15 text-[#0D9488] dark:text-[#14B8A6]">
+            Teacher
+          </span>
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-xl border border-slate-200 dark:border-[#222430] bg-slate-50 dark:bg-[#15161C] text-slate-700 dark:text-slate-200"
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Teacher Sidebar (Slide drawer on mobile, static on desktop) */}
+      <div className={`
+        fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] transform transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:z-20 md:w-72 shrink-0
+        ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
+        <TeacherSidebar
+          activeTab={activeTab}
+          onSelectTab={(tab) => {
+            setActiveTab(tab);
+            setMobileMenuOpen(false);
+          }}
+          session={session}
+          submissionsCount={submissionsList.length}
+          onSignOut={onSignOut}
+          onCloseMobile={() => setMobileMenuOpen(false)}
+        />
+      </div>
 
       <div className="flex-1 min-w-0 min-h-screen flex flex-col">
-        {/* Header */}
-        <header className="px-6 sm:px-8 py-4 border-b border-slate-200 dark:border-[#222430] bg-white/60 dark:bg-[#0B0B0F]/60 backdrop-blur-sm sticky top-0 z-10 flex items-center justify-between">
+        {/* Desktop Header */}
+        <header className="hidden md:flex px-6 sm:px-8 py-4 border-b border-slate-200 dark:border-[#222430] bg-white/60 dark:bg-[#0B0B0F]/60 backdrop-blur-sm sticky top-0 z-10 items-center justify-between">
           <div className="flex items-center gap-2 text-xs text-slate-500 dark:text-[#9CA3AF]">
             <span>Teacher Console</span>
             <span>/</span>
