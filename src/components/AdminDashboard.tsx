@@ -272,7 +272,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
 
       {/* Admin Sidebar (Slide drawer on mobile, static on desktop) */}
       <aside className={`
-        fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full min-h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:z-20 md:w-72
+        fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full md:min-h-screen overflow-y-auto transform transition-transform duration-300 ease-in-out md:static md:translate-x-0 md:z-20 md:w-72
         ${mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'}
       `}>
         <div className="space-y-6">

@@ -39,7 +39,7 @@ export const TeacherSidebar: React.FC<TeacherSidebarProps> = ({
   };
 
   return (
-    <aside className="w-full md:w-72 bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full min-h-screen overflow-y-auto relative z-20">
+    <aside className="w-full md:w-72 bg-white dark:bg-[#0B0B0F] border-r border-slate-200 dark:border-[#222430] flex flex-col justify-between shrink-0 p-5 h-full md:min-h-screen overflow-y-auto relative z-20">
       <div className="space-y-6">
         {/* Brand Header */}
         <div className="pb-2 flex items-center justify-between">

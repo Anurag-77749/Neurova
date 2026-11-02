@@ -462,7 +462,7 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
   }
 
   // 2. Demo teacher shorthand
-  if (clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu') {
+  if (clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu' || clean === 'demo') {
     const t = teachers['teacher@neurova.edu'] || BASE_TEACHERS['teacher@neurova.edu'];
     t.isLocked = false;
     t.failedAttempts = 0;
@@ -485,7 +485,8 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
     if (
       t.email.toLowerCase() === clean ||
       t.name.toLowerCase() === clean ||
-      t.staffId.toLowerCase() === clean
+      t.staffId.toLowerCase() === clean ||
+      t.staffId.toLowerCase().replace(/[^a-z0-9]/g, '') === clean.replace(/[^a-z0-9]/g, '')
     ) {
       t.isLocked = false;
       t.failedAttempts = 0;
@@ -500,37 +501,70 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
 /**
  * Real-time Supabase Teacher Lookup:
  * Checks local cache, and if not present, pulls live from Supabase PostgreSQL cloud table.
+ * Supports email, Staff ID, full name, and demo shortcuts.
  */
 export const findTeacherByLoginAsync = async (input: string): Promise<TeacherAccount | null> => {
-  const local = findTeacherByLogin(input);
+  const clean = (input || '').trim();
+  if (!clean) return null;
+
+  // 1. Check local cache
+  const local = findTeacherByLogin(clean);
   if (local) return local;
 
+  // 2. Query Supabase PostgreSQL cloud table
   const client = getSupabase();
   if (client) {
     try {
-      const clean = (input || '').trim().toLowerCase();
-      const { data } = await client.from('teachers').select('*').or(`id.eq.${clean},email.eq.${clean}`).single();
-      if (data) {
+      const cleanLower = clean.toLowerCase();
+      const cleanUpper = clean.toUpperCase();
+
+      // Try exact email / id / staff_id match
+      let { data, error } = await client
+        .from('teachers')
+        .select('*')
+        .or(`id.ilike.${cleanLower},email.ilike.${cleanLower},staff_id.ilike.${cleanLower},staff_id.ilike.${cleanUpper}`)
+        .limit(1);
+
+      // If no match yet and search term is descriptive, try fuzzy name / email matching
+      if ((!data || data.length === 0) && clean.length >= 3) {
+        const res = await client
+          .from('teachers')
+          .select('*')
+          .or(`name.ilike.%${cleanLower}%,email.ilike.%${cleanLower}%,staff_id.ilike.%${cleanUpper}%`)
+          .limit(1);
+        data = res.data;
+      }
+
+      if (data && data.length > 0) {
+        const row = data[0];
         const teacher: TeacherAccount = {
-          id: data.id,
-          name: data.name,
-          staffId: data.staff_id,
-          email: data.email,
-          plainPassword: data.plain_password,
-          passwordHash: data.password_hash,
-          assignedClasses: data.assigned_classes || [],
-          isLocked: data.is_locked,
-          failedAttempts: data.failed_attempts || 0,
+          id: row.id || row.email,
+          name: row.name || 'Teacher',
+          staffId: row.staff_id || 'STAFF-1001',
+          email: row.email || row.id,
+          plainPassword: row.plain_password || '1234',
+          passwordHash: row.password_hash || '',
+          assignedClasses: row.assigned_classes || [],
+          isLocked: row.is_locked || false,
+          failedAttempts: row.failed_attempts || 0,
           mustChangePassword: false,
-          createdAt: data.created_at || new Date().toISOString(),
+          createdAt: row.created_at || new Date().toISOString(),
         };
         const allTeachers = getAllTeachers();
         allTeachers[teacher.id] = teacher;
         localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(allTeachers));
         return teacher;
       }
-    } catch {}
+    } catch (err) {
+      console.warn('findTeacherByLoginAsync Supabase error:', err);
+    }
   }
+
+  // 3. Fallback for demo teacher shorthand
+  if (clean.toLowerCase() === 'teacher' || clean.toLowerCase() === 'demo' || clean.toLowerCase() === 'demo teacher') {
+    return { ...BASE_TEACHERS['teacher@neurova.edu'] };
+  }
+
   return null;
 };
 
@@ -566,7 +600,14 @@ export const createTeacherAccount = async (
 
   teachers[cleanEmail] = account;
   localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
-  syncTeacherToCloud(account).catch(() => {});
+
+  // Await cloud sync to ensure account immediately persists across all devices
+  try {
+    await syncTeacherToCloud(account);
+  } catch (err) {
+    console.warn('Sync teacher to cloud failed:', err);
+  }
+
   addAuditLog(
     'CREATE_TEACHER',
     'teacher',
