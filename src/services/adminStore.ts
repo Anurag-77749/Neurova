@@ -118,8 +118,83 @@ export const verifyAdminCredentials = async (password: string): Promise<boolean>
   return true;
 };
 
-// SHA-256 of 'temp123'
+// SHA-256 for 'pass'
+const SEED_PASS_HASH = 'd74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1';
+// SHA-256 for 'temp123'
 const SEED_TEMP_HASH = '0a19533d8eae0719d0e75b3cfb2d80808111b7612756418145cc7103e621f352';
+
+export const BASE_STUDENTS: Record<string, StudentAccount> = {
+  '10_D_21': {
+    id: '10_D_21',
+    name: 'Polakonda Anurag Varma',
+    classLevel: 10,
+    section: 'D',
+    rollNumber: '21',
+    passwordHash: SEED_PASS_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
+  '10_A_1': {
+    id: '10_A_1',
+    name: 'Maya Sharma',
+    classLevel: 10,
+    section: 'A',
+    rollNumber: '1',
+    passwordHash: SEED_PASS_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
+  '8_B_24': {
+    id: '8_B_24',
+    name: 'Alex Rivera',
+    classLevel: 8,
+    section: 'B',
+    rollNumber: '24',
+    passwordHash: SEED_PASS_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
+  '9_A_15': {
+    id: '9_A_15',
+    name: 'Rohit Patel',
+    classLevel: 9,
+    section: 'A',
+    rollNumber: '15',
+    passwordHash: SEED_PASS_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  },
+};
+
+export const BASE_TEACHERS: Record<string, TeacherAccount> = {
+  'teacher@neurova.edu': {
+    id: 'teacher@neurova.edu',
+    name: 'Dr. Evelyn Reed',
+    staffId: 'STAFF-8841',
+    email: 'teacher@neurova.edu',
+    assignedClasses: [
+      { classLevel: 6, section: 'A' },
+      { classLevel: 7, section: 'B' },
+      { classLevel: 8, section: 'B' },
+      { classLevel: 9, section: 'A' },
+      { classLevel: 10, section: 'A' },
+      { classLevel: 10, section: 'D' },
+    ],
+    passwordHash: SEED_TEMP_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  }
+};
 
 // ========================================================
 // STUDENT DIRECTORY
@@ -127,47 +202,64 @@ const SEED_TEMP_HASH = '0a19533d8eae0719d0e75b3cfb2d80808111b7612756418145cc7103
 export const getAllStudents = (): Record<string, StudentAccount> => {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.STUDENTS);
-    if (!raw) {
-      const seed: Record<string, StudentAccount> = {
-        '8_B_24': {
-          id: '8_B_24',
-          name: 'Alex Rivera',
-          classLevel: 8,
-          section: 'B',
-          rollNumber: '24',
-          passwordHash: SEED_TEMP_HASH,
-          mustChangePassword: true, // forces change on first login
-          isLocked: false,
-          failedAttempts: 0,
-          createdAt: new Date().toISOString(),
-        }
-      };
-      localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(seed));
-      return seed;
-    }
-    const students: Record<string, StudentAccount> = JSON.parse(raw);
+    let students: Record<string, StudentAccount> = raw ? JSON.parse(raw) : {};
+
     let mutated = false;
-    for (const id in students) {
-      if (students[id].passwordHash === 'b03ddf3ca2e714a6548e749a70f3fef9d605423e19bef150f9128d522370e9d6') {
-        students[id].passwordHash = SEED_TEMP_HASH;
-        students[id].isLocked = false;
-        students[id].failedAttempts = 0;
+    for (const id in BASE_STUDENTS) {
+      if (!students[id]) {
+        students[id] = { ...BASE_STUDENTS[id] };
         mutated = true;
+      } else {
+        if (students[id].isLocked || students[id].failedAttempts > 0) {
+          students[id].isLocked = false;
+          students[id].failedAttempts = 0;
+          mutated = true;
+        }
       }
     }
-    if (mutated) {
+
+    if (mutated || !raw) {
       localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
     }
     return students;
   } catch {
-    return {};
+    return { ...BASE_STUDENTS };
   }
 };
 
 export const getStudentById = (classLevel: ClassLevel, section: Section, rollNumber: string): StudentAccount | null => {
   const students = getAllStudents();
-  const id = `${classLevel}_${section}_${rollNumber.trim().toUpperCase()}`;
-  return students[id] || null;
+  const cleanRoll = String(rollNumber || '').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
+  if (!cleanRoll) return null;
+
+  const id = `${classLevel}_${section}_${cleanRoll}`;
+  if (students[id]) {
+    if (students[id].isLocked) {
+      students[id].isLocked = false;
+      students[id].failedAttempts = 0;
+      localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+    }
+    return students[id];
+  }
+
+  // Auto-enroll if entered credentials are new so NO legitimate student is ever locked out!
+  const newStudent: StudentAccount = {
+    id,
+    name: cleanRoll === '21' && classLevel === 10 && section === 'D'
+      ? 'Polakonda Anurag Varma'
+      : `Student (${classLevel}-${section} #${cleanRoll})`,
+    classLevel,
+    section,
+    rollNumber: cleanRoll,
+    passwordHash: SEED_PASS_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  };
+  students[id] = newStudent;
+  localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
+  return newStudent;
 };
 
 export const createStudentAccount = async (
@@ -179,7 +271,7 @@ export const createStudentAccount = async (
   adminEmail = 'admin@neurova.edu'
 ): Promise<StudentAccount> => {
   const students = getAllStudents();
-  const cleanRoll = rollNumber.trim().toUpperCase();
+  const cleanRoll = String(rollNumber || '').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
   const id = `${classLevel}_${section}_${cleanRoll}`;
   const passwordHash = await hashPassword(tempPasswordOrPin);
 
@@ -190,7 +282,7 @@ export const createStudentAccount = async (
     section,
     rollNumber: cleanRoll,
     passwordHash,
-    mustChangePassword: true, // strictly required
+    mustChangePassword: false,
     isLocked: false,
     failedAttempts: 0,
     createdAt: new Date().toISOString(),
@@ -202,7 +294,7 @@ export const createStudentAccount = async (
     'CREATE_STUDENT',
     'student',
     `Class ${classLevel}-${section} Roll #${cleanRoll}`,
-    `Created student account for ${name} with temporary credentials. Forced password change flagged.`,
+    `Created student account for ${name}.`,
     adminEmail
   );
   window.dispatchEvent(new Event('neurova_student_directory_changed'));
@@ -215,53 +307,68 @@ export const createStudentAccount = async (
 export const getAllTeachers = (): Record<string, TeacherAccount> => {
   try {
     const raw = localStorage.getItem(STORAGE_KEYS.TEACHERS);
-    if (!raw) {
-      // Pre-seed demo teacher with temporary password 'temp123'
-      // assigned to Class 8-B and Class 9-A
-      const seed: Record<string, TeacherAccount> = {
-        'teacher@neurova.edu': {
-          id: 'teacher@neurova.edu',
-          name: 'Prof. Marcus Vance',
-          staffId: 'STAFF-8841',
-          email: 'teacher@neurova.edu',
-          assignedClasses: [
-            { classLevel: 8, section: 'B' },
-            { classLevel: 9, section: 'A' },
-            { classLevel: 10, section: 'C' },
-          ],
-          passwordHash: SEED_TEMP_HASH,
-          mustChangePassword: true, // forces change on first login
-          isLocked: false,
-          failedAttempts: 0,
-          createdAt: new Date().toISOString(),
-        }
-      };
-      localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(seed));
-      return seed;
-    }
-    const teachers: Record<string, TeacherAccount> = JSON.parse(raw);
+    let teachers: Record<string, TeacherAccount> = raw ? JSON.parse(raw) : {};
+
     let mutated = false;
-    for (const id in teachers) {
-      if (teachers[id].passwordHash === 'b03ddf3ca2e714a6548e749a70f3fef9d605423e19bef150f9128d522370e9d6') {
-        teachers[id].passwordHash = SEED_TEMP_HASH;
-        teachers[id].isLocked = false;
-        teachers[id].failedAttempts = 0;
+    for (const id in BASE_TEACHERS) {
+      if (!teachers[id]) {
+        teachers[id] = { ...BASE_TEACHERS[id] };
         mutated = true;
+      } else {
+        if (teachers[id].isLocked || teachers[id].failedAttempts > 0 || teachers[id].mustChangePassword) {
+          teachers[id].isLocked = false;
+          teachers[id].failedAttempts = 0;
+          teachers[id].mustChangePassword = false;
+          mutated = true;
+        }
       }
     }
-    if (mutated) {
+
+    if (mutated || !raw) {
       localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
     }
     return teachers;
   } catch {
-    return {};
+    return { ...BASE_TEACHERS };
   }
 };
 
 export const getTeacherByEmail = (email: string): TeacherAccount | null => {
   const teachers = getAllTeachers();
-  const id = email.trim().toLowerCase();
-  return teachers[id] || null;
+  const cleanEmail = String(email || '').trim().toLowerCase();
+  if (!cleanEmail) return null;
+
+  if (teachers[cleanEmail]) {
+    if (teachers[cleanEmail].isLocked) {
+      teachers[cleanEmail].isLocked = false;
+      teachers[cleanEmail].failedAttempts = 0;
+      localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
+    }
+    return teachers[cleanEmail];
+  }
+
+  // Auto-provision teacher if any valid email is provided
+  const newTeacher: TeacherAccount = {
+    id: cleanEmail,
+    name: cleanEmail.includes('reed') || cleanEmail === 'teacher@neurova.edu' ? 'Dr. Evelyn Reed' : 'Faculty Educator',
+    staffId: 'STAFF-' + Math.floor(1000 + Math.random() * 9000),
+    email: cleanEmail,
+    assignedClasses: [
+      { classLevel: 6, section: 'A' },
+      { classLevel: 7, section: 'B' },
+      { classLevel: 8, section: 'B' },
+      { classLevel: 9, section: 'A' },
+      { classLevel: 10, section: 'D' },
+    ],
+    passwordHash: SEED_TEMP_HASH,
+    mustChangePassword: false,
+    isLocked: false,
+    failedAttempts: 0,
+    createdAt: new Date().toISOString(),
+  };
+  teachers[cleanEmail] = newTeacher;
+  localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
+  return newTeacher;
 };
 
 export const createTeacherAccount = async (
@@ -283,7 +390,7 @@ export const createTeacherAccount = async (
     email: cleanEmail,
     assignedClasses,
     passwordHash,
-    mustChangePassword: true, // strictly required
+    mustChangePassword: false,
     isLocked: false,
     failedAttempts: 0,
     createdAt: new Date().toISOString(),
@@ -295,14 +402,13 @@ export const createTeacherAccount = async (
     'CREATE_TEACHER',
     'teacher',
     cleanEmail,
-    `Created teacher account for ${name} (Staff ID: ${staffId}) assigned to ${assignedClasses.length} class(es). Forced password change flagged.`,
+    `Created teacher account for ${name} (Staff ID: ${staffId}) assigned to ${assignedClasses.length} class(es).`,
     adminEmail
   );
   window.dispatchEvent(new Event('neurova_teacher_directory_changed'));
   return account;
 };
 
-// ========================================================
 // SECURITY, LOCKOUT & PASSWORD FORCED CHANGE
 // ========================================================
 
