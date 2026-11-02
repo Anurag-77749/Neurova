@@ -11,20 +11,11 @@ export const DEFAULT_SUPABASE_URL = 'https://ligwdgnyvkqxtlkunnga.supabase.co';
 export const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_XuiRIAz_4ly9NkaYFXunpQ_NgyNzwAS';
 
 export const getSupabaseConfig = (): SupabaseConfig => {
-  try {
-    const envUrl = import.meta.env.VITE_SUPABASE_URL || '';
-    const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
-    if (envUrl && envKey) {
-      return { url: envUrl.trim(), anonKey: envKey.trim() };
-    }
-    const raw = localStorage.getItem(CONFIG_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      if (parsed.url && parsed.anonKey) {
-        return parsed;
-      }
-    }
-  } catch {}
+  const envUrl = import.meta.env.VITE_SUPABASE_URL || '';
+  const envKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+  if (envUrl && envKey) {
+    return { url: envUrl.trim(), anonKey: envKey.trim() };
+  }
   return { url: DEFAULT_SUPABASE_URL, anonKey: DEFAULT_SUPABASE_ANON_KEY };
 };
 

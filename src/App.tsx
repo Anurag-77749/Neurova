@@ -91,6 +91,7 @@ export const App: React.FC = () => {
   const [teacherName, setTeacherName] = useState('');
   const [teacherPassword, setTeacherPassword] = useState('');
   const [showTeacherPassword, setShowTeacherPassword] = useState(false);
+  const [isTeacherLoading, setIsTeacherLoading] = useState(false);
 
   // Admin Login State
   const [adminEmail, setAdminEmail] = useState('');
@@ -227,48 +228,53 @@ export const App: React.FC = () => {
       return;
     }
 
-    const account = await findTeacherByLoginAsync(cleanInput || cleanName, cleanName || cleanInput);
+    setIsTeacherLoading(true);
+    try {
+      const account = await findTeacherByLoginAsync(cleanInput || cleanName, cleanName || cleanInput);
 
-    if (!account) {
-      setErrorMsg(`No teacher account found for "${cleanInput || cleanName}". Please check your Staff ID or Name.`);
-      return;
-    }
-
-    // Strict credential check against registered account
-    const isMatch =
-      (account.plainPassword && cleanPass.toLowerCase() === account.plainPassword.toLowerCase()) ||
-      cleanPass === '1234' ||
-      cleanPass === 'pass' ||
-      cleanPass === 'password' ||
-      (await verifyPassword(cleanPass, account.passwordHash));
-
-    if (!isMatch) {
-      const { isLocked, attemptsLeft } = recordFailedAttempt('teacher', account.id);
-      if (isLocked) {
-        setErrorMsg('Account Locked: 5 failed attempts exceeded. Please see the School Administrator.');
-      } else {
-        setErrorMsg(`Incorrect password. ${attemptsLeft} attempt(s) remaining before security lockout.`);
+      if (!account) {
+        setErrorMsg(`No teacher account found for "${cleanInput || cleanName}". Please check your Staff ID or Name.`);
+        return;
       }
-      return;
+
+      // Strict credential check against registered account
+      const isMatch =
+        cleanPass === '1234' ||
+        cleanPass === 'pass' ||
+        cleanPass === 'password' ||
+        (account.plainPassword && cleanPass.toLowerCase() === account.plainPassword.toLowerCase()) ||
+        (await verifyPassword(cleanPass, account.passwordHash));
+
+      if (!isMatch) {
+        const { isLocked, attemptsLeft } = recordFailedAttempt('teacher', account.id);
+        if (isLocked) {
+          setErrorMsg('Account Locked: 5 failed attempts exceeded. Please see the School Administrator.');
+        } else {
+          setErrorMsg(`Incorrect password. ${attemptsLeft} attempt(s) remaining before security lockout.`);
+        }
+        return;
+      }
+
+      resetFailedAttempts('teacher', account.id);
+
+      setActiveSession({
+        role: 'teacher',
+        name: account.name || 'Demo Teacher',
+        email: account.email || cleanInput || 'teacher@neurova.edu',
+        staffId: account.staffId || 'STAFF-1001',
+        assignedClasses: account.assignedClasses && account.assignedClasses.length > 0 ? account.assignedClasses : [
+          { classLevel: 6, section: 'A' },
+          { classLevel: 7, section: 'A' },
+          { classLevel: 8, section: 'A' },
+          { classLevel: 9, section: 'A' },
+          { classLevel: 10, section: 'A' },
+          { classLevel: 10, section: 'D' },
+        ],
+        mustChangePassword: false,
+      });
+    } finally {
+      setIsTeacherLoading(false);
     }
-
-    resetFailedAttempts('teacher', account.id);
-
-    setActiveSession({
-      role: 'teacher',
-      name: account.name || 'Demo Teacher',
-      email: account.email || cleanInput,
-      staffId: account.staffId || 'STAFF-1001',
-      assignedClasses: account.assignedClasses && account.assignedClasses.length > 0 ? account.assignedClasses : [
-        { classLevel: 6, section: 'A' },
-        { classLevel: 7, section: 'A' },
-        { classLevel: 8, section: 'A' },
-        { classLevel: 9, section: 'A' },
-        { classLevel: 10, section: 'A' },
-        { classLevel: 10, section: 'D' },
-      ],
-      mustChangePassword: false,
-    });
   };
 
   // ========================================================
@@ -876,10 +882,20 @@ export const App: React.FC = () => {
 
                 <button
                   type="submit"
-                  className="w-full mt-2 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow-xs transition-all flex items-center justify-center gap-2"
+                  disabled={isTeacherLoading}
+                  className="w-full mt-2 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 text-white font-semibold text-xs shadow-xs transition-all flex items-center justify-center gap-2"
                 >
-                  <UserCheck className="w-4 h-4" />
-                  <span>Sign In as Teacher</span>
+                  {isTeacherLoading ? (
+                    <>
+                      <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <span>Verifying Credentials...</span>
+                    </>
+                  ) : (
+                    <>
+                      <UserCheck className="w-4 h-4" />
+                      <span>Sign In as Teacher</span>
+                    </>
+                  )}
                 </button>
               </form>
             </motion.div>
