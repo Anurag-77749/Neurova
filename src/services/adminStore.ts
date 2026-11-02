@@ -12,7 +12,8 @@ import {
   syncStudentToCloud, 
   syncTeacherToCloud, 
   fetchCloudStudents, 
-  fetchCloudTeachers 
+  fetchCloudTeachers,
+  getSupabase 
 } from './supabase';
 
 const STORAGE_KEYS = {
@@ -331,6 +332,44 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
   return null;
 };
 
+/**
+ * Real-time Supabase Student Lookup:
+ * Checks local cache, and if not present, pulls live from Supabase PostgreSQL cloud table.
+ */
+export const getStudentByIdAsync = async (classLevel: ClassLevel, section: Section, rollNumber: string): Promise<StudentAccount | null> => {
+  const local = getStudentById(classLevel, section, rollNumber);
+  if (local) return local;
+
+  const client = getSupabase();
+  if (client) {
+    try {
+      const cleanRoll = String(rollNumber || '').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
+      const id = `${classLevel}_${section}_${cleanRoll}`;
+      const { data } = await client.from('students').select('*').eq('id', id).single();
+      if (data) {
+        const student: StudentAccount = {
+          id: data.id,
+          name: data.name,
+          classLevel: data.class_level,
+          section: data.section,
+          rollNumber: data.roll_number,
+          plainPassword: data.plain_password,
+          passwordHash: data.password_hash,
+          isLocked: data.is_locked,
+          failedAttempts: data.failed_attempts || 0,
+          mustChangePassword: false,
+          createdAt: data.created_at || new Date().toISOString(),
+        };
+        const allStudents = getAllStudents();
+        allStudents[id] = student;
+        localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(allStudents));
+        return student;
+      }
+    } catch {}
+  }
+  return null;
+};
+
 export const createStudentAccount = async (
   name: string,
   classLevel: ClassLevel,
@@ -455,6 +494,43 @@ export const findTeacherByLogin = (input: string): TeacherAccount | null => {
     }
   }
 
+  return null;
+};
+
+/**
+ * Real-time Supabase Teacher Lookup:
+ * Checks local cache, and if not present, pulls live from Supabase PostgreSQL cloud table.
+ */
+export const findTeacherByLoginAsync = async (input: string): Promise<TeacherAccount | null> => {
+  const local = findTeacherByLogin(input);
+  if (local) return local;
+
+  const client = getSupabase();
+  if (client) {
+    try {
+      const clean = (input || '').trim().toLowerCase();
+      const { data } = await client.from('teachers').select('*').or(`id.eq.${clean},email.eq.${clean}`).single();
+      if (data) {
+        const teacher: TeacherAccount = {
+          id: data.id,
+          name: data.name,
+          staffId: data.staff_id,
+          email: data.email,
+          plainPassword: data.plain_password,
+          passwordHash: data.password_hash,
+          assignedClasses: data.assigned_classes || [],
+          isLocked: data.is_locked,
+          failedAttempts: data.failed_attempts || 0,
+          mustChangePassword: false,
+          createdAt: data.created_at || new Date().toISOString(),
+        };
+        const allTeachers = getAllTeachers();
+        allTeachers[teacher.id] = teacher;
+        localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(allTeachers));
+        return teacher;
+      }
+    } catch {}
+  }
   return null;
 };
 

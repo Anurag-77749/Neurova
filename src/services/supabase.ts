@@ -7,6 +7,8 @@ export interface SupabaseConfig {
 }
 
 const CONFIG_KEY = 'neurova_supabase_config';
+export const DEFAULT_SUPABASE_URL = 'https://ligwdgnyvkqxtlkunnga.supabase.co';
+export const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_XuiRIAz_4ly9NkaYFXunpQ_NgyNzwAS';
 
 export const getSupabaseConfig = (): SupabaseConfig => {
   try {
@@ -17,10 +19,13 @@ export const getSupabaseConfig = (): SupabaseConfig => {
     }
     const raw = localStorage.getItem(CONFIG_KEY);
     if (raw) {
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      if (parsed.url && parsed.anonKey) {
+        return parsed;
+      }
     }
   } catch {}
-  return { url: '', anonKey: '' };
+  return { url: DEFAULT_SUPABASE_URL, anonKey: DEFAULT_SUPABASE_ANON_KEY };
 };
 
 export const saveSupabaseConfig = (config: SupabaseConfig) => {

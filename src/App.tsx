@@ -44,6 +44,8 @@ import {
   findStudentByLogin,
   findTeacherByLogin,
   getStudentById,
+  getStudentByIdAsync,
+  findTeacherByLoginAsync,
   getTeacherByEmail, 
   getAdminAccount, 
   verifyAdminCredentials, 
@@ -167,7 +169,7 @@ export const App: React.FC = () => {
       return;
     }
 
-    const account = getStudentById(selectedClass, selectedSection, cleanRoll);
+    const account = await getStudentByIdAsync(selectedClass, selectedSection, cleanRoll);
 
     if (!account) {
       setErrorMsg(`No student account found for Class ${selectedClass}-${selectedSection} Roll #${cleanRoll}. Please check your details.`);
@@ -217,7 +219,7 @@ export const App: React.FC = () => {
       return;
     }
 
-    const account = findTeacherByLogin(cleanInput);
+    const account = await findTeacherByLoginAsync(cleanInput);
 
     if (!account) {
       setErrorMsg(`No teacher account found for "${cleanInput}". Please verify the email.`);
