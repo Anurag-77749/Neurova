@@ -223,11 +223,11 @@ export const getAllStudents = (): Record<string, StudentAccount> => {
 /**
  * Universal Student Dynamic Lookup
  * Matches by exact username 'student', exact name, roll number, or id.
- * Guaranteed never to fail: auto-provisions if not found.
  */
-export const findStudentByLogin = (input: string): StudentAccount => {
+export const findStudentByLogin = (input: string): StudentAccount | null => {
   const students = getAllStudents();
   const clean = (input || '').trim().toLowerCase();
+  if (!clean) return null;
 
   // 1. Direct key match (e.g. 'student', '10_A_1', '10_D_21')
   if (students[clean]) {
@@ -238,16 +238,22 @@ export const findStudentByLogin = (input: string): StudentAccount => {
   }
 
   // 2. Demo student shorthand
-  if (clean === 'student' || clean === 'demo' || clean === 'demo student' || clean === 'anurag') {
-    const s = clean === 'anurag' 
-      ? (students['10_D_21'] || BASE_STUDENTS['10_D_21']) 
-      : (students['student'] || BASE_STUDENTS['student'] || BASE_STUDENTS['10_A_1']);
+  if (clean === 'student' || clean === 'demo' || clean === 'demo student') {
+    const s = students['10_A_1'] || students['student'] || BASE_STUDENTS['10_A_1'];
     s.isLocked = false;
     s.failedAttempts = 0;
     return s;
   }
 
-  // 3. Exact name match (case-insensitive)
+  // 3. Anurag shorthand
+  if (clean === 'anurag' || clean === 'polakonda anurag varma') {
+    const s = students['10_D_21'] || BASE_STUDENTS['10_D_21'];
+    s.isLocked = false;
+    s.failedAttempts = 0;
+    return s;
+  }
+
+  // 4. Exact name match (case-insensitive)
   for (const s of Object.values(students)) {
     if (s.name.trim().toLowerCase() === clean) {
       s.isLocked = false;
@@ -256,48 +262,27 @@ export const findStudentByLogin = (input: string): StudentAccount => {
     }
   }
 
-  // 4. Substring name or roll number match
+  // 5. Roll number match
   for (const s of Object.values(students)) {
-    if (
-      (s.rollNumber && s.rollNumber.toLowerCase() === clean) ||
-      s.name.toLowerCase().includes(clean) ||
-      clean.includes(s.name.toLowerCase())
-    ) {
+    if (s.rollNumber && s.rollNumber.toLowerCase() === clean) {
       s.isLocked = false;
       s.failedAttempts = 0;
       return s;
     }
   }
 
-  // Fallback: auto-provision
-  const autoAccount: StudentAccount = {
-    id: `student_${Date.now()}`,
-    name: input ? input.trim() : 'Demo Student',
-    classLevel: 10,
-    section: 'A',
-    rollNumber: '1',
-    passwordHash: DEMO_1234_HASH,
-    plainPassword: '1234',
-    mustChangePassword: false,
-    isLocked: false,
-    failedAttempts: 0,
-    createdAt: new Date().toISOString(),
-  };
-  students[autoAccount.id] = autoAccount;
-  try {
-    localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
-  } catch {}
-  return autoAccount;
+  return null;
 };
 
 /**
- * Universal Student Lookup by Class, Section, and Roll Number.
- * Zero-Lockout Guaranteed: If the account was created on another device,
- * or entered dynamically, auto-provisions it on this device so login ALWAYS succeeds!
+ * Student Lookup by Class, Section, and Roll Number.
+ * Returns the matching account or null if not registered.
  */
-export const getStudentById = (classLevel: ClassLevel, section: Section, rollNumber: string): StudentAccount => {
+export const getStudentById = (classLevel: ClassLevel, section: Section, rollNumber: string): StudentAccount | null => {
   const students = getAllStudents();
-  const cleanRoll = String(rollNumber || '1').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
+  const cleanRoll = String(rollNumber || '').replace(/[^0-9a-zA-Z]/g, '').toUpperCase();
+  if (!cleanRoll) return null;
+
   const id = `${classLevel}_${section}_${cleanRoll}`;
 
   // 1. Direct ID match
@@ -324,7 +309,7 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
     return s;
   }
 
-  // 4. Fallback search across directory for match
+  // 4. Exact match across directory
   for (const s of Object.values(students)) {
     if (
       s.classLevel === classLevel &&
@@ -337,32 +322,7 @@ export const getStudentById = (classLevel: ClassLevel, section: Section, rollNum
     }
   }
 
-  // 5. Zero-Lockout Auto-Provision: Save to local directory immediately
-  const name = (classLevel === 10 && section === 'D' && cleanRoll === '21')
-    ? 'Polakonda Anurag Varma'
-    : (classLevel === 10 && section === 'A' && cleanRoll === '1')
-    ? 'Demo Student'
-    : `Student (Class ${classLevel}-${section} #${cleanRoll})`;
-
-  const autoAccount: StudentAccount = {
-    id,
-    name,
-    classLevel,
-    section,
-    rollNumber: cleanRoll,
-    passwordHash: DEMO_1234_HASH,
-    plainPassword: '1234',
-    mustChangePassword: false,
-    isLocked: false,
-    failedAttempts: 0,
-    createdAt: new Date().toISOString(),
-  };
-
-  students[id] = autoAccount;
-  try {
-    localStorage.setItem(STORAGE_KEYS.STUDENTS, JSON.stringify(students));
-  } catch {}
-  return autoAccount;
+  return null;
 };
 
 export const createStudentAccount = async (
@@ -438,14 +398,13 @@ export const getAllTeachers = (): Record<string, TeacherAccount> => {
 };
 
 /**
- * Universal Teacher Dynamic Lookup
- * Matches by email, name, staff ID, or 'teacher'.
- * Zero-Lockout Guaranteed: If the account was created on another device,
- * or entered dynamically, auto-provisions it on this device so login ALWAYS succeeds!
+ * Teacher Lookup by email, name, or staff ID.
+ * Returns the matching account or null if not registered.
  */
-export const findTeacherByLogin = (input: string): TeacherAccount => {
+export const findTeacherByLogin = (input: string): TeacherAccount | null => {
   const teachers = getAllTeachers();
   const clean = (input || '').trim().toLowerCase();
+  if (!clean) return null;
 
   // 1. Direct email or id match
   if (teachers[clean]) {
@@ -457,7 +416,7 @@ export const findTeacherByLogin = (input: string): TeacherAccount => {
   }
 
   // 2. Demo teacher shorthand
-  if (!clean || clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu') {
+  if (clean === 'teacher' || clean === 'demo teacher' || clean === 'teacher@neurova.edu') {
     const t = teachers['teacher@neurova.edu'] || BASE_TEACHERS['teacher@neurova.edu'];
     t.isLocked = false;
     t.failedAttempts = 0;
@@ -478,8 +437,8 @@ export const findTeacherByLogin = (input: string): TeacherAccount => {
   // 4. Substring email, name, or staff ID match
   for (const t of Object.values(teachers)) {
     if (
-      t.email.toLowerCase().includes(clean) ||
-      t.name.toLowerCase().includes(clean) ||
+      t.email.toLowerCase() === clean ||
+      t.name.toLowerCase() === clean ||
       t.staffId.toLowerCase() === clean
     ) {
       t.isLocked = false;
@@ -489,40 +448,10 @@ export const findTeacherByLogin = (input: string): TeacherAccount => {
     }
   }
 
-  // 5. Zero-Lockout Auto-Provision: Save to local directory immediately
-  const cleanEmail = clean.includes('@') ? clean : `${clean}@neurova.edu`;
-  const namePart = cleanEmail.split('@')[0].replace(/[._-]/g, ' ');
-  const autoName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
-
-  const autoTeacher: TeacherAccount = {
-    id: cleanEmail,
-    name: autoName.toLowerCase().includes('teacher') ? 'Demo Teacher' : `${autoName} (Faculty)`,
-    staffId: `STAFF-${Math.floor(1000 + Math.random() * 9000)}`,
-    email: cleanEmail,
-    assignedClasses: [
-      { classLevel: 6, section: 'A' },
-      { classLevel: 7, section: 'A' },
-      { classLevel: 8, section: 'A' },
-      { classLevel: 9, section: 'A' },
-      { classLevel: 10, section: 'A' },
-      { classLevel: 10, section: 'D' },
-    ],
-    passwordHash: DEMO_1234_HASH,
-    plainPassword: '1234',
-    mustChangePassword: false,
-    isLocked: false,
-    failedAttempts: 0,
-    createdAt: new Date().toISOString(),
-  };
-
-  teachers[cleanEmail] = autoTeacher;
-  try {
-    localStorage.setItem(STORAGE_KEYS.TEACHERS, JSON.stringify(teachers));
-  } catch {}
-  return autoTeacher;
+  return null;
 };
 
-export const getTeacherByEmail = (email: string): TeacherAccount => {
+export const getTeacherByEmail = (email: string): TeacherAccount | null => {
   return findTeacherByLogin(email);
 };
 
